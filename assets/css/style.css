@@ -1,0 +1,747 @@
+/* nav bar section */
+.nav-link-text {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #c1152e !important;
+}
+
+.nav-btn {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.9375rem;
+  border: 1px solid var(--foundation-red-red-500, #c1152e);
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Alinur Kurigram ANSI V1;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.lang-btn {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 0.9375rem;
+  border: 1px solid var(--foundation-violet-violet-500, #272454);
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit VR;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo-text {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-size: 2.5rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* hero section  */
+.hero-banner {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=272454&c2=b0132a&gt=l&gd=dcl
+*/
+  background: #272454;
+  background: linear-gradient(90deg, #272454, #b0132a);
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+}
+.hero-text {
+  color: var(--foundation-red-red-50, #f9e8ea);
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.hero-title {
+  color: var(--foundation-red-red-50, #f9e8ea);
+  font-family: Li Ador Noirrit;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.hero-btn {
+  display: flex;
+  width: 12.5rem;
+  height: 4.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: var(--foundation-red-red-500, #c1152e);
+  color: var(--foundation-red-grey-r-0, #fff);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.hero-btn2 {
+  display: flex;
+  width: 12.5rem;
+  height: 4.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: var(--foundation-red-grey-r-10, #fefafb);
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* contact us section */
+.contact-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-size: 1.25rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contact {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-size: 2.5rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact-text {
+  color: var(--foundation-violet-violet-900, #100f23);
+  font-size: 1.5rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+/* learn english section */
+.english {
+  background: linear-gradient(90deg, #b0132a, #272454);
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+.english-title {
+  color: var(--foundation-violet-violet-50, #e9e9ee);
+  font-family: Li Ador Noirrit;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.english-content {
+  color: var(--foundation-violet-violet-50, #e9e9ee);
+  font-family: Li Ador Noirrit;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.english-text {
+  color: #e9e9ee;
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.english a {
+  border-radius: 0.625rem;
+  background: var(--foundation-violet-violet-500, #272454);
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  gap: 0.5rem;
+  color: #fff;
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact-btn {
+  display: inline-flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.9375rem;
+  background: var(--foundation-red-red-500, #c1152e);
+  color: var(--foundation-red-red-50, #f9e8ea);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.contact-btn2 {
+  display: inline-flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.9375rem;
+  background: var(--foundation-red-red-50, #f9e8ea);
+  color: var(--foundation-red-grey-r-900, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.contact-btn3 {
+  display: inline-flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.9375rem;
+  background: var(--foundation-red-grey-r-40, #f7e1e4);
+  color: var(--foundation-red-grey-r-900, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+/* packages section  */
+.packages-title {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* student counter section */
+.student-counter {
+  margin-top: -5rem;
+}
+.student-counter-text {
+  color: #c1152e;
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+.student-counter-shadow {
+  width: 90.5rem;
+  height: 11.625rem;
+  padding: 3rem 4rem;
+  border-radius: 2.1875rem;
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(38, 50, 56, 0.25);
+}
+.student-counter .vr {
+  width: 1px;
+  min-height: 4.5rem;
+  background-color: #c1152e;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .student-counter .col-md-2 {
+    flex: 0 0 auto;
+    width: 18.742%;
+  }
+}
+
+/* course list section  */
+.course-list {
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+}
+.course-list-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.course-list-text {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.english-ielts {
+  border-radius: 2.1875rem;
+  background: linear-gradient(180deg, #272557 0%, #484ba0 100%);
+
+  /* mediu, */
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  width: 19.5rem;
+  height: 27.5rem;
+  flex-shrink: 0;
+}
+.card-text {
+  color: #f9e8ea;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.card-btn {
+  color: var(--foundation-red-red-50, #f9e8ea);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  display: flex;
+  width: 15.125rem;
+  padding: 0.625rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 21.875rem;
+  background: var(--foundation-violet-violet-500, #272454);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+.course-english {
+  display: flex;
+  width: 19.4375rem;
+  height: 13rem;
+  padding: 3.625rem 6.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 2.1875rem;
+  background: var(--foundation-red-grey-r-0, #fff);
+
+  /* mediu, */
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.course-english-text {
+  color: #c1152e;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.registration-point {
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+}
+
+.benefit {
+  /* background: #C1162E; */
+  background: #332f6f;
+  background: linear-gradient(45deg, #332f6f, #c1162e, #585cca);
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+.benefit-title {
+  color: var(--foundation-violet-violet-50, #e9e9ee);
+  font-family: Li Ador Noirrit;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+.benefit .ca {
+  width: 34.76088rem;
+  height: 7rem;
+  color: var(--foundation-red-grey-r-0, #fff);
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 2.1rem;
+  padding-left: 2.19rem;
+}
+.c {
+  /* background: #C1162E; */
+  background: #c1152e;
+  background: linear-gradient(45deg, #c1162e, #585cca);
+  border-radius: 0.9375rem;
+  /* background: #FFF; */
+}
+.benefit .car {
+  background: #100f23;
+  border-radius: 0.9375rem;
+
+  width: 34.76088rem;
+  height: 7rem;
+  padding-top: 2.1rem;
+  padding-left: 2.19rem;
+  color: var(--foundation-violet-violet-100, #bcbbca);
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.running-course,
+.language-club,
+.packages,
+.registration-point {
+  background: #fdf6f7;
+  padding-top: 5rem;
+  padding-bottom: 9.6rem;
+}
+.course-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+.course-subtitle {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.running-course-title {
+  display: flex;
+  width: 16.5rem;
+  flex-direction: column;
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.time-text {
+  color: var(--foundation-violet-violet-400, #525076);
+  font-family: Li Ador Noirrit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.money-text {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.money-cut-text {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: strikethrough;
+}
+.list-group-padding {
+  --bs-list-group-item-padding-x: 0rem !important;
+  --bs-list-group-bg: #fdf6f7;
+}
+.language-club-text {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+}
+.packages-btn {
+  display: flex;
+  width: 15.5625rem;
+  height: 3.4375rem;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: var(--foundation-red-red-500, #c1152e);
+  color: var(--foundation-red-red-50, #f9e8ea);
+  text-align: right;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.single-packages-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.single-packages-subtitle {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.benefits-packages-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.benefits-list-text {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* footer section  */
+.footer-content {
+  background-color: #272454;
+  padding-top: 6.25rem;
+  padding-bottom: 1rem;
+}
+.footer-text {
+  color: #bcbbca;
+  font-size: 1rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+}
+.footer-icon {
+  color: #e9e9ee;
+}
+.footer-title {
+  color: #e9e9ee;
+  font-size: 1.5rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.footer-text {
+  color: #bcbbca;
+  font-size: 1rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer-btm {
+  border-bottom: 1px solid #9c9ab0;
+}
+
+.footer-bottom-text {
+  color: #9c9ab0;
+  font-size: 1rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+footer .vr {
+  display: inline-block;
+  align-self: flex-start;
+  width: 1px;
+  min-height: 1.25rem;
+  background-color: #9c9ab0;
+  opacity: 1;
+}
+/* checkout page */
+.checkout-title {
+  color: var(--foundation-red-red-50, #f9e8ea);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.checkout-subtitle {
+  color: var(--foundation-red-grey-r-0, #fff);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+/* oder summary */
+.order-summary {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.order-summary-title {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.order-course-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Roboto;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.order-course-price {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.order-course-text {
+  color: var(--foundation-violet-violet-400, #525076);
+  font-family: Li Ador Noirrit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.product-price {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.discount-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.discount-minus {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.discount-price {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.promocode-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.list-group-item {
+  display: flex;
+  border: 0;
+  align-items: center;
+}
+
+.form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3rectangle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-check-input[type="radio"] {
+  border-radius: 0%;
+}
+
+.form-check-input:checked {
+  background-color: #272454;
+  border-color: #272454;
+}
+
+.checkout-btn {
+  width: 30.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+  background: var(--foundation-violet-violet-500, #272454);
+  display: flex;
+  width: 19.5rem;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--foundation-violet-violet-50, #e9e9ee);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
