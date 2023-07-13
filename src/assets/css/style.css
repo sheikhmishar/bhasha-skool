@@ -1,0 +1,259 @@
+:root {
+  --font-family-secondary: Roboto;
+  --bs-primary-rgb: 193, 21, 46;
+  --bs-light-rgb: 249, 232, 234;
+  --bs-light-text-emphasis: #e9e9ee;
+  --bs-info-rgb: 39, 36, 84;
+  --bs-info-text-emphasis: #525076;
+  --bs-dark-rgb: 16, 15, 35;
+  --bs-dark-text-emphasis: #bcbbca;
+  --bs-secondary-bg-subtle: #fdf6f7;
+
+  --bs-gradient: linear-gradient(90deg, rgba(39, 36, 84), rgba(176, 19, 42));
+  --primary-gradient: linear-gradient(90deg, #b0132a, #272454);
+  --secondary-gradient: linear-gradient(180deg, #272557 0%, #484ba0 100%);
+  --tertiary-gradient: linear-gradient(45deg, #332f6f, #c1162e, #585cca);
+  --card-gradient: linear-gradient(45deg, #c1162e, #585cca);
+}
+
+@font-face {
+  font-family: "bhasha-skool";
+  src: url("/assets/fonts/AdorNoirritWeb.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "bhasha-skool", sans-serif;
+}
+
+.top-50px {
+  top: -50px !important;
+}
+
+.secondary-font-family {
+  font-family: var(--font-family-secondary);
+}
+
+.course-list-gradient {
+  background-image: var(--secondary-gradient);
+}
+
+.what-you-get-gradient {
+  background-image: var(--tertiary-gradient);
+}
+
+.card-gradient {
+  background-image: var(--card-gradient);
+}
+
+.learn-english-gradient {
+  background-image: var(--primary-gradient);
+}
+
+.list-group-padding {
+  --bs-list-group-item-padding-x: 0rem !important;
+  --bs-list-group-bg: #fdf6f7;
+}
+
+
+.nav-btn {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.9375rem;
+  border: 1px solid var(--foundation-red-red-500, #c1152e);
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Alinur Kurigram ANSI V1;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.lang-btn {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 0.9375rem;
+  border: 1px solid var(--foundation-violet-violet-500, #272454);
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit VR;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo-text {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-size: 2.5rem;
+  font-family: Li Ador Noirrit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.footer-btm {
+  border-bottom: 1px solid #9c9ab0;
+}
+
+footer .vr {
+  display: inline-block;
+  align-self: flex-start;
+  width: 1px;
+  min-height: 1.25rem;
+  background-color: #9c9ab0;
+  opacity: 1;
+}
+/* checkout page */
+.checkout-title {
+  color: var(--foundation-red-red-50, #f9e8ea);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.checkout-subtitle {
+  color: var(--foundation-red-grey-r-0, #fff);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+/* oder summary */
+.order-summary {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.order-summary-title {
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.order-course-title {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Roboto;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.order-course-price {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.order-course-text {
+  color: var(--foundation-violet-violet-400, #525076);
+  font-family: Li Ador Noirrit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.product-price {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.discount-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.discount-minus {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.discount-price {
+  color: var(--foundation-violet-violet-500, #272454);
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.promocode-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  color: var(--foundation-red-red-500, #c1152e);
+  font-family: Li Ador Noirrit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.list-group-item {
+  display: flex;
+  border: 0;
+  align-items: center;
+}
+
+.form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3rectangle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-check-input[type="radio"] {
+  border-radius: 0%;
+}
+
+.form-check-input:checked {
+  background-color: #272454;
+  border-color: #272454;
+}
+
+.checkout-btn {
+  width: 30.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+  background: var(--foundation-violet-violet-500, #272454);
+  display: flex;
+  width: 19.5rem;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--foundation-violet-violet-50, #e9e9ee);
+  text-align: center;
+  font-family: Li Ador Noirrit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
