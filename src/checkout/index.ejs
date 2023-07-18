@@ -4,78 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhasha Skool</title>
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-</head>
+  <title>Checkout | Bhasha Skool</title>
+  <%- include("/_components/head-seo") -%> <%- include("/_components/styles")
+    -%>
+  </head>
 
-<body>
-  <!-- nav-bar -->
-  <nav class="navbar navbar-expand-lg bg-body-white">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="/assets/images/bhasha-skool-logo.png" alt="bhasha skool logo" class="img-fluid" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active nav-link-text" aria-current="page" href="#">হোম</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link dropdown-toggle nav-link-text" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">কোর্স</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-text" aria-current="page" href="#">
-              মকটেস্ট
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-text">আমাদের সম্পর্কে</a>
-          </li>
-        </ul>
-        <div class="d-flex gap-4">
-          <div class="d-flex align-items-center gap-2">
-            <img src="/assets/images/Call.svg" alt="call us" />
-            <p class="mb-0">১২১২১</p>
-          </div>
-          <a class="lang-btn d-flex text-decoration-none">
-            <img src="/assets/images/Frame.svg" alt="language" />
-            <p class="mb-0">বাং</p>
-          </a>
-          <a class="nav-btn text-decoration-none" href="">লগ- ইন/সাইন আপ</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <body>
+    <!-- nav-bar -->
+    <%- include("/_components/nav") -%>
   <!-- checkout banner section -->
-  <section class="hero-banner">
-    <div class="container">
-      <h1 class="text-center checkout-title">চেক আউট</h1>
-      <h2 class="text-center checkout-subtitle">
+  <section class="bg-gradient py-5">
+    <div class="container py-5">
+      <h1 class="text-center display-3 fw-bold text-light">চেক আউট</h1>
+      <h2 class="text-center text-white">
         ভাষা শেখা, বিশেষ করে ইংরেজির আতঙ্ককে দূর করে ভাষা শিক্ষা Simplify
         করতেই ভাষা স্কুলের যাত্রা।
       </h2>
     </div>
   </section>
   <!-- oder summary -->
-  <section class="order-summary">
+  <section class="py-5">
     <div class="container">
-      <h2 class="order-summary-title text-center">
+      <h2 class="text-primary text-center">
         অর্ডার আইডিঃ TMS123456789
       </h2>
       <div class="row">
@@ -87,16 +37,18 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="order-course-title">Basic English Course</h5>
-                  <p class="order-course-price">
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M6.1998 2.759C6.44668 3.1215 6.66855 3.70588 6.66855 4.56838V7.36838H7.41543L8.66855 8.6465H6.66855V12.2715C6.66855 12.5559 6.7748 12.8121 6.9873 13.0434C7.1998 13.2746 7.54668 13.3903 8.02793 13.3903C8.6498 13.3903 9.30605 13.0434 9.9998 12.3496C10.7092 11.6403 11.0842 10.9121 11.1186 10.1653L10.7998 10.1934C9.6623 10.1934 9.09355 9.59025 9.09355 8.38088C9.09355 7.9715 9.22793 7.609 9.49355 7.28713C9.75918 6.96838 10.2029 6.80588 10.8248 6.80588C11.4811 6.80588 12.0342 7.09025 12.4779 7.659C12.9404 8.22775 13.1717 8.9215 13.1717 9.73713C13.1717 10.9465 12.6561 12.0996 11.6248 13.2028C10.6123 14.3028 8.6748 14.8559 7.9998 14.8559C6.91855 14.8559 6.50293 14.6434 6.1498 14.4028C5.79668 14.159 5.33418 13.584 5.33418 12.859V8.6465H4.05605L2.83105 7.36838H5.3373V4.83713C5.3373 4.2715 4.77168 3.96213 4.40293 3.93088C4.17793 3.91213 3.93105 3.97463 3.84355 4.06525C3.68418 3.79963 3.53105 3.47775 3.39043 3.10588C3.39043 3.10588 3.51543 2.65588 3.9248 2.38713C4.20605 2.20275 4.47168 2.1465 4.88418 2.1465C5.66855 2.14338 6.03105 2.51213 6.1998 2.759Z"
-                        fill="#C1152E" />
-                    </svg>
+                  <h2 class="secondary-font-family fw-semibold text-info">Basic English Course</h2>
+                  <h4 class="fw-bold text-info">
+                    <span>
+                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.1998 2.759C6.44668 3.1215 6.66855 3.70588 6.66855 4.56838V7.36838H7.41543L8.66855 8.6465H6.66855V12.2715C6.66855 12.5559 6.7748 12.8121 6.9873 13.0434C7.1998 13.2746 7.54668 13.3903 8.02793 13.3903C8.6498 13.3903 9.30605 13.0434 9.9998 12.3496C10.7092 11.6403 11.0842 10.9121 11.1186 10.1653L10.7998 10.1934C9.6623 10.1934 9.09355 9.59025 9.09355 8.38088C9.09355 7.9715 9.22793 7.609 9.49355 7.28713C9.75918 6.96838 10.2029 6.80588 10.8248 6.80588C11.4811 6.80588 12.0342 7.09025 12.4779 7.659C12.9404 8.22775 13.1717 8.9215 13.1717 9.73713C13.1717 10.9465 12.6561 12.0996 11.6248 13.2028C10.6123 14.3028 8.6748 14.8559 7.9998 14.8559C6.91855 14.8559 6.50293 14.6434 6.1498 14.4028C5.79668 14.159 5.33418 13.584 5.33418 12.859V8.6465H4.05605L2.83105 7.36838H5.3373V4.83713C5.3373 4.2715 4.77168 3.96213 4.40293 3.93088C4.17793 3.91213 3.93105 3.97463 3.84355 4.06525C3.68418 3.79963 3.53105 3.47775 3.39043 3.10588C3.39043 3.10588 3.51543 2.65588 3.9248 2.38713C4.20605 2.20275 4.47168 2.1465 4.88418 2.1465C5.66855 2.14338 6.03105 2.51213 6.1998 2.759Z"
+                          fill="#C1152E" />
+                      </svg>
+                    </span>
                     ৪,৯৯৯
-                  </p>
-                  <p class="order-course-text">ফুল কোর্স পরিশোধ</p>
+                  </h4>
+                  <h6 class="text-info-emphasis">ফুল কোর্স পরিশোধ</h6>
                 </div>
               </div>
             </div>
@@ -106,20 +58,20 @@
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between">
-                <p class="product-title">প্রোডাক্টের মূল্য</p>
-                <p class="product-price">
+                <h4 class="text-info fw-semibold">প্রোডাক্টের মূল্য</h4>
+                <h4 class="text-info fw-semibold">
                   <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.1998 2.259C6.44668 2.6215 6.66855 3.20588 6.66855 4.06838V6.86838H7.41543L8.66855 8.1465H6.66855V11.7715C6.66855 12.0559 6.7748 12.3121 6.9873 12.5434C7.1998 12.7746 7.54668 12.8903 8.02793 12.8903C8.6498 12.8903 9.30605 12.5434 9.9998 11.8496C10.7092 11.1403 11.0842 10.4121 11.1186 9.66525L10.7998 9.69338C9.6623 9.69338 9.09355 9.09025 9.09355 7.88088C9.09355 7.4715 9.22793 7.109 9.49355 6.78713C9.75918 6.46838 10.2029 6.30588 10.8248 6.30588C11.4811 6.30588 12.0342 6.59025 12.4779 7.159C12.9404 7.72775 13.1717 8.4215 13.1717 9.23713C13.1717 10.4465 12.6561 11.5996 11.6248 12.7028C10.6123 13.8028 8.6748 14.3559 7.9998 14.3559C6.91855 14.3559 6.50293 14.1434 6.1498 13.9028C5.79668 13.659 5.33418 13.084 5.33418 12.359V8.1465H4.05605L2.83105 6.86838H5.3373V4.33713C5.3373 3.7715 4.77168 3.46213 4.40293 3.43088C4.17793 3.41213 3.93105 3.47463 3.84355 3.56525C3.68418 3.29963 3.53105 2.97775 3.39043 2.60588C3.39043 2.60588 3.51543 2.15588 3.9248 1.88713C4.20605 1.70275 4.47168 1.6465 4.88418 1.6465C5.66855 1.64338 6.03105 2.01213 6.1998 2.259Z"
                         fill="#C1152E" />
                     </svg></span>
                   ৪,৯৯৯
-                </p>
+                  </h4>
               </div>
               <div class="d-flex justify-content-between">
-                <p class="discount-title">ডিসকাউন্ট</p>
-                <p class="discount-price">
-                  <span class="discount-minus">
+                <h5 class="text-info fw-normal">ডিসকাউন্ট</h5>
+                <h5 class="text-info fw-normal">
+                  <span class="h5 text-info fw-semibold">
                     -
                   </span>
                   <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,10 +80,10 @@
                         fill="#C1152E" />
                     </svg></span>
                   ৫০০
-                </p>
+                  </h5>
               </div>
               <div class="d-flex justify-content-between">
-                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span class="d-flex"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_388_886)">
                       <path
                         d="M13.1428 0H2.85713C1.27995 0.001875 0.001875 1.27995 0 2.85713V13.1428C0.001875 14.72 1.27995 15.9981 2.85713 16H13.1428C14.72 15.9981 15.9981 14.72 16 13.1428V2.85713C15.9981 1.27995 14.72 0.001875 13.1428 0ZM14.8571 13.1428C14.8571 14.0896 14.0896 14.8571 13.1428 14.8571H2.85713C1.91036 14.8571 1.14285 14.0896 1.14285 13.1428V2.85713C1.14285 1.91036 1.91036 1.14285 2.85713 1.14285H13.1428C14.0896 1.14285 14.8571 1.91036 14.8571 2.85713V13.1428Z"
@@ -146,170 +98,60 @@
                       </clipPath>
                     </defs>
                   </svg>
+                  <h6 class="ps-3 text-primary fw-normal">প্রোমো কোড যুক্ত করুন</h6>
                 </span>
-                <p class="ps-3 promocode-title">প্রোমো কোড যুক্ত করুন</p>
                 <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.5 5L15.5 12L8.5 19" stroke="#272454" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg></span>
               </div>
-              <hr style="background: #E9E9EE;">
+              <hr class="bg-light-text-emphasis">
               <div class="d-flex justify-content-between">
-                <p class="discount-title">সর্বোমোট</p>
-                <p>
+                <h5 class="text-info fw-normal">সর্বোমোট</h5>
+                <h5 class="text-info fw-normal">
                   <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6.1998 2.259C6.44668 2.6215 6.66855 3.20588 6.66855 4.06838V6.86838H7.41543L8.66855 8.1465H6.66855V11.7715C6.66855 12.0559 6.7748 12.3121 6.9873 12.5434C7.1998 12.7746 7.54668 12.8903 8.02793 12.8903C8.6498 12.8903 9.30605 12.5434 9.9998 11.8496C10.7092 11.1403 11.0842 10.4121 11.1186 9.66525L10.7998 9.69338C9.6623 9.69338 9.09355 9.09025 9.09355 7.88088C9.09355 7.4715 9.22793 7.109 9.49355 6.78713C9.75918 6.46838 10.2029 6.30588 10.8248 6.30588C11.4811 6.30588 12.0342 6.59025 12.4779 7.159C12.9404 7.72775 13.1717 8.4215 13.1717 9.23713C13.1717 10.4465 12.6561 11.5996 11.6248 12.7028C10.6123 13.8028 8.6748 14.3559 7.9998 14.3559C6.91855 14.3559 6.50293 14.1434 6.1498 13.9028C5.79668 13.659 5.33418 13.084 5.33418 12.359V8.1465H4.05605L2.83105 6.86838H5.3373V4.33713C5.3373 3.7715 4.77168 3.46213 4.40293 3.43088C4.17793 3.41213 3.93105 3.47463 3.84355 3.56525C3.68418 3.29963 3.53105 2.97775 3.39043 2.60588C3.39043 2.60588 3.51543 2.15588 3.9248 1.88713C4.20605 1.70275 4.47168 1.6465 4.88418 1.6465C5.66855 1.64338 6.03105 2.01213 6.1998 2.259Z"
                         fill="#C1152E" />
                     </svg></span>
-                  <span class="discount-price">
+                  <span class="text-info fw-normal">
                     ৩,৫০০
                   </span>
-                </p>
+                </h5>
               </div>
-              <h5 class="product-title">পেমেন্ট মেথড সিলেক্ট করুন</h5>
-              <ul class="list-group">
-                <li class="list-group-item gap-2">
-                  <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
-                    checked />
-                  <label class="form-check-label product-title" for="firstRadio">বিকাশ</label>
+              <h4 class="fw-bold text-info">পেমেন্ট মেথড সিলেক্ট করুন</h4>
+              <ul class="list-group mb-5">
+                <li class="list-group-item justify-content-between">
+                  <span>
+                    <input class="form-check-input me-2" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                      checked />
+                    <label class="form-check-label h4 text-info fw-semibold" for="firstRadio">বিকাশ</label>
+                  </span>
                   <img src="/assets/images/checkout/bkash-logo.png" alt="bkash logo" />
                 </li>
-                <li class="list-group-item gap-2">
-                  <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio" />
-                  <label class="form-check-label product-title" for="secondRadio">নগদ</label>
+                <li class="list-group-item justify-content-between">
+                  <span>
+                    <input class="form-check-input me-2" type="radio" name="listGroupRadio" value="" id="secondRadio" />
+                    <label class="form-check-label h4 text-info fw-semibold" for="secondRadio">নগদ</label>
+                  </span>
                   <img src="/assets/images/checkout/nagad-logo.png" alt="nagad logo" />
                 </li>
                 <li class="list-group-item gap-2">
-                  <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio" />
-                  <label class="form-check-label product-title" for="thirdRadio">অন্যান্য</label>
+                  <input class="form-check-input me-2" type="radio" name="listGroupRadio" value="" id="thirdRadio" />
+                  <label class="form-check-label h4 text-info fw-semibold" for="thirdRadio">অন্যান্য</label>
                 </li>
               </ul>
-              <a href="#" class="checkout-btn text-decoration-none">পেমেন্ট</a>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="text-decoration-none bg-info text-light-emphasis h3 p-3 rounded-4 px-5">পেমেন্ট</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <footer class="footer-content">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-4 g-4 pb-5">
-        <div class="col-md-3">
-          <p>
-            <img class="footerlogo img-fluid" src="/assets/images/bhashaskool-footer-logo.png"
-              alt="bhashaskool footer logo" />
-          </p>
-          <p class="footer-text">
-            এর মুল লক্ষ্য হচ্ছে স্কুল বা কলেজের একঘেয়েমি থেকে দূরে সরে ভিন্ন
-            আঙ্গিকে মজার ছলে ভাষা শিখানো ক্লাসরুমে সবার অপঃরাব চধৎঃরপরঢ়ধঃরড়হ
-            নিশ্চিত করার মাধ্যমে।
-          </p>
-          <div class="d-flex gap-3 justify-content-start align-items-center">
-            <a href="https://www.facebook.com/SkyLaneEducation" class="text-white text-decoration-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-facebook footer-icon" viewBox="0 0 16 16">
-                <path
-                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
-                </path>
-              </svg>
-            </a>
-            <a href="https://twitter.com/SkyLane_edu" class="text-white text-decoration-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-twitter footer-icon" viewBox="0 0 16 16">
-                <path
-                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-                </path>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/SkyLane_education/" class="text-white text-decoration-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-instagram footer-icon" viewBox="0 0 16 16">
-                <path
-                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
-                </path>
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/channel/UCzF0ZsOyzQmneGwFa4psDxQ" class="text-white text-decoration-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-youtube footer-icon" viewBox="0 0 16 16">
-                <path
-                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <h3 class="footer-title">লিংক</h3>
-          <p class="footer-text">কোর্সসমুহ</p>
-          <p class="footer-text">ব্লগ</p>
-          <p class="footer-text">আমাদের সম্পর্কে</p>
-        </div>
-        <div class="col-md-4">
-          <h3 class="footer-title">যোগাযোগ</h3>
-          <div class="d-flex">
-            <p class="pe-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-geo-alt-fill text-white" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-              </svg>
-            </p>
-            <p class="mb-0 footer-text">Dhaka, Dhaka Division, Bangladesh</p>
-          </div>
-          <div class="d-flex">
-            <p class="pe-2">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                  class="bi bi-envelope text-white" viewBox="0 0 16 16">
-                  <path
-                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z">
-                  </path>
-                </svg>
-              </span>
-            </p>
-            <p class="footer-text">info@bhashaskool.com</p>
-          </div>
-          <div class="d-flex">
-            <p class="pe-2">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-telephone-fill text-white" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
-                  </path>
-                </svg>
-              </span>
-            </p>
-            <p class="footer-text">01790-313366</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <h3 class="footer-title">কল সেন্টার</h3>
-          <p class="footer-text">১২১২১</p>
-        </div>
-      </div>
-    </div>
-    <hr class="footer-btm" />
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <div class="col d-flex gap-2">
-          <p class="footer-bottom-text mb-0">Terms & Conditions</p>
-
-          <div class="vr"></div>
-          <p class="footer-bottom-text mb-0">Refund Policy</p>
-          <div class="vr"></div>
-          <p class="footer-bottom-text mb-0">Privacy Policy</p>
-        </div>
-        <div
-          class="col-lg-5 d-flex gap-3 justify-content-center justify-content-lg-end align-items-center pb-3 pb-md-0">
-          <p class="footer-bottom-text mb-0">Copyright @ 2023 Bhasha skool</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script type="text/javascript" src="/assets/js/popper.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+  <!-- footer -->
+  <%- include('/_components/footer') -%> <%-
+  include("/_components/scripts")-%>
 </body>
-
 </html>

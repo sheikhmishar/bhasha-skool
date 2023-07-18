@@ -14,6 +14,7 @@
   --secondary-gradient: linear-gradient(180deg, #272557 0%, #484ba0 100%);
   --tertiary-gradient: linear-gradient(45deg, #332f6f, #c1162e, #585cca);
   --card-gradient: linear-gradient(45deg, #c1162e, #585cca);
+  --course-gradient: linear-gradient(0deg, #4C69B9 0%, rgba(250, 250, 250, 0.00) 100%);
 }
 
 @font-face {
@@ -29,6 +30,12 @@ body {
 
 .top-50px {
   top: -50px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .top-50px{
+    top: 0px !important;
+  }
 }
 
 .secondary-font-family {
@@ -51,11 +58,30 @@ body {
   background-image: var(--primary-gradient);
 }
 
+.course-details-gradient{
+  background-image: var(--course-gradient);
+}
+
 .list-group-padding {
   --bs-list-group-item-padding-x: 0rem !important;
   --bs-list-group-bg: #fdf6f7;
 }
 
+.top-10{
+  top: 10% !important
+}
+
+.left-80{
+  left: 84% !important
+}
+
+.bottom-10{
+  bottom: 10% !important;
+}
+
+.left-n10{
+  left: -10% !important;
+}
 
 .nav-btn {
   display: flex;
@@ -107,118 +133,70 @@ footer .vr {
   background-color: #9c9ab0;
   opacity: 1;
 }
-/* checkout page */
-.checkout-title {
-  color: var(--foundation-red-red-50, #f9e8ea);
-  text-align: center;
-  font-family: Li Ador Noirrit;
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 160%;
+
+.btn{
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-size: 1.75rem;
 }
-.checkout-subtitle {
-  color: var(--foundation-red-grey-r-0, #fff);
-  text-align: center;
-  font-family: Li Ador Noirrit;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
+
+@media screen and (max-width: 768px) {
+  .btn {
+	--bs-btn-padding-x: 0.5rem;
+	--bs-btn-padding-y: 0.5rem;
+	--bs-btn-font-size: 1.25rem;
 }
-/* oder summary */
-.order-summary {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
-.order-summary-title {
-  color: var(--foundation-red-red-500, #c1152e);
-  font-family: Li Ador Noirrit;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+
+.btn-primary {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: #272454;
+	--bs-btn-border-color: #272454;
+	--bs-btn-hover-color: #272454;
+	--bs-btn-hover-bg:  #F9E8EA;
+	--bs-btn-hover-border-color:  #F9E8EA;
+	--bs-btn-focus-shadow-rgb: 49,132,253;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #0a58ca;
+	--bs-btn-active-border-color: #0a53be;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #0d6efd;
+	--bs-btn-disabled-border-color: #0d6efd;
 }
-.order-course-title {
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Roboto;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+
+.btn-danger {
+  --bs-btn-color: #fff;
+	--bs-btn-bg: #c1162e;
+	--bs-btn-border-color: #c1162e;
+	--bs-btn-hover-color: #c1162e;
+	--bs-btn-hover-bg:  #F9E8EA;
+	--bs-btn-hover-border-color:  #F9E8EA;
+	--bs-btn-focus-shadow-rgb: 225,83,97;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #b02a37;
+	--bs-btn-active-border-color: #a52834;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #dc3545;
+	--bs-btn-disabled-border-color: #dc3545;
 }
-.order-course-price {
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.order-course-text {
-  color: var(--foundation-violet-violet-400, #525076);
-  font-family: Li Ador Noirrit;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.product-title {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 0;
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.product-price {
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.discount-title {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 0;
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.discount-minus {
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.discount-price {
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.promocode-title {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 0;
-  color: var(--foundation-red-red-500, #c1152e);
-  font-family: Li Ador Noirrit;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+
+.btn-light {
+  --bs-btn-color: #c1162e;
+	--bs-btn-bg: #F9E8EA;
+	--bs-btn-border-color: #F9E8EA;
+	--bs-btn-hover-color: #f9e8ea;
+	--bs-btn-hover-bg: #c1162e;
+	--bs-btn-hover-border-color:  #c1162e;
+	--bs-btn-focus-shadow-rgb: 211,212,213;
+	--bs-btn-active-color: #000;
+	--bs-btn-active-bg: #c6c7c8;
+	--bs-btn-active-border-color: #babbbc;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #000;
+	--bs-btn-disabled-bg: #f8f9fa;
+	--bs-btn-disabled-border-color: #f8f9fa;
 }
 
 .list-group-item {
@@ -256,4 +234,11 @@ footer .vr {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.testimonials{
+  /* opacity: 0.8; */
+background: linear-gradient( rgba(39 36 84), rgba(39, 36, 84, 0.59)), url('../images/testmonial-bg.png');
+background-repeat: no-repeat;
+background-size: cover;
 }

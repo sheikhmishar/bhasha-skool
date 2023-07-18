@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Bhasha Skool</title>
-    <%- include("/_components/head-seo") -%> <%- include("/_components/styles")
+    <%- include("/_components/head-seo") -%> 
+      <!-- slick css -->
+      <link rel="stylesheet" href="/assets/css/slick.min.css" />
+      <link rel="stylesheet" href="/assets/css/slick-theme.min.css" />
+    <%- include("/_components/styles")
     -%>
   </head>
 
@@ -25,16 +29,8 @@
               হয়ে উঠুন ভাষা Expert
             </p>
             <div class="d-flex gap-4 pt-3">
-              <a
-                href="#"
-                class="text-decoration-none bg-primary text-light h3 p-3 rounded-4"
-                >শিখতে শুরু করুন</a
-              >
-              <a
-                href="#"
-                class="text-decoration-none bg-light text-primary h3 p-3 rounded-4"
-                >শিখতে শুরু করুন</a
-              >
+              <a class="btn btn-danger rounded-4" href="#" role="button">শিখতে শুরু করুন</a>
+              <a class="btn btn-light rounded-4" href="#" role="button">শিখতে শুরু করুন</a>                           
             </div>
           </div>
 
@@ -52,34 +48,34 @@
     <section class="z-3 position-relative top-50px">
       <div class="container shadow-lg rounded-5 p-5 bg-white">
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-2 col-5">
             <h6 class="h4 text-center text-primary font-semibold">
               ১ কোটি + <br />
               <span class="text-info"> মোট শিক্ষার্থী </span>
             </h6>
           </div>
-          <div class="col-md-1 text-center">
+          <div class="col-md-1 text-center col-2">
             <div class="vr"></div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-5">
             <h6 class="h4 text-center text-primary font-semibold">
               ১ কোটি + <br />
               <span class="text-info"> মোট শিক্ষার্থী </span>
             </h6>
           </div>
-          <div class="col-md-1 text-center">
+          <div class="col-md-1 text-center d-md-flex d-none">
             <div class="vr"></div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-5">
             <h6 class="h4 text-center text-primary font-semibold">
               ১ কোটি + <br />
               <span class="text-info"> মোট শিক্ষার্থী </span>
             </h6>
           </div>
-          <div class="col-md-1 text-center">
+          <div class="col-md-1 text-center col-2">
             <div class="vr"></div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-5">
             <h6 class="h4 text-center text-primary font-semibold">
               ১ কোটি + <br />
               <span class="text-info"> মোট শিক্ষার্থী </span>
@@ -120,19 +116,15 @@
                 >
                   IELTS হিরো
                 </h5>
-                <div class="d-flex justify-content-center">
-                  <a
-                    href="#"
-                    class="text-decoration-none bg-info text-light h3 px-5 py-3 rounded-5"
-                    >বিস্তারিত দেখুন</a
-                  >
+                <div class="d-flex justify-content-center">                 
+                  <a class="btn btn-primary rounded-4" href="#" role="button">বিস্তারিত দেখুন</a>                           
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-8">
             <div class="row h-50">
-              <div class="col-md-6 h-100 py-2">
+              <div class="col-md-6 h-100 py-2 col-6">
                 <div class="p-5 rounded-5 shadow h-100">
                   <h5
                     class="fw-bold secondary-font-family text-primary d-flex justify-content-center align-items-center flex-column h-100"
@@ -142,7 +134,7 @@
                   </h5>
                 </div>
               </div>
-              <div class="col-md-6 h-100 py-2">
+              <div class="col-md-6 h-100 py-2 col-6">
                 <div class="p-5 rounded-5 shadow h-100">
                   <h5
                     class="fw-bold secondary-font-family text-primary d-flex justify-content-center align-items-center flex-column h-100"
@@ -153,7 +145,7 @@
                   </h5>
                 </div>
               </div>
-              <div class="col-md-6 h-100 py-2">
+              <div class="col-md-6 h-100 py-2 col-6">
                 <div class="p-5 rounded-5 shadow h-100">
                   <h5
                     class="fw-bold secondary-font-family text-primary d-flex justify-content-center align-items-center flex-column h-100"
@@ -164,7 +156,7 @@
                   </h5>
                 </div>
               </div>
-              <div class="col-md-6 h-100 py-2">
+              <div class="col-md-6 h-100 py-2 col-6">
                 <div class="p-5 rounded-5 shadow h-100">
                   <h5
                     class="fw-bold secondary-font-family text-primary d-flex justify-content-center align-items-center flex-column h-100"
@@ -321,7 +313,10 @@
                   >
                     ১২০০০
                   </p>
-                </div>
+                </div>  
+                <div class="d-flex justify-content-center pt-2 pb-2">
+                  <a class="btn btn-danger rounded-4" href="#" role="button">রেজিস্ট্রেশন করুন</a>
+                </div>              
               </div>
             </div>
           </div>
@@ -411,6 +406,9 @@
                     ১২০০০
                   </p>
                 </div>
+                <div class="d-flex justify-content-center pt-2 pb-2">
+                  <a class="btn btn-danger rounded-4" href="#" role="button">রেজিস্ট্রেশন করুন</a>
+                </div> 
               </div>
             </div>
           </div>
@@ -500,6 +498,9 @@
                     ১২০০০
                   </p>
                 </div>
+                <div class="d-flex justify-content-center pt-2 pb-2">
+                  <a class="btn btn-danger rounded-4" href="#" role="button">রেজিস্ট্রেশন করুন</a>
+                </div> 
               </div>
             </div>
           </div>
@@ -589,6 +590,9 @@
                     ১২০০০
                   </p>
                 </div>
+                <div class="d-flex justify-content-center pt-2 pb-2">
+                  <a class="btn btn-danger rounded-4" href="#" role="button">রেজিস্ট্রেশন করুন</a>
+                </div> 
               </div>
             </div>
           </div>
@@ -808,12 +812,8 @@
               ভাষা স্কুলের স্পোকেন কোর্সে অল্প সময়েই <br />
               শিখে নিন দূর্দান্ত স্পোকেন টেকনিক
             </p>
-            <div class="d-flex gap-4 pt-3">
-              <a
-                href="#"
-                class="text-decoration-none bg-info text-light h3 p-3 rounded-4"
-                >জানুন বিস্তারিত</a
-              >
+            <div class="d-flex gap-4 pt-3">             
+              <a class="btn btn-primary rounded-4" href="#" role="button">জানুন বিস্তারিত</a>                          
             </div>
           </div>
 
@@ -867,9 +867,10 @@
                 <div class="d-flex justify-content-center">
                   <a
                     href="#"
-                    class="text-decoration-none bg-primary text-light h3 p-3 rounded-4 px-5"
+                    class="btn btn-danger rounded-4"
+                    role="button"
                     >Get Started</a
-                  >
+                  >                  
                 </div>
               </div>
             </div>
@@ -907,10 +908,11 @@
               >
                 <div class="d-flex justify-content-center">
                   <a
-                    href="#"
-                    class="text-decoration-none bg-primary text-light h3 p-3 rounded-4 px-5"
-                    >Get Started</a
-                  >
+                  href="#"
+                  class="btn btn-danger rounded-4"
+                  role="button"
+                  >Get Started</a
+                > 
                 </div>
               </div>
             </div>
@@ -948,10 +950,11 @@
               >
                 <div class="d-flex justify-content-center">
                   <a
-                    href="#"
-                    class="text-decoration-none bg-primary text-light h3 p-3 rounded-4 px-5"
-                    >Get Started</a
-                  >
+                  href="#"
+                  class="btn btn-danger rounded-4"
+                  role="button"
+                  >Get Started</a
+                > 
                 </div>
               </div>
             </div>
@@ -982,44 +985,50 @@
             </h4>
             <div class="d-flex gap-4 pt-3">
               <a
-                href="#"
-                class="text-decoration-none bg-primary text-light h5 p-3 rounded-4"
-                >সব কোর্সগুলো দেখুন</a
-              >
-              <a
-                href="#"
-                class="text-decoration-none text-primary bg-light h5 p-3 rounded-4"
-                >সেমিনারে অংশ নিন</a
-              >
-              <a
-                href="#"
-                class="text-decoration-none text-primary bg-light h5 p-3 rounded-4"
-                >কল বুক করুন</a
-              >
+              href="#"
+              class="btn btn-danger rounded-4"
+              role="button"
+              >সব কোর্সগুলো দেখুন</a
+            > 
+            <a
+            href="#"
+            class="btn btn-light rounded-4"
+            role="button"
+            >সেমিনারে অংশ নিন</a
+          > 
+          <a
+            href="#"
+            class="btn btn-light rounded-4"
+            role="button"
+            >কল বুক করুন</a
+          >
             </div>
           </div>
         </div>
-      </div>
-      <div class="container w-50 pt-5">
+      </div>      
+    </section>
+    <!-- logo section -->
+    <section class="bg-secondary-subtle py-5">
+      <div class="container w-50">
         <h2 class="h1 text-primary text-center fw-semibold">
           অনুমোদিত রেজিস্ট্রেশন পয়েন্ট
         </h2>
-        <div class="row py-5">
-          <div class="col">
+        <div class="row py-5 logo">
+          <div class="col-12">
             <img
               src="/assets/images/idp-logo.png"
               alt="idp logo"
               class="text-center"
             />
           </div>
-          <div class="col">
+          <div class="col-12">
             <img
               src="/assets/images/british-council-logo.png"
               alt="british council logo"
               class="text-center"
             />
           </div>
-          <div class="col">
+          <div class="col-12">
             <img
               src="/assets/images/ielts-logo.png"
               alt="ielts logo"
@@ -1030,7 +1039,11 @@
       </div>
     </section>
     <!-- footer -->
-    <%- include('/_components/footer') -%> <%-
+    <%- include('/_components/footer') -%>
+    <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/slick.min.js"></script>
+<script type="text/javascript" src="/assets/js/script.js"></script>
+    <%-
     include("/_components/scripts")-%>
   </body>
 </html>
