@@ -67,6 +67,11 @@ body {
   --bs-list-group-bg: #fdf6f7;
 }
 
+.list-group-pad {
+  --bs-list-group-item-padding-x: 0rem !important;
+  --bs-list-group-bg: #fff;
+}
+
 .top-10{
   top: 10% !important
 }
