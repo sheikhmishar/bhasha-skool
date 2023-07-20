@@ -8,7 +8,6 @@
   --bs-dark-rgb: 16, 15, 35;
   --bs-dark-text-emphasis: #bcbbca;
   --bs-secondary-bg-subtle: #fdf6f7;
-
   --bs-gradient: linear-gradient(90deg, rgba(39, 36, 84), rgba(176, 19, 42));
   --primary-gradient: linear-gradient(90deg, #b0132a, #272454);
   --secondary-gradient: linear-gradient(180deg, #272557 0%, #484ba0 100%);
@@ -88,44 +87,6 @@ body {
   left: -10% !important;
 }
 
-.nav-btn {
-  display: flex;
-  padding: 0.5rem 1.25rem;
-  align-items: flex-start;
-  gap: 0.5rem;
-  border-radius: 0.9375rem;
-  border: 1px solid var(--foundation-red-red-500, #c1152e);
-  color: var(--foundation-red-red-500, #c1152e);
-  font-family: Li Alinur Kurigram ANSI V1;
-  font-size: 1.25rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: normal;
-}
-.lang-btn {
-  display: flex;
-  padding: 0.5rem 1.25rem;
-  align-items: flex-start;
-  gap: 1rem;
-  border-radius: 0.9375rem;
-  border: 1px solid var(--foundation-violet-violet-500, #272454);
-  color: var(--foundation-violet-violet-500, #272454);
-  font-family: Li Ador Noirrit VR;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.logo-text {
-  color: var(--foundation-red-red-500, #c1152e);
-  font-size: 2.5rem;
-  font-family: Li Ador Noirrit;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
 .footer-btm {
   border-bottom: 1px solid #9c9ab0;
 }
@@ -176,7 +137,7 @@ footer .vr {
 	--bs-btn-border-color: #c1162e;
 	--bs-btn-hover-color: #c1162e;
 	--bs-btn-hover-bg:  #F9E8EA;
-	--bs-btn-hover-border-color:  #F9E8EA;
+	--bs-btn-hover-border-color:  #c1162e;
 	--bs-btn-focus-shadow-rgb: 225,83,97;
 	--bs-btn-active-color: #fff;
 	--bs-btn-active-bg: #b02a37;
@@ -190,7 +151,7 @@ footer .vr {
 .btn-light {
   --bs-btn-color: #c1162e;
 	--bs-btn-bg: #F9E8EA;
-	--bs-btn-border-color: #F9E8EA;
+	--bs-btn-border-color: #c1162e;
 	--bs-btn-hover-color: #f9e8ea;
 	--bs-btn-hover-bg: #c1162e;
 	--bs-btn-hover-border-color:  #c1162e;
@@ -222,28 +183,87 @@ footer .vr {
   border-color: #272454;
 }
 
-.checkout-btn {
-  width: 30.5rem;
-  height: 3.5rem;
-  flex-shrink: 0;
-  border-radius: 0.9375rem;
-  background: var(--foundation-violet-violet-500, #272454);
-  display: flex;
-  width: 19.5rem;
-  flex-direction: column;
-  flex-shrink: 0;
-  color: var(--foundation-violet-violet-50, #e9e9ee);
-  text-align: center;
-  font-family: Li Ador Noirrit;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
 .testimonials{
   /* opacity: 0.8; */
 background: linear-gradient( rgba(39 36 84), rgba(39, 36, 84, 0.59)), url('../images/testmonial-bg.png');
 background-repeat: no-repeat;
 background-size: cover;
+}
+
+.navbar-scrolled {
+  background: #fff !important;
+}
+
+.top-margin{
+  margin-top: 80px;
+}
+
+.what-you-get-gradient .nav-link {
+	font-size: 2rem !important;
+	color: var(--bs-dark-text-emphasis);
+  background: rgba(var(--bs-dark-rgb));
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color: #fff;
+	background: var(--card-gradient);
+}
+
+.course-list .card-hover{
+  transition:  height 0.3s ease-in-out;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color:  #c1162e;
+}
+
+.course-list .card-hover:hover{
+  height: 210% !important;
+  z-index: 10;
+  transition:  height 0.3s ease-in-out;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--secondary-gradient);
+  color:  #F9E8EA;
+}
+
+.course-list .span:hover{
+  color: #fff;
+}
+
+.course-list-hover{
+  /* transition:  all 0.3s ease-out; */
+  top: 0px !important;
+  color:  #c1162e;
+}
+
+.course-list-hover:hover{
+  height: 208% !important;
+  top: -168px !important;
+  transition:  all 0.3s ease-out;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--secondary-gradient);
+  color:  #F9E8EA;
+}
+
+.mydivouter{
+	position:relative;
+	background: #f90;
+    width: 200px;
+    height: 120px;
+    margin: 0 auto;
+}
+.mydivoverlap{
+    position: relative;
+    z-index: 12;
+}
+.mybuttonoverlap{
+	position: absolute;
+    z-index: 12;
+    top: 44px;
+    display: none;
+    left: 59px;	
+}
+.mydivouter:hover .mybuttonoverlap{ 
+	display:block;
 }

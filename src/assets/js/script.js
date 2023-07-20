@@ -1,3 +1,17 @@
+// navbar sticky
+const navel = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (scrollY < 56) {
+    navel.classList.remove("navbar-scrolled");
+    // navel.classList.add("navbar-margin");
+  }
+
+  if (window.scrollY > 60) {
+    navel.classList.add("navbar-scrolled");
+    // navel.classList.remove("navbar-margin");
+  }
+});
+
 $(document).ready(function ($) {
     // Initialize the Slick Carousel
     $(".logo").slick({
