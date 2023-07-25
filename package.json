@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "watch": "nodemon -w ./src -e ejs build"
+    "watch": "nodemon -w ./src -e ejs,css build"
   },
   "repository": {
     "type": "git",

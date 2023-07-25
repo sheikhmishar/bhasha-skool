@@ -13,7 +13,7 @@
     <%- include("/_components/nav") -%>
     <!-- about banner section -->
     <section class="bg-gradient py-5 top-margin">
-        <div class="container w-50 py-5">
+        <div class="container py-5">
             <h1 class="text-center display-3 fw-bold text-light">আমাদের সম্পর্কে</h1>
             <h2 class="text-center text-white">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,21 +51,164 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 col-12">
-                    <h2 class="h1 text-primary fw-semibold">                        
+                    <h2 class="h1 text-primary fw-semibold text-center text-md-start">                        
                         আমাদের গল্প
                         </h2>
-                    <h4 class="text-info">হচ্ছে স্কুল বা কলেজের একঘেয়েমি থেকে দূরে সরে ভিন্ন আঙ্গিকে মজার ছলে ভাষা শিখানো ক্লাসের সবার
+                    <h4 class="text-info text-center text-md-start">হচ্ছে স্কুল বা কলেজের একঘেয়েমি থেকে দূরে সরে ভিন্ন আঙ্গিকে মজার ছলে ভাষা শিখানো ক্লাসের সবার
                         Active Participation নিশ্চিত করা। সেই সাথে ভাষা স্কুলে পাবেন Unique সব Tips & tricks ও expert
                         guidence যা আপনার জন্য English কে করবে simplified. </h4>
                 </div>
                 <div class="col-md-6 col-12">
-                    <img class="img-fluid" src="/assets/images/about/our-stories.png" alt="our stories">
+                    <!-- <img class="img-fluid" src="/assets/images/about/our-stories.png" alt="our stories"> -->
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                          <img src="/assets/images/about/our-stories.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                          <img src="/assets/images/about/our-stories.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                          <img src="/assets/images/about/our-stories.png" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- specilized packages section -->
+    <section class="bg-secondary-subtle py-5">
+      <div class="container">
+        <h2 class="h1 text-primary text-center fw-semibold">স্পেশালাইজড সার্ভিসেস</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
+          <div class="col">
+            <div class="card border-0 bg-light">
+              <div class="card-body">
+                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
+                <div class="d-flex gap-2">
+                  <span
+                    ><svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
+                        fill="#272454"
+                      ></path>
+                    </svg>
+                  </span>
+                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
+                </div>
+                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+                <ul class="">
+                  <li class="h5 text-info">৪টা মক টেস্ট</li>
+                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
+                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
+                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
+                </ul>
+              </div>
+              <div class="card-footer border-top-0 pb-4 bg-light">
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="btn btn-danger rounded-4" role="button"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 bg-light">
+              <div class="card-body">
+                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
+                <div class="d-flex gap-2">
+                  <span
+                    ><svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
+                        fill="#272454"
+                      ></path>
+                      </svg>
+                    </span>
+                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
+                </div>
+                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+                <ul class="">
+                  <li class="h5 text-info">১২ টি মকটেস্ট</li>
+                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
+                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
+                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
+                </ul>
+              </div>
+              <div class="card-footer border-top-0 pb-4 bg-light">
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="btn btn-danger rounded-4" role="button"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 bg-light">
+              <div class="card-body">
+                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
+                <div class="d-flex gap-2">
+                  <span
+                    ><svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
+                        fill="#272454"
+                      ></path>
+                    </svg>
+                    </span>
+                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
+                </div>
+                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+                <ul class="">
+                  <li class="h5 text-info">১২ টি মকটেস্ট</li>
+                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
+                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
+                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
+                </ul>
+              </div>
+              <div class="card-footer border-top-0 pb-4 bg-light">
+                <div class="d-flex justify-content-center">
+                  <a href="#" class="btn btn-danger rounded-4" role="button"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- teams  -->
-    <section class="py-5">
+    <section class="py-5 d-none">
         <div class="container position-relative">
             <img class="img-fluid" src="/assets/images/about/teams.png" alt="teams">
             <div class="card rounded-5 bg-white border-0 shadow position-absolute top-10 left-80 w-25 d-md-block d-none">
@@ -96,7 +239,7 @@
                             <path d="M20.0035 0C13.5702 0 8.33683 5.23333 8.33683 11.6667C8.33683 18.1 13.5702 23.3333 20.0035 23.3333C26.4368 23.3333 31.6702 18.1 31.6702 11.6667C31.6702 5.23333 26.4368 0 20.0035 0ZM26.3152 11.2617L24.0468 13.5867L24.5852 16.8833C24.6225 17.1147 24.594 17.3519 24.503 17.5679C24.412 17.7839 24.2621 17.9699 24.0704 18.1048C23.8787 18.2396 23.6529 18.3179 23.4189 18.3306C23.1849 18.3433 22.952 18.29 22.7468 18.1767L20.0035 16.6617L17.2602 18.1783C17.0549 18.293 16.8214 18.3473 16.5867 18.3351C16.3519 18.3228 16.1253 18.2446 15.9331 18.1093C15.7408 17.974 15.5907 17.7871 15.4999 17.5702C15.4092 17.3533 15.3815 17.1152 15.4202 16.8833L15.9585 13.5867L13.6918 11.2617C13.5314 11.0971 13.4195 10.8915 13.3683 10.6675C13.3171 10.4435 13.3286 10.2097 13.4017 9.99181C13.4747 9.77392 13.6064 9.58038 13.7822 9.43246C13.9581 9.28454 14.1713 9.18796 14.3985 9.15333L17.4835 8.68167L18.8735 5.72C19.2835 4.84167 20.7252 4.84167 21.1352 5.72L22.5252 8.68167L25.6102 9.15333C25.8379 9.1871 26.0518 9.28325 26.2282 9.43113C26.4046 9.57901 26.5366 9.77285 26.6096 9.99117C26.6826 10.2095 26.6938 10.4437 26.6418 10.668C26.5898 10.8922 26.4768 11.0977 26.3152 11.2617ZM9.93683 21.6333L3.48683 33.2167C3.27016 33.6167 3.28683 34.1167 3.53683 34.5C3.78683 34.8833 4.22016 35.1167 4.68683 35.0667L9.82016 34.6833L12.0868 39.3C12.3035 39.7167 12.7202 39.9833 13.1702 40H13.2035C13.6535 40 14.0868 39.75 14.3035 39.3667L18.5035 31.9L14.4202 24.6833C12.7444 23.9627 11.2225 22.9274 9.93683 21.6333ZM36.5035 33.2167L30.0035 21.7C27.8414 23.8631 25.0326 25.2616 22.0035 25.6833C21.3535 25.7833 20.6868 25.8333 20.0035 25.8333C19.2702 25.8333 18.5535 25.7833 17.8535 25.6667L19.9368 29.35L25.5868 39.3667C25.8035 39.75 26.2202 40 26.6702 40H26.7035C27.1702 39.9833 27.5868 39.7167 27.8035 39.3L30.0868 34.6833L35.3202 35.0833C35.7868 35.1167 36.2202 34.9 36.4702 34.5C36.7202 34.1167 36.7368 33.6167 36.5035 33.2167Z" fill="#272454"/>
                           </svg>                         
                     </span>
-                    <h4 class="h1 text-info fw-bold">২+ বছরের অভিজ্ঞতা</h4>
+                    <h4 class="h1 text-info fw-bold">২+ বছরের সফলতা</h4>
                 </div>
 
             </div>
@@ -105,8 +248,8 @@
     <!-- our teachers -->
     <section class="bg-secondary-subtle py-5">
         <div class="container">
-            <h2 class="h1 text-center text-primary fw-semibold">আমাদের অভিজ্ঞ শিক্ষকমন্ডলী </h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <h2 class="h1 text-center text-primary fw-semibold">ভাষা স্কুল পরিবারের সদস্যবৃন্দ</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
                 <div class="col">
                   <div class="card py-5 align-items-center border-0 rounded-4">
                     <img src="/assets/images/about/teachers.png" class="card-img-top w-50" alt="teacher">
