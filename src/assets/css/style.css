@@ -68,12 +68,22 @@ body {
   font-family: var(--font-family-secondary);
 }
 
+.home-bg-gradient{
+  background: url('../images/home/hero-section-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .course-list-gradient {
   background-image: var(--secondary-gradient);
 }
 
 .what-you-get-gradient {
-  background-image: var(--tertiary-gradient);
+  /* background-image: var(--tertiary-gradient); */
+  background: url('../images/home/bg-whatyouget.jpg');
+  background-repeat: no-repeat;  
+  background-size: cover;
 }
 
 .card-gradient {
@@ -81,7 +91,16 @@ body {
 }
 
 .learn-english-gradient {
-  background-image: var(--primary-gradient);
+  /* background-image: var(--primary-gradient); */
+  background: url('../images/home/bg-quiz-contest.jpg');
+  background-repeat: no-repeat;  
+  background-size: cover;
+}
+
+.bg-language-club{
+  background: url('../images/home/bg-language-club.jpg');
+  background-repeat: no-repeat;  
+  background-size: cover; 
 }
 
 .course-details-gradient {
@@ -211,6 +230,11 @@ body {
   color: #fff;
   background: var(--card-gradient);
 }
+.course-list{
+  background: url('../images/home/bg-course-list.jpg');
+  background-repeat: no-repeat;  
+  background-size: cover;
+}
 
 .course-list .card-hover {
   transition: height 0.3s ease-in-out;
@@ -289,4 +313,72 @@ hr {
   .dropend .dropdown-toggle::after {
     transform: rotate(90deg);
   }
+}
+
+.footerlogo{
+  width: 60% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .footerlogo{
+    width: 45% !important;
+  }
+}
+
+/* customize slick  */
+.slick-dots li {
+	margin: 0px 8px;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 25px !important;
+  height: 0px !important;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+}
+
+.slick-dots li button::before {
+  display: block !important;
+  width: 25px !important;
+  height: 0px !important;
+  padding: 1px !important;
+  cursor: pointer;
+  color: transparent;
+  padding: 0;
+  border: none;
+  background-color: #fff !important;
+  content: "" !important;
+}
+
+.slick-dots li.slick-active button {
+  /* background-color: #fff !important ; */
+  content: "" !important;
+}
+
+.courses .slick-dots li button::before {
+  display: block !important;
+  width: 25px !important;
+  height: 0px !important;
+  padding: 1px !important;
+  cursor: pointer;
+  color: transparent;
+  padding: 0;
+  border: none;
+  background-color: #272454 !important;
+  content: "" !important;
+}
+
+.courses .slick-next::before {
+  color: #272454 !important;
+  padding-right: 15px;
+}
+
+.courses .slick-prev::before {
+  color: #272454 !important;
+  padding-left: 15px;
 }
