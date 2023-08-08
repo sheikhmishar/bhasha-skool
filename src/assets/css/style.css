@@ -103,6 +103,12 @@ body {
   background-size: cover; 
 }
 
+.bg-contact{
+  background: url('../images/home/bg-contact.svg');
+  background-repeat: no-repeat;  
+  background-size: cover; 
+}
+
 .course-details-gradient {
   background-image: var(--course-gradient);
 }
