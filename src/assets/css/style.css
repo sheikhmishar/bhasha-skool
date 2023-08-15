@@ -90,9 +90,9 @@ body {
   background-image: var(--card-gradient);
 }
 
-.learn-english-gradient {
+.quiz-gradient {
   /* background-image: var(--primary-gradient); */
-  background: url('../images/home/bg-quiz-contest.jpg');
+  background: url('../images/home/bg-quiz.jpg');
   background-repeat: no-repeat;  
   background-size: cover;
 }
@@ -115,7 +115,7 @@ body {
 
 .list-group-padding {
   --bs-list-group-item-padding-x: 0rem !important;
-  --bs-list-group-bg: #fdf6f7;
+  --bs-list-group-bg: transparent
 }
 
 .list-group-pad {
@@ -322,12 +322,12 @@ hr {
 }
 
 .footerlogo{
-  width: 60% !important;
+  width: 30% !important;
 }
 
 @media screen and (max-width: 768px) {
   .footerlogo{
-    width: 45% !important;
+    width: 25% !important;
   }
 }
 
@@ -366,7 +366,7 @@ hr {
   content: "" !important;
 }
 
-.courses .slick-dots li button::before {
+.courses .slick-dots li button::before , .packages .slick-dots li button::before {
   display: block !important;
   width: 25px !important;
   height: 0px !important;
@@ -379,12 +379,19 @@ hr {
   content: "" !important;
 }
 
-.courses .slick-next::before {
+.courses .slick-next::before , .packages .slick-next::before{
   color: #272454 !important;
   padding-right: 15px;
 }
 
-.courses .slick-prev::before {
+.courses .slick-prev::before , .packages .slick-prev::before{
   color: #272454 !important;
   padding-left: 15px;
+}
+
+#packages .slick-current{
+  opacity: 1;
+  transform: scale(1.2);
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

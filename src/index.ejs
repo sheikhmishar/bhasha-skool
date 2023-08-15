@@ -1,1030 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Bhasha Skool</title>
-    <%- include("/_components/head-seo") -%>
-    <!-- slick css -->
-    <link rel="stylesheet" href="/assets/css/slick.min.css" />
-    <link rel="stylesheet" href="/assets/css/slick-theme.min.css" />
-    <%- include("/_components/styles") -%>
-  </head>
 
-  <body>
-    <!-- nav-bar -->
-    <%- include("/_components/nav") -%>
-    <!-- hero section -->
-    <section class="home-bg-gradient py-5 top-margin">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h2 class="display-3 fw-bold text-light text-center text-md-start">
-              সহজ কৌশলে ইংরেজির প্রতি <br />
-              জমা হওয়া ভীতি কাটিয়ে উঠুন
-            </h2>
-            <p class="text-light h2 text-center text-md-start">
-              সঠিক নির্দেশনা, দুর্দান্ত সব Techniques ও Expert দের<br />তত্ত্বাবধায়নে
-              হয়ে উঠুন ভাষা Expert
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Bhasha Skool</title>
+  <%- include("/_components/head-seo") -%>
+  <!-- slick css -->
+  <link rel="stylesheet" href="/assets/css/slick.min.css" />
+  <link rel="stylesheet" href="/assets/css/slick-theme.min.css" />
+  <%- include("/_components/styles") -%>
+</head>
+
+<body>
+  <!-- nav-bar -->
+  <%- include("/_components/nav") -%>
+  <!-- hero section -->
+  <section class="home-bg-gradient py-5 top-margin">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="display-3 fw-bold text-light text-center text-md-start">
+            ইংরেজি ও IELTS এর Expert <br />                      
+            হয়ে উঠুন সঠিক নির্দেশনায়
+          </h2>
+          <p class="text-light h2 text-center text-md-start">
+            <!-- সঠিক নির্দেশনা, দুর্দান্ত সব Techniques ও Expert দের<br />তত্ত্বাবধায়নে
+            হয়ে উঠুন ভাষা Expert -->
+            অভিজ্ঞ শিক্ষকদের তৈরি দুর্দান্ত সব Tips, Tricks <br> ও Techniques এর সমন্বয়ে
+          </p>
+          <div class="d-flex gap-4 pt-3 justify-content-center justify-content-md-start">
+            <a class="btn btn-danger rounded-4" href="/our-courses/" role="button">শিখতে শুরু করুন</a>
+            <a class="btn btn-light rounded-4" href="#" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">ফ্রি ক্লাস করুন</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <img class="img-fluid" src="/assets/images/home/hero-banner.png" alt="hero banner" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- form modal -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <!-- <h1 class="modal-title fs-5" id="registrationModalLabel">Modal title</h1> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <a class="navbar-brand" href="/">
+              <img src="/assets/images/bhasha-skool-logo.png" alt="bhasha skool logo" class="img-fluid" />
+            </a>
+            <h2 class="text-info">সুযোগ হাতছাড়া করবেন না</h2>
+            <p class="fs-5 text-info">
+              সঠিক নির্দেশনা, দুর্দান্ত সব Techniques ও Expert দের
+              তত্ত্বাবধায়নে হয়ে উঠুন ভাষা Expert
             </p>
-            <div class="d-flex gap-4 pt-3 justify-content-center justify-content-md-start">
-              <a class="btn btn-danger rounded-4" href="#" role="button"
-                >শিখতে শুরু করুন</a
-              >
-              <a class="btn btn-light rounded-4" href="#" role="button"
-                >ফ্রি ক্লাস করুন</a
-              >
+            <form action="/" method="get">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
+                <label class="h5 text-info" for="name">Enter Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
+                <label class="h5 text-info" for="email">Enter Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" required />
+                <label class="h5 text-info" for="phone">Enter Phone Number</label>
+              </div>
+              <div class="modal-footer border-0 justify-content-center">
+                <button class="btn btn-danger" type="submit">
+                  রেজিস্ট্রেশন করুন
+                </button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                  বন্ধ করুন
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- student counter -->
+  <section class="z-2 position-relative top-50px d-none d-md-flex">
+    <div class="container shadow-lg rounded-5 p-5 bg-white">
+      <div class="row">
+        <div class="col-md-2 col-5">
+          <h6 class="h4 text-center text-primary font-semibold">
+            ১ কোটি + <br />
+            <span class="text-info">মোট শিক্ষার্থী</span>
+          </h6>
+        </div>
+        <div class="col-md-1 text-center col-2 d-md-flex justify-content-center">
+          <div class="vr"></div>
+        </div>
+        <div class="col-md-2 col-5">
+          <h6 class="h4 text-center text-primary font-semibold">
+            ৫০,০০০ +<br />
+            <span class="text-info">শিক্ষার্থী</span>
+          </h6>
+        </div>
+        <div class="col-md-1 text-center d-md-flex d-none justify-content-center">
+          <div class="vr"></div>
+        </div>
+        <div class="col-md-2 col-5">
+          <h6 class="h4 text-center text-primary font-semibold">
+            ৩ +<br />
+            <span class="text-info">সফলতার বছর</span>
+          </h6>
+        </div>
+        <div class="col-md-1 text-center col-2 d-md-flex justify-content-center">
+          <div class="vr"></div>
+        </div>
+        <div class="col-md-2 col-5">
+          <h6 class="h4 text-center text-primary font-semibold">
+            ১০ +<br />
+            <span class="text-info">ল্যাংগুয়েজ কোর্স</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- mobile view of student counter -->
+  <section class="py-4 position-relative d-block d-md-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h6 class="h4 text-center text-primary font-semibold py-4 shadow rounded-4">
+            ১ কোটি + <br />
+            <span class="text-info">মোট শিক্ষার্থী</span>
+          </h6>
+        </div>        
+        <div class="col-6">
+          <h6 class="h4 text-center text-primary font-semibold py-4 shadow rounded-4">
+            ৫০,০০০ +<br />
+            <span class="text-info">শিক্ষার্থী</span>
+          </h6>
+        </div>       
+        <div class="col-6">
+          <h6 class="h4 text-center text-primary font-semibold py-4 shadow rounded-4">
+            ৩ +<br />
+            <span class="text-info">সফলতার বছর</span>
+          </h6>
+        </div>       
+        <div class="col-6">
+          <h6 class="h4 text-center text-primary font-semibold py-4 shadow rounded-4">
+            ১০ +<br />
+            <span class="text-info">ল্যাংগুয়েজ কোর্স</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- course list -->
+  <section class="py-5 course-list d-none d-md-block">
+    <div class="container w-75">
+      <h2 class="text-center h4 text-info">কোর্সসমূহ</h2>
+      <h3 class="h1 text-primary text-center fw-semibold">
+        গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
+      </h3>
+      <div class="row pt-5">
+        <div class="col-md-4">
+          <div class="row h-50">
+            <div class="col-md-12 h-100 py-2 col-6">
+              <div class="p-5 rounded-5 shadow h-100 card-hover border-0 card position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  Basic English <br />
+                  <span>মাস্টার ক্লাস</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 h-100 py-2 col-6">
+              <div class="p-5 rounded-5 shadow h-100 card border-0 course-list-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  IELTS
+                  <br />
+                  <span>হিরো</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row h-50">
+            <div class="col-md-12 h-100 py-2 col-6">
+              <div class="p-5 rounded-5 shadow h-100 card-hover border-0 card position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  জিরো টু<br />
+                  <span>IELTS হিরো</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 h-100 py-2 col-6">
+              <div class="p-5 rounded-5 shadow h-100 card border-0 course-list-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  দুর্দান্ত
+                  <br />
+                  <span>Spoken</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row h-50">
+            <div class="col-md-12 h-100 py-2 col-6">
+              <div class="p-5 rounded-5 shadow h-100 card border-0 card-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  তুখোড়
+                  <br />
+                  <span>Writing</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 h-100 py-2 col-6">
+              <div class="p-5 rounded-5 shadow h-100 card border-0 course-list-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  Mock
+                  <br />
+                  <span>Tests</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- course list mobile view  -->
+  <section class="py-5 course-list d-md-none d-block">
+    <div class="container">
+      <h2 class="text-center h4 text-info">কোর্সসমূহ</h2>
+      <h3 class="h1 text-primary text-center fw-semibold">
+        গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
+      </h3>
+      <div class="row pt-5">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12 py-2 col-6">
+              <div class="px-3 text-center rounded-4 shadow h-100 card-hover border-0 card position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  Basic English <br />
+                  <span>মাস্টার ক্লাস</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 py-2 col-6">
+              <div class="p-5 rounded-4 shadow h-100 card border-0 course-list-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  IELTS
+                  <br />
+                  <span>হিরো</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12 py-2 col-6">
+              <div class="px-3 text-center rounded-4 shadow h-100 card-hover border-0 card position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  জিরো টু<br />
+                  <span>IELTS হিরো</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 py-2 col-6">
+              <div class="p-5 rounded-4 shadow h-100 card border-0 course-list-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  দুর্দান্ত
+                  <br />
+                  <span>Spoken</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12 py-2 col-6">
+              <div class="p-5 rounded-4 shadow h-100 card border-0 card-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  তুখোড়
+                  <br />
+                  <span>Writing</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 py-2 col-6">
+              <div class="p-5 rounded-4 shadow h-100 card border-0 course-list-hover position-relative">
+                <h5 class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100">
+                  Mock
+                  <br />
+                  <span>Tests</span>
+                </h5>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary rounded-4 position-absolute bottom-50px" href="#" role="button">বিস্তারিত দেখুন</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- whatyou get from bhasha skool -->
+  <section class="py-5 what-you-get-gradient">
+    <div class="container">
+      <h2 class="h1 fw-semibold text-light-emphasis text-center">
+        ভাষা স্কুলের কোর্সগুলোতে যা যা পাবেন
+      </h2>
+      <div class="row align-items-center py-5">
+        <div class="col-md-6">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+              <img class="img-fluid w-75" src="/assets/images/home/free-material.png" alt="free material" />
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+              2
+            </div>
+            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
+              3
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+              4
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+              5
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link text-start rounded-4 py-3 active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+              ফ্রি কোর্স ম্যাটেরিয়ালস।
+            </button>
+            <button class="nav-link text-start rounded-4 py-3 mt-4" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+              ল্যাংগুয়েজ ক্লাব।
+            </button>
+            <button class="nav-link text-start rounded-4 py-3 mt-4" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">
+              ৬মাস/১ বছরের মেম্বারশিপ (শর্ত প্রযোজ্য)।
+            </button>
+            <button class="nav-link text-start rounded-4 py-3 mt-4" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+              অভিজ্ঞ শিক্ষকদের তত্ত্বাবধায়ন।
+            </button>
+            <button class="nav-link text-start rounded-4 py-3 mt-4" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+              কোর্স শেষে সার্টিফিকেট
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- running course -->
+  <section id="courses" class="bg-secondary-subtle position-relative">
+    <img src="/assets/images/home/bg-right.svg" class="position-absolute top-0 start-0 h-50 d-none d-md-block z-1" />
+    <img src="/assets/images/home/bg-left.svg" class="position-absolute end-0 left-0 h-50 d-none d-md-block z-1" />
+    <div class="container py-5">
+      <h2 class="text-center h4 text-info">চলমান কোর্স</h2>
+      <h3 class="h1 text-primary text-center fw-semibold">
+        গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
+      </h3>
+      <div class="card-group py-5 courses">
+        <% [{ coursesImg: "course.png",
+         coursesAlt: "Basic English মাস্টারক্লাস",
+          coursesTitle: `Basic English মাস্টারক্লাস`, 
+          courseDuration: "৩ মাস",
+          courseLength: "৩৪টি ক্লাস",
+          coursePrice: "৭,০০০",
+          coursesLink: "#",
+         },
+          { 
+            coursesImg:"course.png",
+           coursesAlt: "IELTS হিরো",
+            coursesTitle: `IELTS হিরো`, 
+            courseDuration: "৩ মাস",
+            courseLength: "৩৪টি ক্লাস",
+            coursePrice: "৯,০০০",
+          coursesLink: "#", },
+          { 
+            coursesImg: "course.png",
+          coursesAlt: "জিরো টু IELTS হিরো", 
+          coursesTitle: `জিরো টু IELTS হিরো`,
+          courseDuration: "৬ মাস",
+          courseLength: "৬৮টি ক্লাস",
+          coursePrice: "১৪,৫০০",
+          coursesLink: "#", 
+        },
+          { coursesImg: "course.png", 
+          coursesAlt: "দুর্দান্ত Spoken",
+           coursesTitle: `দুর্দান্ত Spoken`, 
+           courseDuration: "৩ মাস",
+           courseLength: "১৭টি ক্লাস",
+           coursePrice: "৫,০০০",
+           coursesLink: "#", },
+           {
+          coursesImg: "course.png",
+           coursesAlt: "তুখোড় Writing",
+          coursesTitle: `তুখোড় Writing`,
+          courseDuration: "৩ মাস",
+          courseLength: "১৭টি ক্লাস",
+           coursePrice: "৫,০০০",
+           coursesLink: "#", },
+           {
+            coursesImg: "course.png",
+             coursesAlt: "Mock Tests",
+            coursesTitle: `Mock Tests`,
+             courseDuration: "১টি থেকে",
+            courseLength: "Partial Tests",
+            coursePrice: "৫০০ টাকা থেকে",
+             coursesLink: "#", }
+          ].forEach(course => { %> <%-
+          include('/_components/home/courses-card.ejs', {...course}) %> <% }) %>
+      </div>
+    </div>
+  </section>
+  <!-- language club -->
+  <section class="bg-secondary-subtle py-5 bg-language-club">
+    <div class="container">
+      <h2 class="text-center h4 text-info">ল্যাংগুয়েজ ক্লাব</h2>
+      <h3 class="h1 text-primary text-center fw-semibold">
+        ভাষা স্কুলের ল্যাংগুয়েজ ক্লাব বৃত্তান্ত
+      </h3>
+      <div class="row align-items-center">
+        <div class="col-md-6 order-1 order-md-0">
+          <ul class="list-group list-group-padding">
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">সবার জন্য উন্মুক্ত</h4>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">
+                টিচারের উপস্থিতি এবং Advance Tips & Tricks
+              </h4>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">সপ্তাহে একদিন ল্যাঙ্গুয়েজ ক্লাব</h4>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">ইংরেজির যেকোনো সমস্যার সমাধান</h4>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">এডভান্স প্রেক্টিস সেশন</h4>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">ডিজিটাল ক্লাসরুম</h4>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+              <span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z" fill="#C1152E" />
+                  <path d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z" fill="#C1152E" />
+                  <path d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z" fill="#C1152E" />
+                </svg>
+              </span>
+              <h4 class="ps-3 text-info">টপিক ভিক্তিক আলোচনা</h4>
+            </li>
+          </ul>
+        </div>
 
-          <div class="col-md-6">
-            <img
-              class="img-fluid"
-              src="/assets/images/home/hero-banner.png"
-              alt="hero banner"
-            />
-          </div>
+        <div class="col-md-6 order-0 order-md-1">
+          <img class="img-fluid" src="/assets/images/home/language-club.png" alt="language club" />
         </div>
       </div>
-    </section>
-    <!-- student counter -->
-    <section class="z-2 position-relative top-50px">
-      <div class="container shadow-lg rounded-5 p-5 bg-white">
-        <div class="row">
-          <div class="col-md-2 col-5">
-            <h6 class="h4 text-center text-primary font-semibold">
-              ১ কোটি + <br />
-              <span class="text-info">মোট শিক্ষার্থী</span>
-            </h6>
-          </div>
-          <div
-            class="col-md-1 text-center col-2 d-md-flex justify-content-center"
-          >
-            <div class="vr"></div>
-          </div>
-          <div class="col-md-2 col-5">
-            <h6 class="h4 text-center text-primary font-semibold">
-              ৫০,০০০ +<br />
-              <span class="text-info">শিক্ষার্থী</span>
-            </h6>
-          </div>
-          <div
-            class="col-md-1 text-center d-md-flex d-none justify-content-center"
-          >
-            <div class="vr"></div>
-          </div>
-          <div class="col-md-2 col-5">
-            <h6 class="h4 text-center text-primary font-semibold">
-              ৩ +<br />
-              <span class="text-info">সফলতার বছর</span>
-            </h6>
-          </div>
-          <div
-            class="col-md-1 text-center col-2 d-md-flex justify-content-center"
-          >
-            <div class="vr"></div>
-          </div>
-          <div class="col-md-2 col-5">
-            <h6 class="h4 text-center text-primary font-semibold">
-              ১০ +<br />
-              <span class="text-info">ল্যাংগুয়েজ কোর্স</span>
-            </h6>
+    </div>
+  </section>
+  <!-- quiz section -->
+  <section class="quiz-gradient py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 order-1 order-md-0">
+          <h2 class="display-3 fw-bold text-light">মাসিক কুইজ কন্টেস্ট</h2>
+          <p class="text-light h2">
+            ভাষা স্কুলের কুইজ কন্টেস্টে যোগ দিয়ে জিতে <br />
+            নিন আকর্ষণীয় পুরস্কার
+          </p>
+          <div class="d-flex gap-4 pt-3">
+            <!-- future - facebook page link             -->
+            <a class="btn btn-danger rounded-4" href="#" role="button">জানুন বিস্তারিত</a>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- course list -->
-    <section class="py-5 course-list d-none d-md-block">
-      <div class="container w-75">
-        <h2 class="text-center h4 text-info">কোর্সসমূহ</h2>
-        <h3 class="h1 text-primary text-center fw-semibold">
-          গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
-        </h3>
-        <div class="row pt-5">
-          <div class="col-md-4">
-            <div class="row h-50">
-              <div class="col-md-12 h-100 py-2 col-6">
-                <div
-                  class="p-5 rounded-5 shadow h-100 card-hover border-0 card position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    Basic English <br />
-                    <span>মাস্টার ক্লাস</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 h-100 py-2 col-6">
-                <div
-                  class="p-5 rounded-5 shadow h-100 card border-0 course-list-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    তুখোড়
-                    <br />
-                    <span>Writing</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row h-50">
-              <div class="col-md-12 h-100 py-2 col-6">
-                <div
-                  class="p-5 rounded-5 shadow h-100 card-hover border-0 card position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    Basic English <br />
-                    <span>মাস্টার ক্লাস</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>              
-              <div class="col-md-12 h-100 py-2 col-6">
-                <div
-                  class="p-5 rounded-5 shadow h-100 card border-0 course-list-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    দুর্দান্ত
-                    <br />
-                    <span>Spoken</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>             
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row h-50">
-              <div class="col-md-12 h-100 py-2 col-6">
-                <div
-                  class="p-5 rounded-5 shadow h-100 card border-0 card-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    তুখোড়
-                    <br />
-                    <span>Writing</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div> 
-              <div class="col-md-12 h-100 py-2 col-6">
-                <div
-                  class="p-5 rounded-5 shadow h-100 card border-0 course-list-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    Kid's
-                    <br />
-                    <span>English</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- course list mobile view  -->
-    <section class="py-5 course-list d-md-none d-block">
-      <div class="container">
-        <h2 class="text-center h4 text-info">কোর্সসমূহ</h2>
-        <h3 class="h1 text-primary text-center fw-semibold">
-          গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
-        </h3>
-        <div class="row pt-5">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-12 py-2 col-6">
-                <div
-                  class="px-3 text-center rounded-4 shadow h-100 card-hover border-0 card position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    Basic English <br />
-                    <span>মাস্টার ক্লাস</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 py-2 col-6">
-                <div
-                  class="p-5 rounded-4 shadow h-100 card border-0 course-list-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    তুখোড়
-                    <br />
-                    <span>Writing</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-12 py-2 col-6">
-                <div
-                  class="px-3 text-center rounded-4 shadow h-100 card-hover border-0 card position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    Basic English <br />
-                    <span>মাস্টার ক্লাস</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>              
-              <div class="col-md-12 py-2 col-6">
-                <div
-                  class="p-5 rounded-4 shadow h-100 card border-0 course-list-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    দুর্দান্ত
-                    <br />
-                    <span>Spoken</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>             
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-12 py-2 col-6">
-                <div
-                  class="p-5 rounded-4 shadow h-100 card border-0 card-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    তুখোড়
-                    <br />
-                    <span>Writing</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div> 
-              <div class="col-md-12 py-2 col-6">
-                <div
-                  class="p-5 rounded-4 shadow h-100 card border-0 course-list-hover position-relative"
-                >
-                  <h5
-                    class="fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100"
-                  >
-                    Kid's
-                    <br />
-                    <span>English</span>
-                  </h5>
-                  <div class="d-flex justify-content-center">
-                    <a
-                      class="btn btn-primary rounded-4 position-absolute bottom-50px"
-                      href="#"
-                      role="button"
-                      >বিস্তারিত দেখুন</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- whatyou get from bhasha skool -->
-    <section class="py-5 what-you-get-gradient">
-      <div class="container">
-        <h2 class="h1 fw-semibold text-light-emphasis text-center">
-          ভাষা স্কুলের কোর্সগুলোতে যা যা পাবেন
-        </h2>
-        <div class="row align-items-center py-5">
-          <div class="col-md-6">
-            <div class="tab-content" id="v-pills-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="v-pills-home"
-                role="tabpanel"
-                aria-labelledby="v-pills-home-tab"
-                tabindex="0"
-              >
-                <img
-                  class="img-fluid w-75"
-                  src="/assets/images/home/free-material.png"
-                  alt="free material"
-                />
-              </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-profile"
-                role="tabpanel"
-                aria-labelledby="v-pills-profile-tab"
-                tabindex="0"
-              >
-                2
-              </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-disabled"
-                role="tabpanel"
-                aria-labelledby="v-pills-disabled-tab"
-                tabindex="0"
-              >
-                3
-              </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-messages"
-                role="tabpanel"
-                aria-labelledby="v-pills-messages-tab"
-                tabindex="0"
-              >
-                4
-              </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-settings"
-                role="tabpanel"
-                aria-labelledby="v-pills-settings-tab"
-                tabindex="0"
-              >
-                5
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div
-              class="nav flex-column nav-pills"
-              id="v-pills-tab"
-              role="tablist"
-              aria-orientation="vertical"
-            >
-              <button
-                class="nav-link text-start rounded-4 py-3 active"
-                id="v-pills-home-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-home"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-home"
-                aria-selected="true"
-              >
-                ফ্রি কোর্স ম্যাটেরিয়ালস।
-              </button>
-              <button
-                class="nav-link text-start rounded-4 py-3 mt-4"
-                id="v-pills-profile-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-profile"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-profile"
-                aria-selected="false"
-              >
-                ল্যাংগুয়েজ ক্লাব।
-              </button>
-              <button
-                class="nav-link text-start rounded-4 py-3 mt-4"
-                id="v-pills-disabled-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-disabled"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-disabled"
-                aria-selected="false"
-              >
-                ৬মাস/১ বছরের মেম্বারশিপ (শর্ত প্রযোজ্য)।
-              </button>
-              <button
-                class="nav-link text-start rounded-4 py-3 mt-4"
-                id="v-pills-messages-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-messages"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-messages"
-                aria-selected="false"
-              >
-                অভিজ্ঞ শিক্ষকদের তত্ত্বাবধায়ন।
-              </button>
-              <button
-                class="nav-link text-start rounded-4 py-3 mt-4"
-                id="v-pills-settings-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-settings"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-settings"
-                aria-selected="false"
-              >
-                কোর্স শেষে সার্টিফিকেট
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- running course -->
-    <section id="courses" class="bg-secondary-subtle position-relative">
-      <img src="/assets/images/home/bg-right.svg" class="position-absolute top-0 start-0 h-50 d-none d-md-block z-1">
-      <img src="/assets/images/home/bg-left.svg" class="position-absolute end-0 left-0 h-50 d-none d-md-block z-1">
-      <div class="container py-5">
-        <h2 class="text-center h4 text-info">চলমান কোর্স</h2>
-        <h3 class="h1 text-primary text-center fw-semibold">
-          গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
-        </h3>
-        <div class="card-group py-5 courses">
-          <% [{
-            coursesImg: "course.png",
-            coursesAlt: "জিরো টু IELTS হিরো",
-            coursesTitle: `জিরো টু IELTS হিরো`,
-            coursesLink: "#",
-          },{
-            coursesImg: "course.png",
-            coursesAlt: "জিরো টু IELTS হিরো",
-            coursesTitle: `জিরো টু IELTS হিরো`,
-            coursesLink: "#",
-          },{
-            coursesImg: "course.png",
-            coursesAlt: "জিরো টু IELTS হিরো",
-            coursesTitle: `জিরো টু IELTS হিরো`,
-            coursesLink: "#",
-          },{
-            coursesImg: "course.png",
-            coursesAlt: "জিরো টু IELTS হিরো",
-            coursesTitle: `জিরো টু IELTS হিরো`,
-            coursesLink: "#",
-          },{
-            coursesImg: "course.png",
-            coursesAlt: "জিরো টু IELTS হিরো",
-            coursesTitle: `জিরো টু IELTS হিরো`,
-            coursesLink: "#",
-          }
-          ].forEach(course => {
-        %>
-          <%- include('/_components/home/courses-card.ejs', {...course}) %>
-        <% }) %>
-                
-          </div>
-      </div>
-    </section>
-    <!-- language club -->
-    <section class="bg-secondary-subtle py-5 bg-language-club">
-      <div class="container">
-        <h2 class="text-center h4 text-info">ল্যাংগুয়েজ ক্লাব</h2>
-        <h3 class="h1 text-primary text-center fw-semibold">
-          ভাষা স্কুলের ল্যাংগুয়েজ ক্লাব বৃত্তান্ত
-        </h3>
-        <div class="row align-items-center">
-          <div class="col-md-6 order-1 order-md-0">
-            <ul class="list-group list-group-padding">
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">সবার জন্য উন্মুক্ত</h4>
-              </li>
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">
-                  টিচারের উপস্থিতি এবং Advance Tips & Tricks
-                </h4>
-              </li>
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">সপ্তাহে একদিন ল্যাঙ্গুয়েজ ক্লাব</h4>
-              </li>
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">ইংরেজির যেকোনো সমস্যার সমাধান</h4>
-              </li>
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">এডভান্স প্রেক্টিস সেশন</h4>
-              </li>
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">ডিজিটাল ক্লাসরুম</h4>
-              </li>
-              <li class="list-group-item d-flex align-items-center border-0">
-                <span>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.3327 16.4998C12.166 16.4998 11.9993 16.4332 11.866 16.2998L8.86602 13.2998C8.59935 13.0332 8.59935 12.6332 8.86602 12.3665C9.13268 12.0998 9.53268 12.0998 9.79935 12.3665L12.3327 14.8998L16.866 10.3665C17.1327 10.0998 17.5327 10.0998 17.7993 10.3665C18.066 10.6332 18.066 11.0332 17.7993 11.2998L12.7993 16.2998C12.666 16.4332 12.4993 16.4998 12.3327 16.4998Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M21.333 23.3333H5.33301C4.23301 23.3333 3.33301 22.4333 3.33301 21.3333V5.33325C3.33301 4.23325 4.23301 3.33325 5.33301 3.33325H21.333C22.433 3.33325 23.333 4.23325 23.333 5.33325V21.3333C23.333 22.4333 22.433 23.3333 21.333 23.3333ZM5.33301 4.66659C4.96634 4.66659 4.66634 4.96659 4.66634 5.33325V21.3333C4.66634 21.6999 4.96634 21.9999 5.33301 21.9999H21.333C21.6997 21.9999 21.9997 21.6999 21.9997 21.3333V5.33325C21.9997 4.96659 21.6997 4.66659 21.333 4.66659H5.33301Z"
-                      fill="#C1152E"
-                    />
-                    <path
-                      d="M26.666 28.6667H9.33268C8.96602 28.6667 8.66602 28.3667 8.66602 28C8.66602 27.6333 8.96602 27.3333 9.33268 27.3333H26.666C27.0327 27.3333 27.3327 27.0333 27.3327 26.6667V6.66667C27.3327 6.3 27.6327 6 27.9993 6C28.366 6 28.666 6.3 28.666 6.66667V26.6667C28.666 27.7667 27.766 28.6667 26.666 28.6667Z"
-                      fill="#C1152E"
-                    />
-                  </svg>
-                </span>
-                <h4 class="ps-3 text-info">টপিক ভিক্তিক আলোচনা</h4>
-              </li>
-            </ul>
-           </div>
 
-          <div class="col-md-6 order-0 order-md-1">
-            <img
-              class="img-fluid"
-              src="/assets/images/home/language-club.png"
-              alt="language club"
-            />
-          </div>
+        <div class="col-md-6">
+          <img class="img-fluid" src="/assets/images/home/quiz.svg" alt="quiz section img" />
         </div>
       </div>
-    </section>
-    <!-- english section -->
-    <section class="learn-english-gradient py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 order-1 order-md-0">
-            <h2 class="display-3 fw-bold text-light">মাসিক কুইজ কন্টেস্ট</h2>
-            <p class="text-light h2">
-              ভাষা স্কুলের কুইজ কন্টেস্টে যোগ দিয়ে জিতে <br />
-              নিন আকর্ষণীয় পুরস্কার
-            </p>
-            <div class="d-flex gap-4 pt-3">
-              <!-- future - facebook page link             -->
-              <a class="btn btn-primary rounded-4" href="#" role="button"
-                >জানুন বিস্তারিত</a
-              >
+    </div>
+  </section>
+  <!-- package section -->
+  <section class="bg-secondary-subtle position-relative">
+    <img src="/assets/images/home/bg-left.svg" class="position-absolute end-0 left-0 h-50 d-none d-md-block" />
+    <img src="/assets/images/home/bg-right.svg" class="position-absolute top-0 start-0 h-50 d-none d-md-block" />
+    <div class="container py-5 position-relative">
+      <h2 class="h1 text-primary text-center fw-semibold">মকটেস্ট প্যাকেজ</h2>
+      <div class="card-group py-5 packages">
+          <div class="card border-0 bg-light mx-2">
+            <div class="card-body">
+              <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
+              <div class="d-flex gap-2">
+                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                  </svg>
+                </span>
+                <h6 class="mb-0 text-info display-5 fw-semibold">৫০০</h6>
+              </div>
+              <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+              <ul class="">
+                <li class="h5 text-info">১টি মক টেস্ট</li>
+                <li class="h5 text-info">Gift Hamper</li>
+                <li class="h5 text-info">Feedback Session</li>
+                <li class="h5 text-info">Expert Guidance</li>
+              </ul>
+            </div>
+            <div class="card-footer border-top-0 pb-4 bg-light">
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
+              </div>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <img
-              class="img-fluid"
-              src="/assets/images/home/english.png"
-              alt="english img"
-            />
+          <div class="card border-0 bg-light mx-2">
+            <div class="card-body">
+              <h6 class="text-info pt-4">প্যাকেজ-০২</h6>
+              <div class="d-flex gap-2">
+                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                  </svg></span>
+                <h6 class="mb-0 text-info display-5 fw-semibold">১০০০</h6>
+              </div>
+              <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+              <ul class="">
+                <li class="h5 text-info">২ টি মকটেস্ট</li>
+                <li class="h5 text-info">Gift Hamper</li>
+                <li class="h5 text-info">Feedback Session</li>
+                <li class="h5 text-info">Expert Guidance</li>
+              </ul>
+            </div>
+            <div class="card-footer border-top-0 pb-4 bg-light">
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="card border-0 bg-light mx-2">
+            <div class="card-body">
+              <h6 class="text-info pt-4">প্যাকেজ-০৩</h6>
+              <div class="d-flex gap-2">
+                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                  </svg></span>
+                <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
+              </div>
+              <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+              <ul class="">
+                <li class="h5 text-info">৪টি মকটেস্ট</li>
+                <li class="h5 text-info">Gift Hamper</li>
+                <li class="h5 text-info">Feedback Session</li>
+                <li class="h5 text-info">Expert Guidance</li>
+              </ul>
+            </div>
+            <div class="card-footer border-top-0 pb-4 bg-light">
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 bg-light mx-2">
+            <div class="card-body">
+              <h6 class="text-info pt-4">প্যাকেজ-০৪</h6>
+              <div class="d-flex gap-2">
+                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                  </svg></span>
+                <h6 class="mb-0 text-info display-5 fw-semibold">২,০০০</h6>
+              </div>
+              <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+              <ul class="">
+                <li class="h5 text-info">৫টা মক টেস্ট</li>
+                <li class="h5 text-info">Gift Hamper</li>
+                <li class="h5 text-info">Feedback Session</li>
+                <li class="h5 text-info">Expert Guidance</li>
+              </ul>
+            </div>
+            <div class="card-footer border-top-0 pb-4 bg-light">
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0 bg-light mx-2">
+            <div class="card-body">
+              <h6 class="text-info pt-4">প্যাকেজ-০৫</h6>
+              <div class="d-flex gap-2">
+                <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                  </svg></span>
+                <h6 class="mb-0 text-info display-5 fw-semibold">৩,০০০</h6>
+              </div>
+              <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
+              <ul class="">
+                <li class="h5 text-info">৮টা মক টেস্ট</li>
+                <li class="h5 text-info">Gift Hamper</li>
+                <li class="h5 text-info">Feedback Session</li>
+                <li class="h5 text-info">Expert Guidance</li>
+              </ul>
+            </div>
+            <div class="card-footer border-top-0 pb-4 bg-light">
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
+              </div>
+            </div>
+          </div>
       </div>
-    </section>
-    <!-- package section -->
-    <section class="bg-secondary-subtle position-relative">
-      <img src="/assets/images/home/bg-left.svg" class="position-absolute end-0 left-0 h-50 d-none d-md-block z-2">
-      <img src="/assets/images/home/bg-right.svg" class="position-absolute top-0 start-0 h-50 d-none d-md-block z-2">
-      <div class="container py-5 position-relative">
-        <h2 class="h1 text-primary text-center fw-semibold">মকটেস্ট প্যাকেজ</h2>
-        <div class="row row-cols-2 row-cols-md-3 g-4 pt-5">
-          <div class="col">
-            <div class="card border-0 bg-light">
-              <div class="card-body">
-                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
-                <div class="d-flex gap-2">
-                  <span
-                    ><svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
-                        fill="#272454"
-                      ></path>
-                    </svg>
-                  </span>
-                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
-                </div>
-                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-                <ul class="">
-                  <li class="h5 text-info">৪টা মক টেস্ট</li>
-                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
-                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
-                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
-                </ul>
-              </div>
-              <div class="card-footer border-top-0 pb-4 bg-light">
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-danger rounded-4" role="button"
-                    >Get Started</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-0 bg-light">
-              <div class="card-body">
-                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
-                <div class="d-flex gap-2">
-                  <span
-                    ><svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
-                        fill="#272454"
-                      ></path></svg
-                  ></span>
-                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
-                </div>
-                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-                <ul class="">
-                  <li class="h5 text-info">১২ টি মকটেস্ট</li>
-                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
-                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
-                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
-                </ul>
-              </div>
-              <div class="card-footer border-top-0 pb-4 bg-light">
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-danger rounded-4" role="button"
-                    >Get Started</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-0 bg-light">
-              <div class="card-body">
-                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
-                <div class="d-flex gap-2">
-                  <span
-                    ><svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
-                        fill="#272454"
-                      ></path></svg
-                  ></span>
-                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
-                </div>
-                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-                <ul class="">
-                  <li class="h5 text-info">১২ টি মকটেস্ট</li>
-                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
-                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
-                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
-                </ul>
-              </div>
-              <div class="card-footer border-top-0 pb-4 bg-light">
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-danger rounded-4" role="button"
-                    >Get Started</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col d-md-none d-block">
-            <div class="card border-0 bg-light">
-              <div class="card-body">
-                <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
-                <div class="d-flex gap-2">
-                  <span
-                    ><svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z"
-                        fill="#272454"
-                      ></path></svg
-                  ></span>
-                  <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
-                </div>
-                <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-                <ul class="">
-                  <li class="h5 text-info">১২ টি মকটেস্ট</li>
-                  <li class="h5 text-info">ল্যাংগুয়েজ ক্লাব</li>
-                  <li class="h5 text-info">৬ মাসের মেম্বারশীপ</li>
-                  <li class="h5 text-info">ফ্রি ম্যাটারিয়াল</li>
-                </ul>
-              </div>
-              <div class="card-footer border-top-0 pb-4 bg-light">
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-danger rounded-4" role="button"
-                    >Get Started</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+  </section>
+  <!-- contact -->
+  <section class="bg-secondary-subtle py-5 bg-contact">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <img class="img-fluid" src="/assets/images/home/contact.png" alt="contact us" />
         </div>
-      </div>
-    </section>
-    <!-- contact -->
-    <section class="bg-secondary-subtle py-5 bg-contact">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5">
-            <img
-              class="img-fluid"
-              src="/assets/images/home/contact.png"
-              alt="contact us"
-            />
-          </div>
-          <div class="col-md-7">
-            <!-- <h2 class="h4 text-info">যোগাযোগ</h2> -->
-            <h3 class="h1 text-primary fw-semibold">
-              ইংরেজির দুর্বলতা কাটিয়ে হয়ে উঠুন আত্মবিশ্বাসী
-            </h3>
-            <h4 class="text-dark">
-              সফলতা অর্জন করতে প্রয়োজন সঠিক জায়গায় নিজের সময় আর পরিশ্রম দেয়া।
-              তাই <br />
-              সঠিক জায়গা থেকে অর্জন করুন সঠিক স্কিলস কনফিডেন্সের সাথে।
-            </h4>
-            <div class="d-flex gap-4 pt-3">
-              <a href="#" class="btn btn-danger rounded-4" role="button"
-                >সব কোর্সগুলো দেখুন</a
-              >
-              <a href="#" class="btn btn-light rounded-4" role="button"
-                >সেমিনারে অংশ নিন</a
-              >
-              <!-- <a href="#" class="btn btn-light rounded-4" role="button"
+        <div class="col-md-7">
+          <!-- <h2 class="h4 text-info">যোগাযোগ</h2> -->
+          <h3 class="h1 text-primary fw-semibold">
+            ইংরেজির দুর্বলতা কাটিয়ে হয়ে উঠুন আত্মবিশ্বাসী
+          </h3>
+          <h4 class="text-dark">
+            সফলতা অর্জন করতে প্রয়োজন সঠিক জায়গায় নিজের সময় আর পরিশ্রম দেয়া।
+            তাই <br />
+            সঠিক জায়গা থেকে অর্জন করুন সঠিক স্কিলস কনফিডেন্সের সাথে।
+          </h4>
+          <div class="d-flex gap-4 pt-3">
+            <a href="#" class="btn btn-danger rounded-4" role="button">সব কোর্সগুলো দেখুন</a>
+            <a href="#" class="btn btn-light rounded-4" role="button">সেমিনারে অংশ নিন</a>
+            <!-- <a href="#" class="btn btn-light rounded-4" role="button"
                 >কল বুক করুন</a
               > -->
-            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- logo section -->
-    <section class="bg-secondary-subtle py-5">
-      <div class="container w-50">
-        <h2 class="h1 text-primary text-center fw-semibold">
-          অনুমোদিত রেজিস্ট্রেশন পয়েন্ট
-        </h2>
-        <div class="row py-5 logo">
-          <div class="col-12">
-            <img
-              src="/assets/images/idp-logo.png"
-              alt="idp logo"
-              class="text-center"
-            />
-          </div>
-          <div class="col-12">
-            <img
-              src="/assets/images/british-council-logo.png"
-              alt="british council logo"
-              class="text-center"
-            />
-          </div>
-          <div class="col-12">
-            <img
-              src="/assets/images/ielts-logo.png"
-              alt="ielts logo"
-              class="text-center"
-            />
-          </div>
+    </div>
+  </section>
+  <!-- logo section -->
+  <section class="bg-secondary-subtle py-5 d-none">
+    <div class="container w-50">
+      <h2 class="h1 text-primary text-center fw-semibold">
+        অনুমোদিত রেজিস্ট্রেশন পয়েন্ট
+      </h2>
+      <div class="row py-5 logo">
+        <div class="col-12">
+          <img src="/assets/images/idp-logo.png" alt="idp logo" class="text-center" />
+        </div>
+        <div class="col-12">
+          <img src="/assets/images/british-council-logo.png" alt="british council logo" class="text-center" />
+        </div>
+        <div class="col-12">
+          <img src="/assets/images/ielts-logo.png" alt="ielts logo" class="text-center" />
         </div>
       </div>
-    </section>
-    <!-- footer -->
-    <%- include('/_components/footer') -%>
-    <script
-      type="text/javascript"
-      src="/assets/js/jquery-3.6.0.min.js"
-    ></script>
-    <script type="text/javascript" src="/assets/js/slick.min.js"></script>
-    <script type="text/javascript" src="/assets/js/script.js"></script>
-    <%- include("/_components/scripts")-%>
-  </body>
+    </div>
+  </section>
+  <!-- success-stories -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="h1 text-primary text-center fw-semibold">
+        IELTS Exam-এ ভাষা স্কুল থেকে সফল যারা
+      </h2>
+      <div class="card-group py-5 packages">
+        <div class="card border-0">
+          <div class="card-body">
+            <img class="img-fluid" src="./assets/images/success-stories/success-stories01.jpg" alt="success stories 01">
+          </div>        
+        </div>
+        <div class="card border-0">
+          <div class="card-body">
+            <img class="img-fluid" src="/assets/images/success-stories/success-stories02.jpg" alt="success stories 02">
+          </div>        
+        </div>
+        <div class="card border-0">
+          <div class="card-body">
+            <img class="img-fluid" src="./assets/images/success-stories/success-stories03.jpg" alt="success stories 03">
+          </div>        
+        </div>
+        <div class="card border-0">
+          <div class="card-body">
+            <img class="img-fluid" src="./assets/images/success-stories/success-stories04.jpg" alt="success stories 04">
+          </div>        
+        </div>
+        <div class="card border-0">
+          <div class="card-body">
+            <img class="img-fluid" src="./assets/images/success-stories/success-stories05.jpg" alt="success stories 05">
+          </div>        
+        </div>
+        <div class="card border-0">
+          <div class="card-body">
+            <img class="img-fluid" src="./assets/images/success-stories/success-stories06.jpg" alt="success stories 06">
+          </div>        
+        </div>
+    </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <%- include('/_components/footer') -%>
+  <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="/assets/js/slick.min.js"></script>
+  <script type="text/javascript" src="/assets/js/script.js"></script>
+  <%- include("/_components/scripts")-%>
+</body>
+
 </html>
