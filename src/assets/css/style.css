@@ -56,7 +56,7 @@ body {
 }
 
 .top-50px {
-  top: -50px !important;
+  top: -120px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,23 +76,13 @@ body {
   background-position: center;
 }
 
-.course-list-gradient {
-  background-image: var(--secondary-gradient);
-}
-
 .what-you-get-gradient {
-  /* background-image: var(--tertiary-gradient); */
   background: url("../images/home/bg-whatyouget.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.card-gradient {
-  background-image: var(--card-gradient);
-}
-
 .quiz-gradient {
-  /* background-image: var(--primary-gradient); */
   background: url("../images/home/bg-quiz.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,10 +201,6 @@ body {
   background-size: cover;
 }
 
-.navbar-scrolled {
-  background: #fff !important;
-}
-
 .top-margin {
   margin-top: 80px;
 }
@@ -225,16 +211,18 @@ body {
   }
 }
 
-.what-you-get-gradient .nav-link {
-  font-size: 2rem !important;
-  color: var(--bs-dark-text-emphasis);
-  background: rgba(var(--bs-dark-rgb));
+.navbar-scrolled {
+  background: #fff !important;
 }
 
-.nav-pills .nav-link.active,
+.bg-language-club .nav-link {
+  color: #b0132a !important;
+}
+
+.bg-language-club .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background: var(--card-gradient);
+  color: #fff !important;
+  background: var(--card-gradient) !important;
 }
 
 .navbar-nav .nav-link.active,
@@ -302,6 +290,12 @@ body {
 .course-list .card-hover:hover a {
   display: block;
 }
+.card-hover img{
+  display: none;
+}
+.card-hover:hover img{
+  display: block;
+}
 
 .course-list .span {
   color: #fff;
@@ -335,6 +329,14 @@ body {
 }
 
 .course-list-hover:hover a {
+  display: block;
+}
+
+.course-list-hover img{
+  display: none;
+}
+
+.course-list-hover:hover img{
   display: block;
 }
 
