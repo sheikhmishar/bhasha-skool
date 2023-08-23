@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname;
+  console.log(window.location.pathname);
+
+  // Get all the navigation links
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  console.log(navLinks)
+
+  // Loop through the links and set the "active" class if the href matches the current path
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+
 // navbar sticky
 const navel = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
