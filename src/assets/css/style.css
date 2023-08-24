@@ -475,7 +475,7 @@ hr {
 }
 .packages .slick-current.slick-active {
   transform: scale(1.0) !important;
-  background-color: #b0132a !important;
+  /* background-color: #b0132a !important; */
   color: #fdf6f7 !important;
 }
 
