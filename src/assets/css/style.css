@@ -217,6 +217,7 @@ body {
 
 .bg-language-club .nav-link {
   color: #b0132a !important;
+  background: #f9e8ea !important;
 }
 
 .bg-language-club .nav-pills .nav-link.active,
@@ -228,7 +229,7 @@ body {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
   color: #b0132a !important;
-  border-bottom: 2px solid #b0132a !important;
+  /* border-bottom: 2px solid #b0132a !important; */
 }
 
 .navbar-nav .nav-item.active {
@@ -237,19 +238,19 @@ body {
 
 .navbar-nav .nav-item.active a {
   color: #b0132a !important;
-  border-bottom: 2px solid transparent;
+  /* border-bottom: 2px solid transparent; */
   transition: color 0.3s, border-bottom 0.3s !important;
 }
 
 .navbar-nav .nav-item.active a:hover {
-  border-bottom: 2px solid #b0132a !important;
+  /* border-bottom: 2px solid #b0132a !important; */
   color: #b0132a !important;
 }
 
 .nav-link:focus,
 .nav-link:hover {
   color: #b0132a !important;
-  border-bottom: 2px solid #b0132a !important;
+  /* border-bottom: 2px solid #b0132a !important; */
 }
 
 .course-list {
@@ -401,7 +402,8 @@ hr {
 }
 
 .courses .slick-dots li button::before,
-.packages .slick-dots li button::before {
+.packages .slick-dots li button::before,
+.stories .slick-dots li button::before {
   display: block !important;
   width: 25px !important;
   height: 0px !important;
@@ -414,7 +416,7 @@ hr {
   content: "" !important;
 }
 
-.courses .slick-next::before,
+.courses, .slick-next::before,
 .packages .slick-next::before {
   color: #272454 !important;
   padding-right: 15px;
@@ -426,26 +428,23 @@ hr {
   padding-left: 15px;
 }
 
-#packages .slick-current {
-  opacity: 1;
-  transform: scale(1.2);
-  z-index: 99;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
 
-@media screen and (min-width: 488px) {
+@media screen and (min-width: 576px) {
   #navbardesktop .navbar-nav .nav-item.dropdown .dropdown-menu {
     opacity: 1 !important;
     transition: opacity 0.3s;
   }
 
-  #navbardesktop .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  #navbardesktop .navbar-nav .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu {
     display: block !important;
-    opacity: 1 !important;
+    opacity: 1 !important;   
+    margin-top: .125rem !important;
   }
 
-  #navbardesktop .navbar-nav .nav-item.dropend:hover > a:hover .dropdown-menu {
-    display: block !important;
-    background-color: #272454 !important;
+  #navbardesktop .navbar-nav .dropend:hover > .dropdown-menu  {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: .5rem !important;
   }
 }
