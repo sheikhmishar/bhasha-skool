@@ -448,3 +448,49 @@ hr {
     margin-top: .5rem !important;
   }
 }
+
+
+/* /// maskot packages  */
+/* Default slide */
+.packages .card {
+  background-color: #b32532;
+  color: #fff;
+  height: 100%;  
+  transform: scale(0.8);
+  transition: all 0.4s ease-in-out;
+}
+.packages .card,
+.packages .card[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"] {
+  transform: scale(0.8, 0.8);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.packages .card,
+.packages .card[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"] {
+  /* transform: scale(1.1); */
+  background-color: #000000;
+}
+.packages .slick-current.slick-active {
+  transform: scale(1.0) !important;
+  background-color: #b0132a !important;
+  color: #fdf6f7 !important;
+}
+
+.slick-next,
+.slick-prev {
+  z-index: 5;
+}
+.slick-next {
+  right: 15px;
+}
+.slick-prev {
+  left: 15px;
+}
+.slick-next:before,
+.slick-prev:before {
+  color: #000;
+  font-size: 26px;
+}
