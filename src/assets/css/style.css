@@ -100,6 +100,24 @@ body {
   background-size: cover;
 }
 
+.bg-success-stories {
+  background: url("../images/bg-stories.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-about{
+  background: url("../images/bg-about-golpo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-teachers-card{
+  background: url("../images/bg-teachers.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .course-details-gradient {
   background-image: var(--course-gradient);
 }
