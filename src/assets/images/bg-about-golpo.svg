@@ -1,33 +1,41 @@
 <svg width="1920" height="575" viewBox="0 0 1920 575" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_23680)">
+<g clip-path="url(#clip0_202_1318)">
 <rect width="1920" height="575" fill="white"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 521.9 -510)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 493.738 -462)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 465.575 -414)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 437.413 -366)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 409.25 -318)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 381.087 -270)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 352.925 -222)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 324.762 -174)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 296.6 -126)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 268.438 -78)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 240.275 -30)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 212.113 18)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 183.95 66)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 155.788 114)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 127.625 162)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 99.4624 210)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 71.3003 258)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 43.1372 306)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 14.9751 354)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -13.1875 402)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -41.3501 450)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -69.5122 498)" stroke="black" stroke-opacity="0.08"/>
-<line y1="-0.5" x2="1767.5" y2="-0.5" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -97.6753 546)" stroke="black" stroke-opacity="0.08"/>
+<g clip-path="url(#clip1_202_1318)">
+<rect width="2734.75" height="819" transform="translate(-516 -190)" fill="white"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 251.716 -805)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 211.604 -759.371)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 171.49 -713.741)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 131.377 -668.112)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 91.2637 -622.482)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 51.1504 -576.853)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 11.0381 -531.224)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -29.0762 -485.594)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -69.189 -439.965)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -109.302 -394.335)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -149.416 -348.706)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -189.528 -303.077)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -229.643 -257.447)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -269.755 -211.818)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -309.868 -166.188)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -349.981 -120.559)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -390.094 -74.9297)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -430.208 -29.3003)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -470.321 16.3291)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -510.434 61.9585)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -550.548 107.588)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -590.66 153.217)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -630.774 198.847)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -670.887 244.476)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+<line y1="-0.712174" x2="2517.53" y2="-0.712174" transform="matrix(0.892278 0.451486 -0.482256 0.87603 -711 290.105)" stroke="black" stroke-opacity="0.08" stroke-width="1.42435"/>
+</g>
 </g>
 <defs>
-<clipPath id="clip0_1_23680">
+<clipPath id="clip0_202_1318">
 <rect width="1920" height="575" fill="white"/>
+</clipPath>
+<clipPath id="clip1_202_1318">
+<rect width="2734.75" height="819" fill="white" transform="translate(-516 -190)"/>
 </clipPath>
 </defs>
 </svg>
