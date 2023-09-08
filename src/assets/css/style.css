@@ -106,13 +106,13 @@ body {
   background-size: cover;
 }
 
-.bg-about{
+.bg-about {
   background: url("../images/bg-about-golpo.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-teachers-card{
+.bg-teachers-card {
   background: url("../images/bg-teachers.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -243,7 +243,16 @@ body {
   color: #fff !important;
   background: var(--card-gradient) !important;
 }
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link {
+  color: #b0132a !important;
+}
 
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff !important;
+  background: var(--card-gradient) !important;
+}
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
   color: #b0132a !important;
@@ -309,10 +318,10 @@ body {
 .course-list .card-hover:hover a {
   display: block;
 }
-.card-hover img{
+.card-hover img {
   display: none;
 }
-.card-hover:hover img{
+.card-hover:hover img {
   display: block;
 }
 
@@ -351,11 +360,11 @@ body {
   display: block;
 }
 
-.course-list-hover img{
+.course-list-hover img {
   display: none;
 }
 
-.course-list-hover:hover img{
+.course-list-hover:hover img {
   display: block;
 }
 
@@ -434,7 +443,8 @@ hr {
   content: "" !important;
 }
 
-.courses, .slick-next::before,
+.courses,
+.slick-next::before,
 .packages .slick-next::before {
   color: #272454 !important;
   padding-right: 15px;
@@ -445,40 +455,50 @@ hr {
   color: #272454 !important;
   padding-left: 15px;
 }
-
+/* > ul > li > a */
 
 @media screen and (min-width: 576px) {
   #navbardesktop .navbar-nav .nav-item.dropdown .dropdown-menu {
     opacity: 1 !important;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
   }
 
-  #navbardesktop .navbar-nav .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu {
+  #navbardesktop .navbar-nav .dropdown:hover > .dropdown-menu,
+  .dropend:hover > .dropdown-menu {
     display: block !important;
-    opacity: 1 !important;   
-    margin-top: .125rem !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
   }
 
-  #navbardesktop .navbar-nav .dropend:hover > .dropdown-menu  {
+  #navbardesktop .navbar-nav .dropend:hover > .dropdown-menu {
     position: absolute;
     top: 0;
     left: 100%;
-    margin-top: .5rem !important;
+    margin-top: 0.5rem !important;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
   }
 }
 
-
-/* /// maskot packages  */
 /* Default slide */
 .packages .card {
   background-color: #b32532;
   color: #fff;
-  height: 100%;  
+  height: 100%;
   transform: scale(0.8);
   transition: all 0.4s ease-in-out;
 }
 .packages .card,
-.packages .card[aria-hidden="true"]:not(.slick-cloned)
+.packages
+  .card[aria-hidden="true"]:not(.slick-cloned)
   ~ .slick-cloned[aria-hidden="true"] {
   transform: scale(0.8, 0.8);
   transition: all 0.4s ease-in-out;
@@ -486,29 +506,12 @@ hr {
 
 /* Active center slide (You can change anything here for cenetr slide)*/
 .packages .card,
-.packages .card[aria-hidden="true"]:not([tabindex="-1"])
+.packages
+  .card[aria-hidden="true"]:not([tabindex="-1"])
   + .slick-cloned[aria-hidden="true"] {
-  /* transform: scale(1.1); */
   background-color: #000000;
 }
 .packages .slick-current.slick-active {
-  transform: scale(1.0) !important;
-  /* background-color: #b0132a !important; */
+  transform: scale(1) !important;
   color: #fdf6f7 !important;
-}
-
-.slick-next,
-.slick-prev {
-  z-index: 5;
-}
-.slick-next {
-  right: 15px;
-}
-.slick-prev {
-  left: 15px;
-}
-.slick-next:before,
-.slick-prev:before {
-  color: #000;
-  font-size: 26px;
 }
