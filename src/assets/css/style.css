@@ -339,8 +339,8 @@ body {
 }
 
 .course-list-hover:hover {
-  height: 208% !important;
-  top: -168px !important;
+  height: 210% !important;
+  top: -173px !important;
   transition: all 0.3s ease-out;
   font-size: 1.5rem;
   font-weight: 700;
@@ -447,15 +447,14 @@ hr {
 .slick-next::before,
 .packages .slick-next::before {
   color: #272454 !important;
-  padding-right: 15px;
+  /* padding-right: 15px; */
 }
 
 .courses .slick-prev::before,
 .packages .slick-prev::before {
   color: #272454 !important;
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
-/* > ul > li > a */
 
 @media screen and (min-width: 576px) {
   #navbardesktop .navbar-nav .nav-item.dropdown .dropdown-menu {
@@ -464,6 +463,7 @@ hr {
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    animation: 0.5s slideup;
   }
 
   #navbardesktop .navbar-nav .dropdown:hover > .dropdown-menu,
@@ -485,6 +485,15 @@ hr {
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+  }
+
+  @keyframes slideup {
+    from {
+      transform: translateY(10%);
+    }
+    to {
+      transform: translateY(0%);
+    }
   }
 }
 
