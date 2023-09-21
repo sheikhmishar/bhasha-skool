@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const currentPath = window.location.pathname;
-  console.log(window.location.pathname);
-
-  // Get all the navigation links
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  console.log(navLinks);
-
-  // Loop through the links and set the "active" class if the href matches the current path
   navLinks.forEach((link) => {
     if (link.getAttribute("href") === currentPath) {
       link.classList.add("active");
@@ -19,17 +13,14 @@ const navel = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
   if (scrollY < 56) {
     navel.classList.remove("navbar-scrolled");
-    // navel.classList.add("navbar-margin");
   }
 
-  if (window.scrollY > 60) {
+  if (window.scrollY > 56) {
     navel.classList.add("navbar-scrolled");
-    // navel.classList.remove("navbar-margin");
   }
 });
 
 $(document).ready(function ($) {
-  // Initialize the Slick Carousel
   $(".whatyouget").slick({
     dots: true,
     infinite: true,
@@ -68,46 +59,6 @@ $(document).ready(function ($) {
 });
 
 $(document).ready(function ($) {
-  // Initialize the Slick Carousel
-  $(".logo").slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    arrows: false,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(document).ready(function ($) {
-  // Initialize the Slick Carousel
   $(".courses").slick({
     dots: true,
     infinite: true,
@@ -186,7 +137,6 @@ $(document).ready(function ($) {
 
 // packages
 $(document).ready(function ($) {
-  // Initialize the Slick Carousel
   $(".packages").slick({
     centerMode: true,
     centerPadding: "0px",
@@ -227,7 +177,6 @@ $(document).ready(function ($) {
 
 // stories
 $(document).ready(function ($) {
-  // Initialize the Slick Carousel
   $(".stories").slick({
     dots: true,
     infinite: true,

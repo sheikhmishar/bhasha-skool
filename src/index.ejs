@@ -612,8 +612,8 @@
             coursesAlt: "Mock Tests",
             coursesTitle: `Mock Tests`,
             courseDuration: "১টি থেকে",
-            courseLength: "Partial Tests",
-            courseActualPrice:"৫০০",
+            courseLength: "Partial Tests", 
+            courseActualPrice:"",
             coursePrice: "৫০০ টাকা থেকে",
             coursesLink: "#", },
              {
@@ -908,7 +908,7 @@
   </section>
   <!-- logo section -->
   <section class="bg-secondary-subtle py-5">
-    <div class="container w-50 d-md-block d-none">
+    <div class="container w-50 d-none">
       <h2 class="h1 text-primary text-center fw-semibold">
         অনুমোদিত রেজিস্ট্রেশন পয়েন্ট
       </h2>
@@ -924,22 +924,16 @@
         </div>
       </div>
     </div>
-    <div class="container d-block d-md-none">
-      <h2 class="h1 text-primary text-center fw-semibold">
-        অনুমোদিত রেজিস্ট্রেশন পয়েন্ট
-      </h2>
-      <div class="row py-5">
-        <div class="col-6">
-          <img src="/assets/images/idp-logo.png" alt="idp logo" class="text-center" />
-        </div>
-        <div class="col-6">
-          <img src="/assets/images/british-council-logo.png" alt="british council logo" class="text-center" />
-        </div>
-        <div class="col-12 mt-5 d-flex justify-content-center">
-          <img src="/assets/images/ielts-logo.png" alt="ielts logo" class="text-center" />
-        </div>
-      </div>
-    </div>
+    <div class="container d-md-block d-none">       
+      <div class="text-center">
+        <img src="/assets/images/councils-logo.png" alt="councils logo" class="w-50" />
+      </div>  
+    </div>   
+    <div class="container d-md-none d-block">       
+      <div class="text-center">
+        <img src="/assets/images/councils-logo.png" alt="councils logo" class="w-100" />
+      </div>  
+    </div>  
   </section>
   <!-- footer -->
   <%- include('/_components/footer') -%>
