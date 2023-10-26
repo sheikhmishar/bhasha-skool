@@ -212,13 +212,6 @@ body {
   border-color: #272454;
 }
 
-.testimonials {
-  background: linear-gradient(rgba(39 36 84), rgba(39, 36, 84, 0.59)),
-    url("../images/testmonial-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .top-margin {
   margin-top: 86px;
 }
@@ -431,7 +424,8 @@ hr {
 
 .courses .slick-dots li button::before,
 .packages .slick-dots li button::before,
-.stories .slick-dots li button::before {
+.stories .slick-dots li button::before,
+.testimonials .slick-dots li button::before {
   display: block !important;
   width: 25px !important;
   height: 0px !important;
@@ -446,13 +440,15 @@ hr {
 
 .courses,
 .slick-next::before,
-.packages .slick-next::before {
+.packages .slick-next::before,
+.testimonials .slick-next::before {
   color: #272454 !important;
   /* padding-right: 15px; */
 }
 
 .courses .slick-prev::before,
-.packages .slick-prev::before {
+.packages .slick-prev::before,
+.testimonials .slick-prev::before {
   color: #272454 !important;
   /* padding-left: 15px; */
 }
@@ -523,4 +519,13 @@ hr {
 .packages .slick-current.slick-active {
   transform: scale(1) !important;
   color: #fdf6f7 !important;
+}
+
+.testimonial-img {
+  margin-top: -3.5rem;
+}
+
+.testimonials .slick-list.draggable {
+  padding-top: 3rem !important;
+  padding-bottom: 1rem !important;
 }
