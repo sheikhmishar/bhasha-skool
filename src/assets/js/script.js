@@ -24,7 +24,7 @@ $(document).ready(function ($) {
   $(".whatyouget").slick({
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
