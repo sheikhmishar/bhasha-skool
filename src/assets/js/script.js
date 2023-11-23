@@ -29,7 +29,7 @@ $(document).ready(function ($) {
     slidesToScroll: 1,
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     responsive: [
       {
         breakpoint: 1024,
