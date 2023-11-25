@@ -101,13 +101,6 @@
             <h5 class="h5 text-info mb-0">+৮৮০১৭৯০-৩১৩৩৬৬</h5>
           </a>
         </div>
-        <a class="d-none text-decoration-none border border-info text-info px-3 d-flex gap-2 text-decoration-none rounded-4">
-          <img src="/assets/images/Frame.svg" alt="" />
-          <select class="form-select border-0" aria-label="Default select example">
-            <option selected value="bn">বাং</option>
-            <option value="en">EN</option>
-          </select>
-        </a>
         <button class="btn btn-danger px-4 py-2 rounded-4 fs-4" data-bs-toggle="modal" data-bs-target="#registrationModal" href="#">রেজিস্ট্রেশন করুন</button>
       </div>
     </div>
@@ -273,7 +266,6 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header border-0 position-relative">
-        <!-- <h1 class="modal-title fs-5" id="registrationModalLabel">Modal title</h1> -->
         <button type="button" class="btn-close position-absolute top-0 end-0 bg-white rounded-4 shadow-0" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -286,7 +278,10 @@
             সঠিক নির্দেশনা, দুর্দান্ত সব Techniques ও Expert দের তত্ত্বাবধায়নে
             হয়ে উঠুন ভাষা Expert
           </p>
-          <form action="/" method="get">
+          <form name="registrationForm" action="/" method="post" netlify-honeypot="bot-field" data-netlify="true">
+            <p class="visually-hidden">
+              <label id="registration-form-bot-label">Don't fill this out if you're human: <input name="bot-field" aria-labelledby="registration-form-bot-label" /></label>
+            </p>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
               <label class="h5 text-info" for="name">Enter Name</label>
@@ -300,7 +295,7 @@
               <label class="h5 text-info" for="phone">Enter Phone Number</label>
             </div>
             <div class="form-floating">
-              <select class="form-select form-select-lg h5 text-info pt-1" aria-label="Select branch name">
+              <select class="form-select form-select-lg h5 text-info pt-1" id="branch" name="branch" aria-label="Select branch name">
                 <option selected class="h6">Select Branch Name</option>
                 <option class="h6 text-info" value="dhaka">Dhaka</option>
                 <option class="h6 text-info" value="narayanganj">Narayanganj</option>
@@ -311,9 +306,6 @@
               <button class="btn btn-danger rounded-4" type="submit">
                 রেজিস্ট্রেশন করুন
               </button>
-              <!-- <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                বন্ধ করুন
-              </button> -->
             </div>
           </form>
         </div>
