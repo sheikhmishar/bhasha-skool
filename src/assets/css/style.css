@@ -334,7 +334,7 @@ body {
 
 .course-list-hover:hover {
   height: 210% !important;
-  top: -173px !important;
+  top: -177px !important;
   transition: all 0.3s ease-out;
   font-size: 1.5rem;
   font-weight: 700;
