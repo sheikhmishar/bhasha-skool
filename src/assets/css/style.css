@@ -529,3 +529,7 @@ hr {
   padding-top: 3rem !important;
   padding-bottom: 1rem !important;
 }
+
+.w-30{
+  width: 30% !important;
+}
