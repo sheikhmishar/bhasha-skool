@@ -15,6 +15,24 @@
 <body>
   <!-- nav-bar -->
   <%- include("/_components/nav") -%>
+  <button type="button" id="modalbtn" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#promotionalModal">
+    Launch demo modal
+  </button>
+  <!-- promotional popup -->
+  <div class="modal fade" id="promotionalModal" tabindex="-1" aria-labelledby="promotionalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content p-0">
+        <div class="modal-header position-relative border-0 p-0 z-3">
+          <button type="button" class="btn-close position-absolute top-0 end-0 rounded-5 bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <% db.promotions.forEach(promotion => { %>
+        <div class="modal-body p-0">
+          <img src="<%= backendUrl %><%= promotion.imgSrc %>" class="img-fluid rounded" alt="promotional popup image">
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
   <!-- hero section -->
   <section class="home-bg-gradient py-5 top-margin">
     <div class="container">
@@ -532,144 +550,78 @@
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-offline" role="tabpanel" aria-labelledby="pills-offline-tab" tabindex="0">
           <div class="card-group py-5 courses">
-            <% [{ coursesImg: "be.jpg",
-             coursesAlt: "Basic English মাস্টারক্লাস",
-              coursesTitle: `Basic English মাস্টারক্লাস`, 
-              courseDuration: "৩ মাস",
-              courseLength: "৩৪টি ক্লাস",
-              courseActualPrice:"৪,০০০", 
-              coursePrice: "২,০০০",
-              coursesLink: "/courses/basic-english/",
-             },
-             { 
-              coursesImg:"ielts.jpg",
-              coursesAlt: "IELTS হিরো",
-              coursesTitle: `IELTS হিরো`, 
-              courseDuration: "৩ মাস",
-              courseLength: "৩৪টি ক্লাস",
-              courseActualPrice:"৫,০০০",
-              coursePrice: "২,৫০০",
-              coursesLink: "/courses/ielts-hero/", 
-            },                    
-              { 
-                coursesImg: "ielts.jpg",
-              coursesAlt: "জিরো টু IELTS হিরো", 
-              coursesTitle: `জিরো টু IELTS হিরো`,
-              courseDuration: "৬ মাস",
-              courseLength: "৬৮টি ক্লাস",
-              courseActualPrice:"৯,৫০০", 
-              coursePrice: "৩,৫০০",
-              coursesLink: "/courses/zero-ielts-hero", 
-            },
-              { coursesImg: "spoken.jpg", 
-              coursesAlt: "দুর্দান্ত Spoken",
-              coursesTitle: `দুর্দান্ত Spoken`, 
-              courseDuration: "৩ মাস",
-              courseLength: "১৭টি ক্লাস",
-              courseActualPrice:"৩,০০০",  
-              coursePrice: "১,৫০০",
-              coursesLink: "/courses/durdanta-spoken", },
-              {
-                coursesImg: "writing.jpg",
-                coursesAlt: "তুখোড় Writing",
-                coursesTitle: `তুখোড় Writing`,
-                courseDuration: "৩ মাস",
-                courseLength: "১৭টি ক্লাস",
-                courseActualPrice:"৩,০০০", 
-                coursePrice: "১,৫০০",
-                coursesLink: "/courses/tukhor-writing", 
-              },
-               {
-                coursesImg: "mock.jpg",
-                coursesAlt: "Mock Tests",
-                coursesTitle: `Mock Tests`,
-                courseDuration: "১টি থেকে",
-                courseLength: "Partial Tests", 
-                courseActualPrice:"",
-                coursePrice: "৫০০ টাকা থেকে",
-                coursesLink: "#", },
-                 {
-                coursesImg: "kids-english.jpg",
-                coursesAlt: "Kid’s English Course",
-                coursesTitle: `Kid’s English Course`,
-                courseDuration: "১টি থেকে",
-                courseLength: "Partial Tests",
-                courseActualPrice:"৬,০০০",
-                coursePrice: "২,০০০",
-                coursesLink: "/courses/kids-english", }
-              ].forEach(course => { %> <%-
-              include('/_components/home/courses-card.ejs', {...course}) %> <% }) %>
+            <% db.courses.forEach(course => { %>
+            <div class="card rounded-5 bg-info border-0 bg-info ms-2 me-2">
+              <img src="<%= backendUrl %><%= course.imgSrc %>" class="card-img-top rounded-top-5" alt="<%= course.courseAlt %>" />
+              <div class="card-body">
+                <h3 class="text-light fw-bold">
+                  <%= course.courseTitle %>
+                </h3>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex gap-2 align-items-center">
+                    <img src="/assets/images/time.svg" alt="course duration">
+                    <h5 class="mb-0 text-light"><%= course.courseDuration %></h5>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <img src="/assets/images/calender.svg" alt="total class">
+                    <h5 class="mb-0 text-light"><%= course.courseTotalClass %></h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-info border-top-0 rounded-5 pb-4">
+                <div class="d-flex gap-2">
+                  <span>
+                    <img src="/assets/images/money-icon.svg" alt="money icon">
+                  </span>
+                  <h4 class="text-light fw-semibold"><%= course.courseOnlineDiscountPrice %></h4>
+                  <p class="mb-0 mt-1 text-decoration-line-through text-light fs-6">
+                    <%= course.courseOnlineActualPrice %>
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center pt-2 pb-2">
+                  <a class="btn btn-danger rounded-4" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                </div>
+              </div>
+            </div>
+            <% }) %>
           </div>
         </div>
         <div class="tab-pane fade" id="pills-online" role="tabpanel" aria-labelledby="pills-online-tab" tabindex="0">
           <div class="card-group py-5 courses">
-            <% [{ coursesImg: "be.jpg",
-             coursesAlt: "Basic English মাস্টারক্লাস",
-              coursesTitle: `Basic English মাস্টারক্লাস`, 
-              courseDuration: "৩ মাস",
-              courseLength: "৩৪টি ক্লাস",
-              courseActualPrice:"৯,০০০",
-              coursePrice: "৫,০০০",
-              coursesLink: "/courses/basic-english/",
-             },
-             { 
-              coursesImg:"ielts.jpg",
-              coursesAlt: "IELTS হিরো",
-              coursesTitle: `IELTS হিরো`, 
-              courseDuration: "৩ মাস",
-              courseLength: "৩৪টি ক্লাস",
-              courseActualPrice:"১২,০০০",
-              coursePrice: "৯,০০০",
-              coursesLink: "/courses/ielts-hero/", 
-            },                    
-              { 
-                coursesImg: "ielts.jpg",
-              coursesAlt: "জিরো টু IELTS হিরো", 
-              coursesTitle: `জিরো টু IELTS হিরো`,
-              courseDuration: "৬ মাস",
-              courseLength: "৬৮টি ক্লাস",
-              courseActualPrice:"২১০০০",
-              coursePrice: "১৪,৫০০",
-              coursesLink: "/courses/zero-ielts-hero", 
-            },
-              { coursesImg: "spoken.jpg", 
-              coursesAlt: "দুর্দান্ত Spoken",
-              coursesTitle: `দুর্দান্ত Spoken`, 
-              courseDuration: "৩ মাস",
-              courseLength: "১৭টি ক্লাস",
-              courseActualPrice:"৬,০০০",
-              coursePrice: "৫,০০০",
-              coursesLink: "/courses/durdanta-spoken", },
-              {
-                coursesImg: "writing.jpg",
-                coursesAlt: "তুখোড় Writing",
-                coursesTitle: `তুখোড় Writing`,
-                courseDuration: "৩ মাস",
-                courseLength: "১৭টি ক্লাস",
-                courseActualPrice:"৫,০০০",
-                coursePrice: "৫,০০০",
-                coursesLink: "/courses/tukhor-writing", 
-              },
-               {
-                coursesImg: "mock.jpg",
-                coursesAlt: "Mock Tests",
-                coursesTitle: `Mock Tests`,
-                courseDuration: "১টি থেকে",
-                courseLength: "Partial Tests", 
-                courseActualPrice:"",
-                coursePrice: "৫০০ টাকা থেকে",
-                coursesLink: "#", },
-                 {
-                coursesImg: "kids-english.jpg",
-                coursesAlt: "Kid’s English Course",
-                coursesTitle: `Kid’s English Course`,
-                courseDuration: "১টি থেকে",
-                courseLength: "Partial Tests",
-                courseActualPrice:"৮,৫০০",
-                coursePrice: "৫,৯৫০",
-                coursesLink: "/courses/kids-english", }
-              ].forEach(course => { %> <%-
-              include('/_components/home/courses-card.ejs', {...course}) %> <% }) %>
+            <% db.courses.forEach(course => { %>
+            <div class="card rounded-5 bg-info border-0 bg-info ms-2 me-2">
+              <img src="<%= backendUrl %><%= course.imgSrc %>" class="card-img-top rounded-top-5" alt="<%= course.courseAlt %>" />
+              <div class="card-body">
+                <h3 class="text-light fw-bold">
+                  <%= course.courseTitle %>
+                </h3>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex gap-2 align-items-center">
+                    <img src="/assets/images/time.svg" alt="course duration">
+                    <h5 class="mb-0 text-light"><%= course.courseDuration %></h5>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <img src="/assets/images/calender.svg" alt="total class">
+                    <h5 class="mb-0 text-light"><%= course.courseTotalClass %></h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-info border-top-0 rounded-5 pb-4">
+                <div class="d-flex gap-2">
+                  <span>
+                    <img src="/assets/images/money-icon.svg" alt="money icon">
+                  </span>
+                  <h4 class="text-light fw-semibold"><%= course.courseDiscountPrice %></h4>
+                  <p class="mb-0 mt-1 text-decoration-line-through text-light fs-6">
+                    <%= course.courseActualPrice %>
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center pt-2 pb-2">
+                  <a class="btn btn-danger rounded-4" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                </div>
+              </div>
+            </div>
+            <% }) %>
           </div>
         </div>
       </div>
@@ -769,22 +721,18 @@
     <div class="container py-5 position-relative">
       <h2 class="h1 text-primary text-center">মকটেস্ট প্যাকেজ <span class="h5">*(শুধু অফলাইনে প্রযোজ্য)</span></h2>
       <div class="card-group py-5 packages">
+        <% db.mocktests.forEach(mocktest => { %>
         <div class="card border-0 bg-light">
           <div class="card-body">
-            <h6 class="text-info pt-4">প্যাকেজ-০১</h6>
+            <h6 class="text-info pt-4"><%= mocktest.title %></h6>
             <div class="d-flex gap-2">
               <span>
                 <img src="/assets/images/home/package-money-icon.svg" alt="packages money icon">
               </span>
-              <h6 class="mb-0 text-info display-5 fw-semibold">৫০০</h6>
+              <h6 class="mb-0 text-info display-5 fw-semibold"><%= mocktest.price %></h6>
             </div>
             <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-            <ul class="">
-              <li class="h5 text-info">১টি মক টেস্ট</li>
-              <li class="h5 text-info">Gift Hamper</li>
-              <li class="h5 text-info">Feedback Session</li>
-              <li class="h5 text-info">Expert Guidance</li>
-            </ul>
+            <%- mocktest.description.replaceAll('<li>','<li class="h5 text-info">') %>
           </div>
           <div class="card-footer border-top-0 pb-4 bg-light">
             <div class="d-flex justify-content-center">
@@ -792,98 +740,7 @@
             </div>
           </div>
         </div>
-        <div class="card border-0 bg-light">
-          <div class="card-body">
-            <h6 class="text-info pt-4">প্যাকেজ-০২</h6>
-            <div class="d-flex gap-2">
-              <span>
-                <img src="/assets/images/home/package-money-icon.svg" alt="packages money icon">
-              </span>
-              <h6 class="mb-0 text-info display-5 fw-semibold">১০০০</h6>
-            </div>
-            <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-            <ul class="">
-              <li class="h5 text-info">২ টি মকটেস্ট</li>
-              <li class="h5 text-info">Gift Hamper</li>
-              <li class="h5 text-info">Feedback Session</li>
-              <li class="h5 text-info">Expert Guidance</li>
-            </ul>
-          </div>
-          <div class="card-footer border-top-0 pb-4 bg-light">
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <div class="card border-0 bg-light">
-          <div class="card-body">
-            <h6 class="text-info pt-4">প্যাকেজ-০৩</h6>
-            <div class="d-flex gap-2">
-              <span>
-                <img src="/assets/images/home/package-money-icon.svg" alt="packages money icon">
-              </span>
-              <h6 class="mb-0 text-info display-5 fw-semibold">১৫০০</h6>
-            </div>
-            <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-            <ul class="">
-              <li class="h5 text-info">৪টি মকটেস্ট</li>
-              <li class="h5 text-info">Gift Hamper</li>
-              <li class="h5 text-info">Feedback Session</li>
-              <li class="h5 text-info">Expert Guidance</li>
-            </ul>
-          </div>
-          <div class="card-footer border-top-0 pb-4 bg-light">
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <div class="card border-0 bg-light">
-          <div class="card-body">
-            <h6 class="text-info pt-4">প্যাকেজ-০৪</h6>
-            <div class="d-flex gap-2">
-              <span>
-                <img src="/assets/images/home/package-money-icon.svg" alt="packages money icon">
-              </span>
-              <h6 class="mb-0 text-info display-5 fw-semibold">২,০০০</h6>
-            </div>
-            <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-            <ul class="">
-              <li class="h5 text-info">৫টা মক টেস্ট</li>
-              <li class="h5 text-info">Gift Hamper</li>
-              <li class="h5 text-info">Feedback Session</li>
-              <li class="h5 text-info">Expert Guidance</li>
-            </ul>
-          </div>
-          <div class="card-footer border-top-0 pb-4 bg-light">
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <div class="card border-0 bg-light">
-          <div class="card-body">
-            <h6 class="text-info pt-4">প্যাকেজ-০৫</h6>
-            <div class="d-flex gap-2">
-              <span>
-                <img src="/assets/images/home/package-money-icon.svg" alt="packages money icon">
-              </span>
-              <h6 class="mb-0 text-info display-5 fw-semibold">৩,০০০</h6>
-            </div>
-            <h5 class="h4 text-info fw-bold">যা যা থাকবেঃ</h5>
-            <ul class="">
-              <li class="h5 text-info">৮টা মক টেস্ট</li>
-              <li class="h5 text-info">Gift Hamper</li>
-              <li class="h5 text-info">Feedback Session</li>
-              <li class="h5 text-info">Expert Guidance</li>
-            </ul>
-          </div>
-          <div class="card-footer border-top-0 pb-4 bg-light">
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
-            </div>
-          </div>
-        </div>
+        <% }) %>
       </div>
     </div>
   </section>
@@ -985,6 +842,19 @@
   <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="/assets/js/slick.min.js"></script>
   <%- include("/_components/scripts")-%>
+  <script>
+    let examplemodalbtn = document.getElementById("modalbtn");
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loadedDate = localStorage.getItem('loaded');
+        if (!loadedDate || (Date.now() - new Date(loadedDate).getTime() > 24 * 60 * 60 * 1000)) {
+          examplemodalbtn.click();
+          localStorage.setItem('loaded', Date.now().toString());
+        }
+      }, 1000);
+    });
+  </script>
 </body>
 
 </html>
