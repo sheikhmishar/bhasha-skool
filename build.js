@@ -25,7 +25,10 @@ function readFilesRecursive(dir, files = []) {
 /** @type {ejs.Options} */
 const ejsOptions = { root: srcDir, beautify: true, rmWhitespace: true };
 
-module.exports.build = async (backendUrl = "http://localhost:3000/") => {
+module.exports.build = async (
+  backendUrl = "http://localhost:3000/",
+  buildDir = outDir
+) => {
   try {
     fs.cpSync(srcAssetsDir, outAssetsDir, { recursive: true });
     const ejsFiles = readFilesRecursive(srcDir).filter(
@@ -45,7 +48,7 @@ module.exports.build = async (backendUrl = "http://localhost:3000/") => {
     for await (const ejsFile of ejsFiles) {
       try {
         const outHtml = path.resolve(
-          ejsFile.replace(srcDir, outDir).replace(".ejs", ".html")
+          ejsFile.replace(srcDir, buildDir).replace(".ejs", ".html")
         );
 
         const outHtmlDir = path.dirname(outHtml);
