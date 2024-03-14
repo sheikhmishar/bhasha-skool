@@ -70,24 +70,6 @@
         <div class="col-md-1 text-center col-2 d-md-flex justify-content-center">
           <div class="vr"></div>
         </div>
-        <!-- <div class="col-md-2 col-5">
-          <h6 class="h4 text-center text-primary font-semibold">
-            ৫০,০০০ +<br />
-            <span class="text-info">শিক্ষার্থী</span>
-          </h6>
-        </div>
-        <div class="col-md-1 text-center d-md-flex d-none justify-content-center">
-          <div class="vr"></div>
-        </div>
-        <div class="col-md-2 col-5">
-          <h6 class="h4 text-center text-primary font-semibold">
-            ৩ +<br />
-            <span class="text-info">সফলতার বছর</span>
-          </h6>
-        </div>
-        <div class="col-md-1 text-center col-2 d-md-flex justify-content-center">
-          <div class="vr"></div>
-        </div> -->
         <div class="col-6 col-6 d-flex align-items-center">
           <img src="/assets/images/idp-logo.png" alt="idp logo" class="text-center ms-5" />
           <img src="/assets/images/british-council-logo.png" alt="british council logo" class="text-center ms-5" />
@@ -531,16 +513,16 @@
       <h3 class="h1 text-primary text-center">
         গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
       </h3>
-      <ul class="nav nav-pills w-30 bg-danger-subtle w-50 justify-content-center rounded-pill mx-auto" id="pills-tab" role="tablist">
+      <ul class="w-30 nav nav-pills nav-fill gap-2 p-1 bg-danger-subtle rounded-5 shadow-sm justify-content-center mx-auto" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active  rounded-pill px-md-5" id="pills-offline-tab" data-bs-toggle="pill" data-bs-target="#pills-offline" type="button" role="tab" aria-controls="pills-offline" aria-selected="true">
+          <button class="nav-link active rounded-5" id="pills-offline-tab" data-bs-toggle="pill" data-bs-target="#pills-offline" type="button" role="tab" aria-controls="pills-offline" aria-selected="true">
             <h4 class="mb-0">
               অনলাইন
             </h4>
           </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link px-md-5  rounded-pill" id="pills-online-tab" data-bs-toggle="pill" data-bs-target="#pills-online" type="button" role="tab" aria-controls="pills-online" aria-selected="false">
+          <button class="nav-link rounded-5" id="pills-online-tab" data-bs-toggle="pill" data-bs-target="#pills-online" type="button" role="tab" aria-controls="pills-online" aria-selected="false">
             <h4 class="mb-0">
               অফলাইন
             </h4>
@@ -550,36 +532,52 @@
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-offline" role="tabpanel" aria-labelledby="pills-offline-tab" tabindex="0">
           <div class="card-group py-5 courses">
-            <% db.courses.forEach(course => { %>
-            <div class="card rounded-5 bg-info border-0 bg-info ms-2 me-2">
-              <img src="<%= backendUrl %><%= course.imgSrc %>" class="card-img-top rounded-top-5" alt="<%= course.courseAlt %>" />
+            <% db.courses.concat(db.courses).forEach(course => { %>
+            <div class="card rounded ms-2 me-2 bg-transparent">
+              <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
+              <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
               <div class="card-body">
-                <h3 class="text-light fw-bold">
-                  <%= course.courseTitle %>
-                </h3>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex gap-2 align-items-center">
-                    <img src="/assets/images/time.svg" alt="course duration">
-                    <h5 class="mb-0 text-light"><%= course.courseDuration %></h5>
+                <div class="d-flex justify-content-start gap-2">
+                  <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                    <img src="/assets/images/time.svg" alt="course duration" class="d-none">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
+                      <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
+                      <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
+                    </svg>
+                    <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
+                    <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
                   </div>
-                  <div class="d-flex gap-2 align-items-center">
-                    <img src="/assets/images/calender.svg" alt="total class">
-                    <h5 class="mb-0 text-light"><%= course.courseTotalClass %></h5>
+                  <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                    <img src="/assets/images/calender.svg" alt="total class" class="d-none">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
+                      <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
+                    <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
                   </div>
                 </div>
               </div>
-              <div class="card-footer bg-info border-top-0 rounded-5 pb-4">
-                <div class="d-flex gap-2">
-                  <span>
-                    <img src="/assets/images/money-icon.svg" alt="money icon">
-                  </span>
-                  <h4 class="text-light fw-semibold"><%= course.courseOnlineDiscountPrice %></h4>
-                  <p class="mb-0 mt-1 text-decoration-line-through text-light fs-6">
-                    <%= course.courseOnlineActualPrice %>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-center pt-2 pb-2">
-                  <a class="btn btn-danger rounded-4" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+              <div class="card-footer bg-transparent">
+                <h3 class="text-info mb-5">
+                  <%= course.courseTitle %>
+                </h3>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <div class="d-flex">
+                      <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                      </span>
+                      <h4 class="text-info mb-0 fw-semibold"><%= course.courseOnlineDiscountPrice %></h4>
+                    </div>
+                    <p class="ps-4 text-decoration-line-through text-info">
+                      <%= course.courseOnlineActualPrice %>
+                    </p>
+                  </div>
+                  <div class="">
+                    <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -588,36 +586,52 @@
         </div>
         <div class="tab-pane fade" id="pills-online" role="tabpanel" aria-labelledby="pills-online-tab" tabindex="0">
           <div class="card-group py-5 courses">
-            <% db.courses.forEach(course => { %>
-            <div class="card rounded-5 bg-info border-0 bg-info ms-2 me-2">
-              <img src="<%= backendUrl %><%= course.imgSrc %>" class="card-img-top rounded-top-5" alt="<%= course.courseAlt %>" />
+            <% db.courses.concat(db.courses).forEach(course => { %>
+            <div class="card rounded ms-2 me-2 bg-transparent">
+              <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
+              <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
               <div class="card-body">
-                <h3 class="text-light fw-bold">
-                  <%= course.courseTitle %>
-                </h3>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex gap-2 align-items-center">
-                    <img src="/assets/images/time.svg" alt="course duration">
-                    <h5 class="mb-0 text-light"><%= course.courseDuration %></h5>
+                <div class="d-flex justify-content-start gap-2">
+                  <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                    <img src="/assets/images/time.svg" alt="course duration" class="d-none">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
+                      <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
+                      <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
+                    </svg>
+                    <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
+                    <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
                   </div>
-                  <div class="d-flex gap-2 align-items-center">
-                    <img src="/assets/images/calender.svg" alt="total class">
-                    <h5 class="mb-0 text-light"><%= course.courseTotalClass %></h5>
+                  <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                    <img src="/assets/images/calender.svg" alt="total class" class="d-none">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
+                      <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
+                    <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
                   </div>
                 </div>
               </div>
-              <div class="card-footer bg-info border-top-0 rounded-5 pb-4">
-                <div class="d-flex gap-2">
-                  <span>
-                    <img src="/assets/images/money-icon.svg" alt="money icon">
-                  </span>
-                  <h4 class="text-light fw-semibold"><%= course.courseDiscountPrice %></h4>
-                  <p class="mb-0 mt-1 text-decoration-line-through text-light fs-6">
-                    <%= course.courseActualPrice %>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-center pt-2 pb-2">
-                  <a class="btn btn-danger rounded-4" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+              <div class="card-footer bg-transparent">
+                <h3 class="text-info mb-5">
+                  <%= course.courseTitle %>
+                </h3>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <div class="d-flex">
+                      <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                      </span>
+                      <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
+                    </div>
+                    <p class="ps-4 text-decoration-line-through text-info">
+                      <%= course.courseActualPrice %>
+                    </p>
+                  </div>
+                  <div class="">
+                    <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -638,32 +652,28 @@
           <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
               <img class="img-fluid" src="/assets/images/home/classroom/roleplay.svg" alt="role play" />
-              <h4 class="text-info">বাস্তব-জীবনের পরিস্থিতি যেমন Job Interview, Viva, বন্ধুদের সাথে কথা বলা ইত্যাদি ক্ষেত্রে সাবলীল্ভাবে ও Confidence এর সাথে ইংরেজি বলার দক্ষতা বৃদ্ধি করে।</h4>
+              <h4 class="text-info text-center">বাস্তব-জীবনের পরিস্থিতি যেমন Job Interview, Viva, বন্ধুদের সাথে কথা বলা ইত্যাদি ক্ষেত্রে সাবলীল্ভাবে ও Confidence এর সাথে ইংরেজি বলার দক্ষতা বৃদ্ধি করে।</h4>
             </div>
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
               <img class="img-fluid" src="/assets/images/home/classroom/presentation.svg" alt="group presentation" />
-              <h4 class="text-info mt-5">শিক্ষার্থীদের সৃজনশীল চিন্তাভাবনা এবং উপস্থাপনার দক্ষতা বিকাশ করে, তাদেরকে বাস্তব-বিশ্বের পরিস্থিতির জন্য প্রস্তুত করে।</h4>
-
+              <h4 class="text-info text-center">শিক্ষার্থীদের সৃজনশীল চিন্তাভাবনা এবং উপস্থাপনার দক্ষতা বিকাশ করে, তাদেরকে বাস্তব-বিশ্বের পরিস্থিতির জন্য প্রস্তুত করে।</h4>
             </div>
             <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
               <img class="img-fluid" src="/assets/images/home/classroom/public-speaking.svg" alt="public speaking" />
-              <h4 class="text-info mt-5">সঠিক Pronunciation এবং Vocabulary গড়ে তোলে, যা বিভিন্ন সামাজিক এবং পেশাদার ক্ষেত্রে Confidence এর সাথে নিজেদের প্রকাশ করতে সাহায্য করে।</h4>
-
+              <h4 class="text-info text-center">সঠিক Pronunciation এবং Vocabulary গড়ে তোলে, যা বিভিন্ন সামাজিক এবং পেশাদার ক্ষেত্রে Confidence এর সাথে নিজেদের প্রকাশ করতে সাহায্য করে।</h4>
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
               <img class="img-fluid" src="/assets/images/home/classroom/mocktest.svg" alt="unlimited mocktest" />
-              <h4 class="text-info mt-5">শিক্ষার্থীদের অগ্রগতি মূল্যায়ন এবং উন্নতির জন্য কি কি করা প্রয়োজন তা খুঁজে বের করতে মেম্বারশীপের মেয়াদ পর্যন্ত পাচ্ছে Mock ও অন্যান্য Tests.</h4>
+              <h4 class="text-info text-center">শিক্ষার্থীদের অগ্রগতি মূল্যায়ন এবং উন্নতির জন্য কি কি করা প্রয়োজন তা খুঁজে বের করতে মেম্বারশীপের মেয়াদ পর্যন্ত পাচ্ছে Mock ও অন্যান্য Tests.</h4>
 
             </div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
               <img class="img-fluid" src="/assets/images/home/classroom/freehand-writing.svg" alt="freehand writing" />
-              <h4 class="text-info mt-5">সৃজনশীলতাকে লালন, Vocabulary বৃদ্ধি এবং সাবলীল্ভাবে লেখার প্রবাহকে উৎসাহিত করে, যা Confidently ইংরেজি লিখতে সহায়ক। </h4>
-
+              <h4 class="text-info text-center">সৃজনশীলতাকে লালন, Vocabulary বৃদ্ধি এবং সাবলীল্ভাবে লেখার প্রবাহকে উৎসাহিত করে, যা Confidently ইংরেজি লিখতে সহায়ক। </h4>
             </div>
             <div class="tab-pane fade" id="v-pills-sentence" role="tabpanel" aria-labelledby="v-pills-sentence-tab" tabindex="0">
               <img class="img-fluid" src="/assets/images/home/classroom/intensive-reading.svg" alt="intensive reading" />
-              <h4 class="text-info mt-5">Sentence Structure, Vocabulary, এবং সমালোচনামূলক চিন্তার দক্ষতা উন্নত করতে সাহায্য করে যা যে কোন কঠিন বিষয়কেও সহজে বুঝতে সহায়ক।</h4>
-
+              <h4 class="text-info text-center">Sentence Structure, Vocabulary, এবং সমালোচনামূলক চিন্তার দক্ষতা উন্নত করতে সাহায্য করে যা যে কোন কঠিন বিষয়কেও সহজে বুঝতে সহায়ক।</h4>
             </div>
           </div>
         </div>
@@ -703,7 +713,6 @@
             নিন আকর্ষণীয় পুরস্কার
           </p>
           <div class="d-flex gap-4 pt-3">
-            <!-- future - facebook page link             -->
             <a class="btn btn-danger rounded-4" href="https://www.facebook.com/groups/8402853953119177" role="button" target="_blank">জানুন বিস্তারিত</a>
           </div>
         </div>
@@ -736,7 +745,7 @@
           </div>
           <div class="card-footer border-top-0 pb-4 bg-light">
             <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-danger rounded-4" role="button">Get Started</a>
+              <a href="#" class="btn btn-danger rounded-2 w-75" role="button">কিনুন</a>
             </div>
           </div>
         </div>
