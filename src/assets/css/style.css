@@ -1,5 +1,6 @@
 :root {
-  --font-family-secondary: "bhasha-ishkool";
+  --font-family: "bhasha-skool", "bhasha-ishkool", serif;
+  --font-family-secondary: "bhasha-ishkool", serif;
   --bs-primary-rgb: 193, 21, 46;
   --bs-light-rgb: 249, 232, 234;
   --bs-light-text-emphasis: #e9e9ee;
@@ -22,9 +23,37 @@
 
 @font-face {
   font-family: "bhasha-skool";
-  src: url("/assets/fonts/AdorNoirritWeb.otf") format("opentype");
-  font-weight: normal;
   font-style: normal;
+  font-weight: 100;
+  src: url("/assets/fonts/LiAdorNoirritExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "bhasha-skool";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/assets/fonts/LiAdorNoirritLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "bhasha-skool";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/LiAdorNoirritRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "bhasha-skool";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/LiAdorNoirritSemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "bhasha-skool";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/LiAdorNoirritBold.ttf") format("truetype");
 }
 
 /* latin */
@@ -155,7 +184,7 @@ body {
 .btn {
   --bs-btn-padding-x: 1.25rem;
   --bs-btn-padding-y: 0.5rem;
-  --bs-btn-font-size: 1.5rem;
+  --bs-btn-font-size: 1.3rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -530,12 +559,27 @@ hr {
   padding-bottom: 1rem !important;
 }
 
-.w-30{
+.w-30 {
   width: 30% !important;
 }
 
 @media screen and (max-width: 768px) {
-  .w-30{
+  .w-30 {
     width: 80% !important;
   }
+}
+
+  .nav-pills .nav-link .active::after {
+	position: absolute !important; 
+	background: #fff;
+	content: '';
+	top: 9px;
+	right: -20px;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #b7b7b7;
+	transform: rotate(360deg);
+	border-radius: 3px;
+	border-left: 0px;
+	border-bottom: 0px;
 }
