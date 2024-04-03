@@ -7,25 +7,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbardesktop">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item h5 px-2">
-          <a class="nav-link text-info" aria-current="page" href="/">হোম</a>
-        </li>
-        <li class="nav-item h5 px-2 dropdown">
-          <a class="nav-link text-info" href="/courses/" role="button">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-light small">        
+        <li class="nav-item dropdown" >
+          <a class="nav-link text-info dropdown-toggle" href="/courses/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             কোর্সসমূহ
           </a>
           <ul class="dropdown-menu p-0">
-            <li class="nav-item dropend h5 px-2 mb-0">
+            <li class="nav-item dropend mb-0">
               <a role="button" class="nav-link text-info" data-bs-toggle="dropdown" aria-expanded="false">
                 ইংরেজি কোর্স
               </a>
-              <ul class="dropdown-menu p-0">
-                <li class="nav-item h5 px-2 mb-0">
+              <ul class="dropdown-menu p-0 d-none">
+                <li class="nav-item mb-0">
                   <a class="text-info nav-link" href="/courses/basic-english/">বেসিক ইংলিশ</a>
                 </li>
                 <hr class="text-info m-0 p-0" />
-                <li class="nav-item h5 px-2 mb-0">
+                <li class="nav-item mb-0">
                   <a class="text-info nav-link" href="/courses/kids-english/">Kids ইংলিশ</a>
                 </li>
                 <hr class="text-info m-0 p-0" />
@@ -39,11 +36,11 @@
               </ul>
             </li>
             <hr class="text-info p-0 m-0" />
-            <li class="nav-item dropend h5 px-2 mb-0">
+            <li class="nav-item dropend mb-0">
               <a role="button" class="nav-link text-info" data-bs-toggle="dropdown" aria-expanded="false">
                 IELTS কোর্স
               </a>
-              <ul class="dropdown-menu p-0">
+              <ul class="dropdown-menu p-0 d-none">
                 <!-- Dropdown menu links -->
                 <li class="nav-item h5 px-2 mb-0">
                   <a class="text-info nav-link" href="/courses/zero-ielts-hero/">Zero to IELTS Hero</a>
@@ -59,12 +56,12 @@
               </ul>
             </li>
             <hr class="text-info p-0 m-0" />
-            <li class="nav-item dropend h5 px-2 mb-0">
+            <li class="nav-item dropend mb-0">
               <a class="nav-link text-info" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Foreign Language কোর্স
               </a>
               <ul class="dropdown-menu p-0">
-                <li class="nav-item h5 px-2 mb-0">
+                <li class="nav-item mb-0">
                   <a class="nav-link text-info" href="#">Korean</a>
                 </li>
                 <hr class="text-info p-0 m-0" />
@@ -87,21 +84,35 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item h5 px-2">
-          <a class="nav-link text-info" href="/about-us/">আমাদের সম্পর্কে</a>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="/about-us/">
+            IELTS প্রিপারেশন
+            </a>
         </li>
-        <li class="nav-item h5 px-2">
-          <a class="nav-link text-info" href="/blog/"> ব্লগ</a>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="/about-us/">Basic ইংলিশ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="/blog/">Foreign ল্যাঙ্গুয়েজ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="/blog/">Professional কোর্স</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="/blog/">Kids ইংলিশ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="/about-us/">আমাদের সম্পর্কে</a>
         </li>
       </ul>
       <div class="gap-3 d-none d-md-flex">
         <div class="d-flex align-items-center gap-2">
           <img src="/assets/images/Call.svg" alt="phone call" />
           <a href="tel:+8801790-313366" class="text-decoration-none">
-            <h5 class="h5 text-info mb-0">+৮৮০১৭৯০-৩১৩৩৬৬</h5>
+            <span class="text-info mb-0 small fw-normal">+৮৮০১৭৯০-৩১৩৩৬৬</span>
           </a>
         </div>
-        <button class="btn btn-danger px-4 py-2 rounded-4 fs-4" data-bs-toggle="modal" data-bs-target="#registrationModal" href="#">রেজিস্ট্রেশন করুন</button>
+        <button class="btn btn-danger rounded-4" data-bs-toggle="modal" data-bs-target="#registrationModal" href="#">রেজিস্ট্রেশন করুন</button>
       </div>
     </div>
   </div>
