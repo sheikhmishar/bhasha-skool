@@ -15,35 +15,57 @@
   <!-- checkout banner section -->
   <section class="bg-gradient py-5 top-margin">
     <div class="container py-5">
-      <h1 class="text-center display-3 fw-bold text-light">আমাদের ব্লগে স্বাগতম</h1>
-      <h2 class="text-center text-white">
+      <h1 class="text-center display-5 fw-bold text-light">আমাদের ব্লগে স্বাগতম</h1>
+      <h3 class="text-center text-white">
         ভাষা শেখা, বিশেষ করে ইংরেজির আতঙ্ককে দূর করে ভাষা শিক্ষা Simplify
         করতেই ভাষা স্কুলের যাত্রা।
-      </h2>
+      </h3>
     </div>
   </section>
   <section class="bg-secondary-subtle py-5">
     <div class="container">
+      <div class="d-flex justify-content-between mb-3">
+        <h4 class="card-title text-info">Popular blogs</h4>
+        <div class="input-group mb-3 w-25 d-none d-md-flex">
+          <span class="input-group-text bg-transparent" id="search">
+            <img src="/assets/images/search-icon.svg" alt="search icon">
+          </span>
+          <input type="text" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search">
+        </div>
+      </div>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <% db.blogs.forEach(blog => { %>
         <div class="col">
           <div class="card border-0 h-100 bg-transparent">
-            <img src="/assets/images/blog/blog-01.png" class="card-img-top" alt="blog-01">
+            <img src="/<%= blog.imgSrc %>" class="card-img-top" alt="blog-01">
             <div class="card-body">
-              <h2 class="card-title text-info overflow-hidden" style="height: 5rem;"><%= blog.blog_title %></h2>
-              <p class="card-text text-info"><%= blog.blog_excerpt %></p>
+              <h4 class="card-title text-info overflow-hidden"><%= blog.blog_title %></h4>
+              <p class="card-text text-info"><%= blog.blog_excerpt.replaceAll('<p>', "").replaceAll('</p>', "") %></p>
             </div>
-            <a href="<%= blog.blog_link %>" class="btn btn-light rounded-4 w-50 py-2" role="button"> আরো পড়ুন
+            <a href="/blog/blog_slug?blog_slug=<%= blog.blog_slug %>" class="btn btn-light rounded-4 w-50 py-2" role="button"> আরো পড়ুন
             </a>
           </div>
         </div>
         <% }) %>
       </div>
     </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center my-5">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
   </section>
   <!-- footer -->
-  <%- include('/_components/footer') -%> <%-
-  include("/_components/scripts")-%>
+  <%- include('/_components/footer') -%>
+  <%- include("/_components/scripts")-%>
 </body>
 
 </html>
