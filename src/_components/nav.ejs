@@ -7,100 +7,28 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbardesktop">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-light small">        
-        <li class="nav-item dropdown" >
-          <a class="nav-link text-info dropdown-toggle" href="/courses/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-light small">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-info dropdown-toggle" href="#" role="button" aria-expanded="false">
             কোর্সসমূহ
           </a>
           <ul class="dropdown-menu p-0">
-            <li class="nav-item dropend mb-0">
-              <a role="button" class="nav-link text-info" data-bs-toggle="dropdown" aria-expanded="false">
-                ইংরেজি কোর্স
+            <% db.categories.forEach(category => { %>
+            <li class="dropdown-item nav-item">
+              <a class="nav-link text-info" href="/courses?category=<%= category.category_link %>">
+                <%= category.category_title %>
               </a>
-              <ul class="dropdown-menu p-0 d-none">
-                <li class="nav-item mb-0">
-                  <a class="text-info nav-link" href="/courses/basic-english/">বেসিক ইংলিশ</a>
-                </li>
-                <hr class="text-info m-0 p-0" />
-                <li class="nav-item mb-0">
-                  <a class="text-info nav-link" href="/courses/kids-english/">Kids ইংলিশ</a>
-                </li>
-                <hr class="text-info m-0 p-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="text-info nav-link" href="/courses/durdanta-spoken/">দুর্দান্ত স্পোকেন</a>
-                </li>
-                <hr class="text-info m-0 p-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="text-info nav-link" href="/courses/tukhor-writing/">তুখোড় রাইটিং</a>
-                </li>
-              </ul>
             </li>
-            <hr class="text-info p-0 m-0" />
-            <li class="nav-item dropend mb-0">
-              <a role="button" class="nav-link text-info" data-bs-toggle="dropdown" aria-expanded="false">
-                IELTS কোর্স
-              </a>
-              <ul class="dropdown-menu p-0 d-none">
-                <!-- Dropdown menu links -->
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="text-info nav-link" href="/courses/zero-ielts-hero/">Zero to IELTS Hero</a>
-                </li>
-                <hr class="text-info p-0 m-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="text-info nav-link" href="/courses/ielts-hero/">IELTS Hero</a>
-                </li>
-                <hr class="text-info p-0 m-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="text-info nav-link" href="#">Mock test</a>
-                </li>
-              </ul>
-            </li>
-            <hr class="text-info p-0 m-0" />
-            <li class="nav-item dropend mb-0">
-              <a class="nav-link text-info" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Foreign Language কোর্স
-              </a>
-              <ul class="dropdown-menu p-0">
-                <li class="nav-item mb-0">
-                  <a class="nav-link text-info" href="#">Korean</a>
-                </li>
-                <hr class="text-info p-0 m-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="nav-link text-info" href="#">Japanese</a>
-                </li>
-                <hr class="text-info p-0 m-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="nav-link text-info" href="#">Chinese</a>
-                </li>
-                <hr class="text-info p-0 m-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="nav-link text-info" href="#">Arabic</a>
-                </li>
-                <hr class="text-info p-0 m-0" />
-                <li class="nav-item h5 px-2 mb-0">
-                  <a class="nav-link text-info" href="#">French</a>
-                </li>
-              </ul>
-            </li>
+            <% }) %>
           </ul>
         </li>
+        <% db.categories.forEach(category => { %>
         <li class="nav-item">
-          <a class="nav-link text-info" href="/about-us/">
-            IELTS প্রিপারেশন
-            </a>
+          <a class="nav-link text-info" href="/courses?category=<%= category.category_link %>">
+            <%= category.category_title %>
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-info" href="/about-us/">Basic ইংলিশ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-info" href="/blog/">Foreign ল্যাঙ্গুয়েজ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-info" href="/blog/">Professional কোর্স</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-info" href="/blog/">Kids ইংলিশ</a>
-        </li>
+        <% }) %>
         <li class="nav-item">
           <a class="nav-link text-info" href="/about-us/">আমাদের সম্পর্কে</a>
         </li>
@@ -135,90 +63,27 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item h5">
+          <li class="nav-item">
             <a class="nav-link text-info" aria-current="page" href="/">হোম</a>
           </li>
-          <li class="nav-item h5 dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link text-info dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
               কোর্সসমূহ
             </a>
             <ul class="dropdown-menu border-0">
-              <li class="dropend px-3">
-                <a type="button" class="text-decoration-none text-info h5 mb-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  ইংরেজি কোর্স
+              <% db.categories.forEach(category => { %>
+              <li class="dropdown-item nav-item">
+                <a class="nav-link text-info" href="/courses?category=<%= category.category_link %>">
+                  <%= category.category_title %>
                 </a>
-                <ul class="dropdown-menu border-0">
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="/courses/basic-english/">বেসিক ইংলিশ</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="/courses/kids-english/">Kids ইংলিশ</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="/courses/durdanta-spoken/">দুর্দান্ত স্পোকেন</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="/courses/tukhor-writing/">তুখোড় রাইটিং</a>
-                  </li>
-                </ul>
               </li>
-              <hr class="text-info" />
-              <li class="dropend px-3">
-                <a type="button" class="text-decoration-none text-info h5 mb-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  IELTS কোর্স
-                </a>
-                <ul class="dropdown-menu border-0">
-                  <!-- Dropdown menu links -->
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="/courses/zero-ielts-hero/">Zero to IELTS Hero</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="/courses/ielts-hero/">IELTS Hero</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="#">Mock test</a>
-                  </li>
-                </ul>
-              </li>
-              <hr class="text-info" />
-              <li class="dropend px-3">
-                <a class="text-decoration-none text-info h5 mb-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Foreign Language কোর্স
-                </a>
-                <ul class="dropdown-menu border-0">
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="#">Korean</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="#">Japanese</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="#">Chinese</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="#">Arabic</a>
-                  </li>
-                  <hr class="text-info" />
-                  <li>
-                    <a class="dropdown-item text-info h5 mb-0" href="#">French</a>
-                  </li>
-                  <hr class="text-info" />
-                </ul>
-              </li>
+              <% }) %>
             </ul>
           </li>
-          <li class="nav-item h5">
+          <li class="nav-item">
             <a class="nav-link text-info" href="/about-us/">আমাদের সম্পর্কে</a>
           </li>
-          <li class="nav-item h5">
+          <li class="nav-item">
             <a class="nav-link text-info" href="/blog/"> ব্লগ</a>
           </li>
         </ul>
@@ -244,7 +109,7 @@
         </span> </a><a href="/" class="mt-0 pt-0 text-dark text-decoration-none">Home</a>
     </div>
     <div class="col-4 text-center d-flex flex-column">
-      <a href="/courses/" class="pb-0">
+      <a href="/courses?category=All" class="pb-0">
         <span class="mb-0">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_2_32" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -254,7 +119,7 @@
               <path d="M12 21L5 17.2V11.2L1 9L12 3L23 9V17H21V10.1L19 11.2V17.2L12 21ZM12 12.7L18.85 9L12 5.3L5.15 9L12 12.7ZM12 18.725L17 16.025V12.25L12 15L7 12.25V16.025L12 18.725Z" fill="#1C1B1F" />
             </g>
           </svg>
-        </span> </a><a href="/courses/" class="pt-0 text-dark text-decoration-none">Courses</a>
+        </span> </a><a href="/courses?category=All" class="pt-0 text-dark text-decoration-none">Courses</a>
     </div>
     <div class="col-4 text-center d-flex flex-column">
       <a href="/about-us/" class="pb-0">
@@ -296,22 +161,22 @@
             </p>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
-              <label class="h5 text-info" for="name">Enter Name</label>
+              <label class="h6 text-info" for="name">Enter Name</label>
             </div>
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
-              <label class="h5 text-info" for="email">Enter Email address</label>
+              <label class="h6 text-info" for="email">Enter Email address</label>
             </div>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" required />
-              <label class="h5 text-info" for="phone">Enter Phone Number</label>
+              <label class="h6 text-info" for="phone">Enter Phone Number</label>
             </div>
             <div class="form-floating">
-              <select class="form-select form-select-lg h5 text-info pt-1" id="branch" name="branch" aria-label="Select branch name">
-                <option selected class="h6">Select Branch Name</option>
-                <option class="h6 text-info" value="dhaka">Dhaka</option>
-                <option class="h6 text-info" value="narayanganj">Narayanganj</option>
-                <option class="h6 text-info" value="online">Online</option>
+              <select class="form-select form-select-lg text-info pt-1 fs-6" id="branch" name="branch" aria-label="Select branch name">
+                <option class="fs-6" selected>Select Branch Name</option>
+                <option class="fs-6 text-info" value="dhaka">Dhaka</option>
+                <option class="fs-6 text-info" value="narayanganj">Narayanganj</option>
+                <option class="fs-6 text-info" value="online">Online</option>
               </select>
             </div>
             <div class="modal-footer border-0 justify-content-center">
