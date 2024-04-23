@@ -27,7 +27,7 @@
         </div>
         <% db.promotions.forEach(promotion => { %>
         <div class="modal-body p-0">
-          <img src="<%= backendUrl %><%= promotion.imgSrc %>" class="img-fluid rounded" alt="promotional popup image">
+          <img src="/<%= promotion.imgSrc %>" class="img-fluid rounded" alt="promotional popup image">
         </div>
         <% }) %>
       </div>
@@ -46,7 +46,7 @@
             অভিজ্ঞ শিক্ষকদের তৈরি দুর্দান্ত সব Tips, Tricks <br> ও Techniques এর সমন্বয়ে
           </p>
           <div class="d-flex gap-4 pt-3 justify-content-center justify-content-md-start">
-            <a class="btn btn-danger rounded-3" href="/courses/" role="button">শিখতে শুরু করুন</a>
+            <a class="btn btn-danger rounded-3" href="/courses?category=ielts-প্রিপারেশন" role="button">শিখতে শুরু করুন</a>
             <a class="btn btn-light rounded-3" href="#" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">ফ্রি ক্লাস করুন</a>
           </div>
         </div>
@@ -92,8 +92,8 @@
       <div class="row">
         <div class="col-6">
           <h6 class="text-center text-primary fw-normal py-4 shadow rounded-4">
-            ১ কোটি + <br />
-            <span class="text-info">মোট শিক্ষার্থী</span>
+            ১০/২০ টির<br />
+            <span class="text-info">অধিক সার্ভিস</span>
           </h6>
         </div>
         <div class="col-6">
@@ -122,6 +122,15 @@
     <div class="container shadow-lg rounded-5 p-5 bg-white top-50px position-relative">
       <div class="row">
         <div class="col-md-3">
+          <h6 class="text-center text-primary fw-normal h5">
+            ১০/২০ টির<br />
+            <span class="text-info">অধিক সার্ভিস</span>
+          </h6>
+        </div>
+        <div class="col-md-1 text-center d-flex justify-content-center">
+          <div class="vr"></div>
+        </div>
+        <div class="col-md-2">
           <h6 class="h5 text-center text-primary fw-normal">
             ৫০,০০০ +<br />
             <span class="text-info">শিক্ষার্থী</span>
@@ -130,7 +139,7 @@
         <div class="col-md-1 text-center d-flex justify-content-center">
           <div class="vr"></div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
           <h6 class="h5 text-center text-primary fw-normal">
             ৩ +<br />
             <span class="text-info">সফলতার বছর</span>
@@ -139,7 +148,7 @@
         <div class="col-md-1 text-center d-flex justify-content-center">
           <div class="vr"></div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <h6 class="h5 text-center text-primary fw-normal">
             ১০ +<br />
             <span class="text-info">ল্যাংগুয়েজ কোর্স</span>
@@ -165,7 +174,7 @@
                   <span>মাস্টার ক্লাস</span>
                 </h5>
                 <div class="d-flex justify-content-center">
-                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/basic-english/" role="button">বিস্তারিত দেখুন</a>
+                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/details/?courseLink=basic-english-মাস্টারক্লাস" role="button">বিস্তারিত দেখুন</a>
                 </div>
               </div>
             </div>
@@ -180,7 +189,7 @@
                   <span>Writing</span>
                 </h5>
                 <div class="d-flex justify-content-center">
-                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/tukhor-writing/" role="button">বিস্তারিত দেখুন</a>
+                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/details/?courseLink=তুখোড়-writing" role="button">বিস্তারিত দেখুন</a>
                 </div>
               </div>
             </div>
@@ -198,7 +207,7 @@
                   <span>IELTS হিরো</span>
                 </h5>
                 <div class="d-flex justify-content-center">
-                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/zero-ielts-hero/" role="button">বিস্তারিত দেখুন</a>
+                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/details/?courseLink=ielts-হিরো" role="button">বিস্তারিত দেখুন</a>
                 </div>
               </div>
             </div>
@@ -213,7 +222,7 @@
                   <span>Spoken</span>
                 </h5>
                 <div class="d-flex justify-content-center">
-                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/durdanta-spoken/" role="button">বিস্তারিত দেখুন</a>
+                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/details/?courseLink=দুর্দান্ত-spoken" role="button">বিস্তারিত দেখুন</a>
                 </div>
               </div>
             </div>
@@ -232,7 +241,7 @@
                   <span>হিরো</span>
                 </h5>
                 <div class="d-flex justify-content-center">
-                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/ielts-hero/" role="button">বিস্তারিত দেখুন</a>
+                  <a class="btn btn-primary rounded-3 position-absolute bottom-50px px-xxl-5 py-2" href="/courses/details/?courseLink=ielts-হিরো" role="button">বিস্তারিত দেখুন</a>
                 </div>
               </div>
             </div>
@@ -269,7 +278,7 @@
             <div class="col-md-12 py-2 col-6">
               <div class="px-3 text-center rounded-4 shadow h-100 border-0 card">
                 <h6 class="fw-bold secondary-font-family h-100 text-primary  d-flex justify-content-center align-items-center flex-column">
-                  <a href="/courses/basic-english/" class="text-decoration-none card-link stretched-link text-primary">
+                  <a href="/courses/details/?courseLink=basic-english-মাস্টারক্লাস" class="text-decoration-none card-link stretched-link text-primary">
                     Basic English <br />
                     <span class="text-info">মাস্টার ক্লাস</span>
                   </a>
@@ -279,7 +288,7 @@
             <div class="col-md-12 py-2 col-6">
               <div class="p-5 text-center rounded-4 shadow h-100 border-0 card">
                 <h6 class="text-center fw-bold secondary-font-family h-100 text-primary d-flex justify-content-center align-items-center flex-column">
-                  <a href="/courses/zero-ielts-hero/" class="text-decoration-none card-link stretched-link text-primary">
+                  <a href="/courses/details/?courseLink=ielts-হিরো" class="text-decoration-none card-link stretched-link text-primary">
                     জিরো টু<br />
                     <span class="text-info">IELTS হিরো</span>
                   </a>
@@ -293,7 +302,7 @@
             <div class="col-md-12 py-2 col-6">
               <div class="p-5  text-center rounded-4 shadow h-100 card border-0">
                 <h6 class="text-center fw-bold secondary-font-family h-100 text-primary">
-                  <a href="/courses/ielts-hero/" class="text-decoration-none card-link stretched-link text-primary">
+                  <a href="/courses/details/?courseLink=ielts-হিরো" class="text-decoration-none card-link stretched-link text-primary">
                     IELTS
                     <br />
                     <span class="text-info">হিরো</span>
@@ -304,7 +313,7 @@
             <div class="col-md-12 py-2 col-6">
               <div class="p-5 rounded-4 shadow h-100 card border-0">
                 <h6 class="text-center fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100 text-primary">
-                  <a href="/courses/tukhor-writing/" class="text-decoration-none card-link stretched-link text-primary">
+                  <a href="/courses/details/?courseLink=তুখোড়-writing" class="text-decoration-none card-link stretched-link text-primary">
                     তুখোড়
                     <br />
                     <span class="text-info">Writing</span>
@@ -319,7 +328,7 @@
             <div class="col-md-12 py-2 col-6">
               <div class="p-5 rounded-4 shadow h-100 card border-0">
                 <h6 class="text-center fw-bold secondary-font-family d-flex justify-content-center align-items-center flex-column h-100 text-primary">
-                  <a href="/courses/durdanta-spoken/" class="text-decoration-none card-link stretched-link text-primary">
+                  <a href="/courses/details/?courseLink=দুর্দান্ত-spoken" class="text-decoration-none card-link stretched-link text-primary">
                     দুর্দান্ত
                     <br />
                     <span class="text-info">Spoken</span>
@@ -506,6 +515,30 @@
     </div>
   </section>
   <!-- running course -->
+  <%              
+  function convertToBanglaNumber(number) {
+    const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+    const englishNumberString = number.toString();
+    let banglaNumberString = "";
+    for (let i = 0; i < englishNumberString.length; i++) {
+      const digit = parseInt(englishNumberString[i]);
+      banglaNumberString += banglaNumbers[digit];
+    }
+    return banglaNumberString;
+  }
+  
+  function getDateDifferenceInDays(startDateISO) {
+    const currentDate = new Date();
+    currentDate.setHours(currentDate.getHours() + 6);
+    const startDate = new Date(startDateISO);
+    const differenceInDays = Math.ceil((startDate - currentDate) / (1000 * 60 * 60 * 24));    
+    if (differenceInDays <= -0) {
+      return 0;
+    } else {
+      return differenceInDays;
+    }
+  }
+  %>
   <section id="courses" class="bg-secondary-subtle position-relative">
     <div class="container py-5">
       <h2 class="text-center h5 text-info fw-normal">কোর্সসমূহ</h2>
@@ -533,8 +566,7 @@
           <div class="card-group py-5 courses">
             <% db.courses.concat(db.courses).forEach(course => { %>
             <div class="card rounded ms-2 me-2 bg-transparent">
-              <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-              <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
+              <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
               <div class="card-body">
                 <div class="d-flex justify-content-start gap-2">
                   <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
@@ -546,7 +578,7 @@
                       <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
                     </svg>
                     <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                    <p class="mb-0 text-info fw-nomal small">৩২ টি সিট বাকি</p>
+                    <p class="mb-0 text-info fw-nomal small"><%= course.courseSeatleft %> টি সিট বাকি</p>
                   </div>
                   <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
                     <img src="/assets/images/calender.svg" alt="total class" class="d-none">
@@ -555,7 +587,8 @@
                       <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                    <p class="mb-0 text-info fw-normal small">৫ দিন বাকি </p>
+                    <% const remainingDays = getDateDifferenceInDays(course.courseStartDate); %>
+                    <p class="mb-0 text-info fw-normal small"><%= convertToBanglaNumber(remainingDays) %> দিন বাকি</p>
                   </div>
                 </div>
               </div>
@@ -575,7 +608,7 @@
                     </p>
                   </div>
                   <div class="">
-                    <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                    <a class="btn btn-danger rounded" href="/courses/details?courseLink=<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
                   </div>
                 </div>
               </div>
@@ -587,8 +620,7 @@
           <div class="card-group py-5 courses">
             <% db.courses.concat(db.courses).forEach(course => { %>
             <div class="card rounded ms-2 me-2 bg-transparent">
-              <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-              <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
+              <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
               <div class="card-body">
                 <div class="d-flex justify-content-start gap-2">
                   <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
@@ -600,7 +632,7 @@
                       <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
                     </svg>
                     <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                    <p class="mb-0 text-info fw-normal small">৩২ টি সিট বাকি</p>
+                    <p class="mb-0 text-info fw-nomal small"><%= course.courseSeatleft %> টি সিট বাকি</p>
                   </div>
                   <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
                     <img src="/assets/images/calender.svg" alt="total class" class="d-none">
@@ -609,7 +641,8 @@
                       <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                    <p class="mb-0 text-info fw-normal small">৫ দিন বাকি </p>
+                    <% const remainingDays = getDateDifferenceInDays(course.courseStartDate); %>
+                    <p class="mb-0 text-info fw-normal small"><%= convertToBanglaNumber(remainingDays) %> দিন বাকি</p>
                   </div>
                 </div>
               </div>
@@ -629,7 +662,7 @@
                     </p>
                   </div>
                   <div class="">
-                    <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                    <a class="btn btn-danger rounded" href="/courses/details?courseLink=<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
                   </div>
                 </div>
               </div>
