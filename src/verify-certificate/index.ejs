@@ -14,48 +14,18 @@
   <%- include("/_components/nav") -%>
   <!-- checkout banner section -->
   <section class="py-5 top-margin">
-    <div class="container">
+    <div class="container" id="main-section">
       <div class="row align-items-center">
         <div class="col-md-6">
           <h5 class="text-info">সম্পন্নকৃত কোর্স</h5>
-          <img src="/assets/images/courses/course-img.png" class="card-img-top rounded w-75 my-3" alt="দুর্দান্ত Spoken">
-          <div>
-            <a href="#" class="btn btn-danger rounded-2" role="button" tabindex="-1">কোর্সটি দেখুন</a>
-          </div>
+          <div id="course-details"></div>
           <h4 class="text-info mt-3">এই কোর্সে আপনি যা যা শিখবেন</h4>
-          <div class="d-flex flex-row align-items-center gap-2">
-            <span>
-              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.341 2.42156C9.68817 2.2165 8.9934 2.10596 8.27285 2.10596C4.46543 2.10596 1.37891 5.19248 1.37891 8.9999C1.37891 12.8073 4.46543 15.8938 8.27285 15.8938C12.0802 15.8938 15.1668 12.8073 15.1668 8.9999C15.1668 8.27934 15.0562 7.5846 14.8512 6.93171" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" />
-                <path d="M5.85938 7.27452L8.27225 9.6874L14.4769 2.79346" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <p class="text-info">একাডেমিক পেপার, অ্যাসাইনমেন্ট, কিংবা যেকোনো ডকুমেন্ট প্রফেশনালি ফরম্যাট ও উপস্থাপন করা।</p>
-          </div>
-          <div class="d-flex flex-row align-items-center gap-2">
-            <span>
-              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.341 2.42156C9.68817 2.2165 8.9934 2.10596 8.27285 2.10596C4.46543 2.10596 1.37891 5.19248 1.37891 8.9999C1.37891 12.8073 4.46543 15.8938 8.27285 15.8938C12.0802 15.8938 15.1668 12.8073 15.1668 8.9999C15.1668 8.27934 15.0562 7.5846 14.8512 6.93171" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" />
-                <path d="M5.85938 7.27452L8.27225 9.6874L14.4769 2.79346" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <p class="text-info">একাডেমিক পেপার, অ্যাসাইনমেন্ট, কিংবা যেকোনো ডকুমেন্ট প্রফেশনালি ফরম্যাট ও উপস্থাপন করা।</p>
-          </div>
-          <div class="d-flex flex-row align-items-center gap-2">
-            <span>
-              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.341 2.42156C9.68817 2.2165 8.9934 2.10596 8.27285 2.10596C4.46543 2.10596 1.37891 5.19248 1.37891 8.9999C1.37891 12.8073 4.46543 15.8938 8.27285 15.8938C12.0802 15.8938 15.1668 12.8073 15.1668 8.9999C15.1668 8.27934 15.0562 7.5846 14.8512 6.93171" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" />
-                <path d="M5.85938 7.27452L8.27225 9.6874L14.4769 2.79346" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <p class="text-info">একাডেমিক পেপার, অ্যাসাইনমেন্ট, কিংবা যেকোনো ডকুমেন্ট প্রফেশনালি ফরম্যাট ও উপস্থাপন করা।</p>
-          </div>
-
+          <div id="topics-learn"></div>
         </div>
         <div class="col-md-6 d-none d-md-block">
           <h5 class="text-info">সার্টিফিকেট প্রাপক</h5>
-          <h4 class="text-info">Ashraful Islam Abid</h4>
-          <p class="text-info">“ভাষা স্কুল থেকে Ashraful Islam Abid ১ ডিসেম্বর, ২০২৩ তারিখে “তুখোড় Writing” কোর্সটি সফলভাবে সম্পন্ন করেছেন।”</p>
+          <h4 class="text-info" id="student-name">Ashraful Islam Abid</h4>
+          <p class="text-info" id="complete-course">“ভাষা স্কুল থেকে Ashraful Islam Abid ১ ডিসেম্বর, ২০২৩ তারিখে “তুখোড় Writing” কোর্সটি সফলভাবে সম্পন্ন করেছেন।”</p>
           <img class="img-fluid" src="/assets/images/courses/certificate.png" alt="certificate">
         </div>
       </div>
@@ -65,6 +35,47 @@
   <!-- footer -->
   <%- include('/_components/footer') -%> <%-
   include("/_components/scripts")-%>
+  <script>
+    const studentName = document.getElementById("student-name")
+    const topicsLearn = document.getElementById("topics-learn")
+    const courseDetails = document.getElementById("course-details")
+    const completeCourseDetails = document.getElementById("complete-course")
+    const mainSection = document.getElementById("main-section")
+
+    const formattedDate = (completionDate) => {
+      return new Date(completionDate)
+        .toLocaleDateString("bn", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        })
+        .replace(",", "");
+    }
+
+    var certificatesJson = <%- JSON.stringify(db.certificates) %>;
+    var coursesJson = <%- JSON.stringify(db.courses) %>;
+    const urlParams = new URLSearchParams(window.location.search);
+    const certificateId = urlParams.get('id');
+    const certificateDeatils = certificatesJson.find(course => course.certificate_id === certificateId);
+
+    if (certificateDeatils) {
+      const completedCourse = coursesJson.filter(c => c.id === certificateDeatils.courseId);
+
+      studentName.innerHTML = certificateDeatils.student_name
+      topicsLearn.innerHTML = certificateDeatils.course_topics.replaceAll("<ul>", '<ul class="list-unstyled">').replaceAll('<li>', '<li class="text-info my-2"><span class="pe-2"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.341 2.42156C9.68817 2.2165 8.9934 2.10596 8.27285 2.10596C4.46543 2.10596 1.37891 5.19248 1.37891 8.9999C1.37891 12.8073 4.46543 15.8938 8.27285 15.8938C12.0802 15.8938 15.1668 12.8073 15.1668 8.9999C15.1668 8.27934 15.0562 7.5846 14.8512 6.93171" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" /><path d="M5.85938 7.27452L8.27225 9.6874L14.4769 2.79346" stroke="#272454" stroke-width="1.10795" stroke-linecap="round" stroke-linejoin="round" /></svg></span>')
+      completeCourseDetails.innerHTML = `“ভাষা স্কুল থেকে ${certificateDeatils.student_name} ${formattedDate(certificateDeatils.completion_date)} তারিখে “${completedCourse.map(c => c.courseTitle)}” কোর্সটি সফলভাবে সম্পন্ন করেছেন।”`
+      courseDetails.innerHTML = completedCourse.map(course => `
+      <img id="course-img" src="/${course.imgSrc}" class="card-img-top img-fluid rounded my-3" alt="${course.courseAlt}">
+          <div>
+            <a href="/courses/details/?courseLink=${course.courseLink}" class="btn btn-danger rounded-2" role="button" tabindex="-1">কোর্সটি দেখুন</a>
+          </div>         
+      `).join(' ')
+
+    } else {
+      mainSection.innerHTML = `<h3 class="text-info text-center">Certificate not matched! Verification failed</h3>`
+      alert("Verification failed")
+    }
+  </script>
 </body>
 
 </html>

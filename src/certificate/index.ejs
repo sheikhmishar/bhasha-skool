@@ -19,10 +19,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 gap-3">
-          <h4 class="card-title text-info">সার্টিফিকেট আইডি ভেরিফিকেশন</h4>
-          <input type="text" class="form-control py-3 my-3" placeholder="সার্টিফিকেট আইডি লিখুন" aria-label="certificate-id" aria-describedby="search">
-          <a href="#" class="btn btn-danger rounded-2 w-100" role="button" tabindex="-1">সাবমিট করুন</a>
-        </div>
+            <form role="search" action="/verify-certificate/">
+            <h4 class="card-title text-info">সার্টিফিকেট আইডি ভেরিফিকেশন</h4>
+            <input type="text" class="form-control py-3 my-3" name="id" placeholder="সার্টিফিকেট আইডি লিখুন" aria-label="certificate-id" aria-describedby="search">
+            <button class="btn btn-danger rounded-2 w-100" type="submit" role="button" tabindex="-1">সাবমিট করুন</button>
+          </form>
+          </div>
         <div class="col-md-6 d-none d-md-block">
           <img src="/assets/images/cerificate-demo.png" class="card-img-top" alt="certificate demo">
         </div>
