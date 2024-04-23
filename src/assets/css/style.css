@@ -9,11 +9,13 @@
   --bs-dark-rgb: 16, 15, 35;
   --bs-dark-text-emphasis: #bcbbca;
   --bs-secondary-bg-subtle: #fdf6f7;
+  --bs-primary-bg-subtle: #E9E9EE;
   --bs-gradient: linear-gradient(90deg, rgba(39, 36, 84), rgba(176, 19, 42));
   --primary-gradient: linear-gradient(90deg, #b0132a, #272454);
   --secondary-gradient: linear-gradient(180deg, #272557 0%, #484ba0 100%);
   --tertiary-gradient: linear-gradient(45deg, #332f6f, #c1162e, #585cca);
   --card-gradient: linear-gradient(45deg, #c1162e, #585cca);
+  --course-tab-gradient: linear-gradient(45deg, #c1162e, #585cca);
   --course-gradient: linear-gradient(
     0deg,
     #4c69b9 0%,
@@ -569,17 +571,17 @@ hr {
   }
 }
 
-  .nav-pills .nav-link .active::after {
-	position: absolute !important; 
-	background: #fff;
-	content: '';
-	top: 9px;
-	right: -20px;
-	width: 16px;
-	height: 16px;
-	border: 1px solid #b7b7b7;
-	transform: rotate(360deg);
-	border-radius: 3px;
-	border-left: 0px;
-	border-bottom: 0px;
+.nav-pills .nav-link .active::after {
+  position: absolute !important;
+  background: #fff;
+  content: "";
+  top: 9px;
+  right: -20px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #b7b7b7;
+  transform: rotate(360deg);
+  border-radius: 3px;
+  border-left: 0px;
+  border-bottom: 0px;
 }
