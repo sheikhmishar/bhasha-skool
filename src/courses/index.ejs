@@ -18,635 +18,286 @@
   <!-- courses banner section -->
   <section class="bg-gradient py-5 top-margin">
     <div class="container py-5">
-      <h1 class="text-center display-3 text-light">
+      <h1 class="text-center display-5 text-light">
         আমাদের কোর্সসমুহ
       </h1>
-      <h2 class="text-center text-white">
+      <h3 class="text-center text-white">
         ভাষা শিক্ষার Alphabets উচ্চারন থেকে শুরু করে সাবলীলভাবে বলা পর্যন্ত
         প্রতিটি ধাপ সহজ ও আনন্দময় করে তুলতে আমাদের রয়েছে ২০টিরও অধিক কোর্স।
-      </h2>
+      </h3>
     </div>
   </section>
-  <section class="py-5">
+  <section class="py-5 d-non">
     <div class="container">
-      <div class="d-flex justify-content-between">
-        <h2 class="h1 text-info">ভাষা স্কুলের কোর্সসমুহঃ</h2>
-        <div class="input-group mb-3 w-25 d-none d-md-flex">
-          <span class="input-group-text bg-transparent" id="search">
-            <img src="/assets/images/search-icon.svg" alt="search icon">
-          </span>
-          <input type="text" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" />
-        </div>
-      </div>
       <div class="justify-content-center gap-5 pt-5 flex-column">
         <!-- // nav pill  -->
-        <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">        
+          <% db.categories.forEach(category => { %>
           <li class="nav-item" role="presentation">
-            <button class="nav-link active px-md-3" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">
-              <h4 class="mb-0">
-                All
-              </h4>
+            <button class="nav-link " id="<%= category.category_link %>-tab" data-bs-toggle="pill" data-bs-target="#<%= category.category_link %>" type="button" role="tab" aria-controls="<%= category.category_link %>" aria-selected="false">
+              <h5 class="mb-0">
+                <%= category.category_title %>
+              </h5>
             </button>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-              <h4 class="mb-0">
-                Basic English
-              </h4>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-              <h4 class="mb-0">
-                IELTS প্রিপারেশন
-              </h4>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link " id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
-              <h4 class="mb-0">
-                Kid's English
-              </h4>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link " id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">
-              <h4 class="mb-0">
-                Foreign Language কোর্স
-              </h4>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link " id="pills-professional-tab" data-bs-toggle="pill" data-bs-target="#pills-professional" type="button" role="tab" aria-controls="pills-professional" aria-selected="false">
-              <h4 class="mb-0">
-                Professional
-              </h4>
-            </button>
-          </li>          
+          <% }) %>
         </ul>
-        <div class="tab-content" id="pills-tabContent">              
+        <div class="tab-content" id="pills-tabContent">
+          <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex flex-row gap-2">
+              <button class="btn btn-outline-danger active" type="button">Online</button>
+              <button class="btn btn-outline-danger" type="button">Offline</button>
+            </div>
+            <div class="input-group mb-3 w-25 d-none d-md-flex">
+              <span class="input-group-text bg-transparent" id="search">
+                <img src="/assets/images/search-icon.svg" alt="search icon">
+              </span>
+              <input type="text" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" />
+            </div>
+          </div>
+          <%              
+              function convertToBanglaNumber(number) {
+                const banglaNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+                const englishNumberString = number.toString();
+                let banglaNumberString = "";
+                for (let i = 0; i < englishNumberString.length; i++) {
+                  const digit = parseInt(englishNumberString[i]);
+                  banglaNumberString += banglaNumbers[digit];
+                }
+                return banglaNumberString;
+              }
+              
+              function getDateDifferenceInDays(startDateISO) {
+                const currentDate = new Date();
+                currentDate.setHours(currentDate.getHours() + 6);
+                const startDate = new Date(startDateISO);
+                const differenceInDays = Math.ceil((startDate - currentDate) / (1000 * 60 * 60 * 24));                
+                if (differenceInDays <= -0) {
+                  return 0;
+                } else {
+                  return differenceInDays;
+                }
+              }
+          %>
+          <% db.categories.forEach(category => { %>
+          <div class="tab-pane" id="<%= category.category_link %>" role="tabpanel" data-index="5" aria-labelledby="<%= category.category_link %>-tab" tabindex="0">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+              <% db.courses.forEach(course => { %>
+              <% if (category.id === course.categoryId) { %>
+              <div class="col p-0">
+                <div class="card rounded ms-2 me-2 bg-transparent">
+                  <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
+                  <div class="card-body">
+                    <div class="d-flex justify-content-start gap-2">
+                      <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                        <img src="/assets/images/time.svg" alt="course duration" class="d-none">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
+                          <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
+                          <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
+                        </svg>
+                        <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
+                        <p class="mb-0 text-info fw-nomal small"><%= course.courseSeatleft %> টি সিট বাকি</p>
+                      </div>
+                      <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                        <img src="/assets/images/calender.svg" alt="total class" class="d-none">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
+                          <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
+                        <% const remainingDays = getDateDifferenceInDays(course.courseStartDate); %>
+                        <p class="mb-0 text-info fw-normal small"><%= convertToBanglaNumber(remainingDays) %> দিন বাকি</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-transparent">
+                    <h5 class="text-info mb-5">
+                      <%= course.courseTitle %>
+                    </h5>
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <div class="d-flex">
+                          <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                          </span>
+                          <h6 class="text-info mb-0 fw-semibold"><%= course.courseOnlineDiscountPrice %></h6>
+                        </div>
+                        <p class="ps-4 text-decoration-line-through text-info">
+                          <%= course.courseOnlineActualPrice %>
+                        </p>
+                      </div>
+                      <div class="">
+                        <a class="btn btn-danger rounded" href="/courses/details/?courseLink=<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+              <% }) %>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="d-none">
+    <div class="justify-content-center gap-5 pt-5 flex-column">
+      <!-- // nav pill  -->
+      <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">        
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-categories-tab" data-bs-toggle="pill" data-bs-target="#all-categories" type="button" role="tab" aria-controls="all-categories" aria-selected="true">
+            <h5 class="mb-0">All Categories</h5>
+          </button>
+        </li>
+        <% db.categories.forEach(category => { %>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link " id="<%= category.category_link %>-tab" data-bs-toggle="pill" data-bs-target="#<%= category.category_link %>" type="button" role="tab" aria-controls="<%= category.category_link %>" aria-selected="false">
+            <h5 class="mb-0">
+              <%= category.category_title %>
+            </h5>
+          </button>
+        </li>
+        <% }) %>
+        <!-- Add a button for "All Categories" -->
+       
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="d-flex justify-content-between mb-3">
           <div class="d-flex flex-row gap-2">
             <button class="btn btn-outline-danger active" type="button">Online</button>
             <button class="btn btn-outline-danger" type="button">Offline</button>
           </div>
-          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
-            <h2 class="fw-semibold text-info">
-              Basic English
-              </h2>
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-            <h2 class="fw-semibold text-info">
-              IELTS প্রিপারেশন
-              </h2>
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-            <h2 class="fw-semibold text-info">
-              Kid's English
-              </h2>
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-            <h2 class="fw-semibold text-info">
-              Foreign Language কোর্স
-              </h2>
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-            <h2 class="fw-semibold text-info">
-              Professional
-              </h2>
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-professional" role="tabpanel" aria-labelledby="pills-professional-tab" tabindex="0">
-            <div class="card-group py-5 courses">
-              <% db.courses.concat(db.courses).forEach(course => { %>
-              <div class="card rounded ms-2 me-2 bg-transparent">
-                <!-- <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />               -->
-                <img src="/assets/images/courses/course-img.png" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <div class="d-flex justify-content-start gap-2">
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1021 14.8207C17.719 14.8207 18.2097 14.4325 18.6503 13.8897C19.5521 12.7785 18.0714 11.8905 17.5067 11.4557C16.9325 11.0136 16.2915 10.7631 15.6416 10.7043M14.8184 9.05779C15.9551 9.05779 16.8765 8.1363 16.8765 6.9996C16.8765 5.86289 15.9551 4.94141 14.8184 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M2.6568 14.8207C2.03992 14.8207 1.54925 14.4325 1.1087 13.8897C0.206833 12.7785 1.68756 11.8905 2.25231 11.4557C2.8264 11.0136 3.46741 10.7631 4.11732 10.7043M4.52896 9.05779C3.39225 9.05779 2.47077 8.1363 2.47077 6.9996C2.47077 5.86289 3.39225 4.94141 4.52896 4.94141" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" />
-                        <path d="M6.65452 12.4422C5.81332 12.9623 3.60773 14.0244 4.95108 15.3534C5.6073 16.0027 6.33815 16.467 7.25702 16.467H12.5003C13.4191 16.467 14.15 16.0027 14.8062 15.3534C16.1495 14.0244 13.944 12.9623 13.1027 12.4422C11.1301 11.2224 8.62717 11.2224 6.65452 12.4422Z" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.761 6.17443C12.761 7.76583 11.4709 9.0559 9.87951 9.0559C8.28812 9.0559 6.99805 7.76583 6.99805 6.17443C6.99805 4.58304 8.28812 3.29297 9.87951 3.29297C11.4709 3.29297 12.761 4.58304 12.761 6.17443Z" stroke="#272454" stroke-width="1.23491" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
-                      <h6 class="mb-0 text-info">৩২ টি সিট বাকি</h6>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
-                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
-                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.638 18.114C15.1849 18.114 18.8708 14.428 18.8708 9.8812C18.8708 5.33437 15.1849 1.64844 10.638 1.64844C6.0912 1.64844 2.40527 5.33437 2.40527 9.8812C2.40527 14.428 6.0912 18.114 10.638 18.114Z" stroke="#272454" stroke-width="1.23491" />
-                        <path d="M10.6396 6.58594V9.87904L12.2862 11.5256" stroke="#272454" stroke-width="1.23491" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
-                      <h6 class="mb-0 text-info">৫ দিন বাকি </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <h3 class="text-info mb-5">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <div class="d-flex">
-                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                        </span>
-                        <h4 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h4>
-                      </div>
-                      <p class="ps-4 text-decoration-line-through text-info">
-                        <%= course.courseActualPrice %>
-                      </p>
-                    </div>
-                    <div class="">
-                      <a class="btn btn-danger rounded" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-            </div>
+          <div class="input-group mb-3 w-25 d-none d-md-flex">
+            <span class="input-group-text bg-transparent" id="search">
+              <img src="/assets/images/search-icon.svg" alt="search icon">
+            </span>
+            <input type="text" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" />
           </div>
         </div>
+        <!-- Add a tab pane for "All Categories" -->
+        <div class="tab-pane fade show active" id="all-categories" role="tabpanel" aria-labelledby="all-categories-tab">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <% db.courses.forEach(course => { %>
+            <div class="col p-0">
+              <div class="card rounded ms-2 me-2 bg-transparent">
+                <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-start gap-2">
+                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Your SVG code for time icon -->
+                      </svg>
+                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
+                      <p class="mb-0 text-info fw-nomal small"><%= course.courseSeatleft %> টি সিট বাকি</p>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
+                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Your SVG code for calendar icon -->
+                      </svg>
+                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
+                      <% const remainingDays = getDateDifferenceInDays(course.courseStartDate); %>
+                      <p class="mb-0 text-info fw-normal small"><%= convertToBanglaNumber(remainingDays) %> দিন বাকি</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <h5 class="text-info mb-5">
+                    <%= course.courseTitle %>
+                  </h5>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <div class="d-flex">
+                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                        </span>
+                        <h6 class="text-info mb-0 fw-semibold"><%= course.courseOnlineDiscountPrice %></h6>
+                      </div>
+                      <p class="ps-4 text-decoration-line-through text-info">
+                        <%= course.courseOnlineActualPrice %>
+                      </p>
+                    </div>
+                    <div class="">
+                      <a class="btn btn-danger rounded" href="/courses/details/?courseLink=<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <!-- Add tab panes for each category -->
+        <% db.categories.forEach(category => { %>
+        <div class="tab-pane" id="<%= category.category_link %>" role="tabpanel" aria-labelledby="<%= category.category_link %>-tab" tabindex="0">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <% db.courses.forEach(course => { %>
+            <% if (category.id === course.categoryId) { %>
+            <div class="col p-0">
+              <div class="card rounded ms-2 me-2 bg-transparent">
+                <img src="/<%= course.imgSrc %>" class="card-img-top rounded" alt="<%= course.courseAlt %>" />
+                <div class="card-body">
+                  <div class="d-flex justify-content-start gap-2">
+                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                      <img src="/assets/images/time.svg" alt="course duration" class="d-none">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Your SVG code for time icon -->
+                      </svg>
+                      <h5 class="mb-0 text-info d-none"><%= course.courseDuration %></h5>
+                      <p class="mb-0 text-info fw-nomal small"><%= course.courseSeatleft %> টি সিট বাকি</p>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center bg-danger-subtle p-1 rounded">
+                      <img src="/assets/images/calender.svg" alt="total class" class="d-none">
+                      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Your SVG code for calendar icon -->
+                      </svg>
+                      <h5 class="mb-0 text-info d-none"><%= course.courseTotalClass %></h5>
+                      <% const remainingDays = getDateDifferenceInDays(course.courseStartDate); %>
+                      <p class="mb-0 text-info fw-normal small"><%= convertToBanglaNumber(remainingDays) %> দিন বাকি</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <h5 class="text-info mb-5">
+                    <%= course.courseTitle %>
+                  </h5>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <div class="d-flex">
+                        <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                        </span>
+                        <h6 class="text-info mb-0 fw-semibold"><%= course.courseOnlineDiscountPrice %></h6>
+                      </div>
+                      <p class="ps-4 text-decoration-line-through text-info">
+                        <%= course.courseOnlineActualPrice %>
+                      </p>
+                    </div>
+                    <div class="">
+                      <a class="btn btn-danger rounded" href="/courses/details/?courseLink=<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <% }) %>
       </div>
     </div>
+    
   </section>
   <!-- quiz section -->
   <section class="quiz-gradient py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 order-1 order-md-0">
-          <h2 class="display-3 text-light">মাসিক কুইজ কন্টেস্ট</h2>
-          <p class="text-light h2">
+          <h2 class="display-5 text-light">মাসিক কুইজ কন্টেস্ট</h2>
+          <p class="text-light h3 fw-normal">
             ভাষা স্কুলের কুইজ কন্টেস্টে যোগ দিয়ে জিতে <br />
             নিন আকর্ষণীয় পুরস্কার
           </p>
@@ -660,115 +311,12 @@
       </div>
     </div>
   </section>
-  <!-- courses  -->
-  <section id="courses" class="bg-secondary-subtle position-relative d-none">
-    <div class="container py-5">
-      <h2 class="text-center h4 text-info">কোর্সসমূহ</h2>
-      <h3 class="h1 text-primary text-center">
-        গোছানো প্রস্তুতি নিয়ে হয়ে উঠুন ভাষা এক্সপার্ট
-      </h3>
-      <ul class="nav nav-pills w-30 bg-danger-subtle w-50 justify-content-center rounded-pill mx-auto" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active  rounded-pill px-md-5" id="pills-offline-tab" data-bs-toggle="pill" data-bs-target="#pills-offline" type="button" role="tab" aria-controls="pills-offline" aria-selected="true">
-            <h4 class="mb-0">
-              অনলাইন
-            </h4>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link px-md-5  rounded-pill" id="pills-online-tab" data-bs-toggle="pill" data-bs-target="#pills-online" type="button" role="tab" aria-controls="pills-online" aria-selected="false">
-            <h4 class="mb-0">
-              অফলাইন
-            </h4>
-          </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-offline" role="tabpanel" aria-labelledby="pills-offline-tab" tabindex="0">
-          <div class="card-group py-5 courses">
-            <% db.courses.forEach(course => { %>
-            <div class="card rounded-5 bg-info border-0 bg-info ms-2 me-2">
-              <img src="<%= backendUrl %><%= course.imgSrc %>" class="card-img-top rounded-top-5" alt="<%= course.courseAlt %>" />
-              <div class="card-body">
-                <h3 class="text-light fw-bold">
-                  <%= course.courseTitle %>
-                </h3>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex gap-2 align-items-center">
-                    <img src="/assets/images/time.svg" alt="course duration">
-                    <h5 class="mb-0 text-light"><%= course.courseDuration %></h5>
-                  </div>
-                  <div class="d-flex gap-2 align-items-center">
-                    <img src="/assets/images/calender.svg" alt="total class">
-                    <h5 class="mb-0 text-light"><%= course.courseTotalClass %></h5>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer bg-info border-top-0 rounded-5 pb-4">
-                <div class="d-flex gap-2">
-                  <span>
-                    <img src="/assets/images/money-icon.svg" alt="money icon">
-                  </span>
-                  <h4 class="text-light fw-semibold"><%= course.courseOnlineDiscountPrice %></h4>
-                  <p class="mb-0 mt-1 text-decoration-line-through text-light fs-6">
-                    <%= course.courseOnlineActualPrice %>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-center pt-2 pb-2">
-                  <a class="btn btn-danger rounded-4" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                </div>
-              </div>
-            </div>
-            <% }) %>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="pills-online" role="tabpanel" aria-labelledby="pills-online-tab" tabindex="0">
-          <div class="card-group py-5 courses">
-            <% db.courses.forEach(course => { %>
-              <div class="card rounded-5 bg-info border-0 bg-info ms-2 me-2">
-                <img src="<%= backendUrl %><%= course.imgSrc %>" class="card-img-top rounded-top-5" alt="<%= course.courseAlt %>" />
-                <div class="card-body">
-                  <h3 class="text-light fw-bold">
-                    <%= course.courseTitle %>
-                  </h3>
-                  <div class="d-flex justify-content-between">
-                    <div class="d-flex gap-2 align-items-center">
-                      <img src="/assets/images/time.svg" alt="course duration">
-                      <h5 class="mb-0 text-light"><%= course.courseDuration %></h5>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center">
-                      <img src="/assets/images/calender.svg" alt="total class">
-                      <h5 class="mb-0 text-light"><%= course.courseTotalClass %></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-info border-top-0 rounded-5 pb-4">
-                  <div class="d-flex gap-2">
-                    <span>
-                      <img src="/assets/images/money-icon.svg" alt="money icon">
-                    </span>
-                    <h4 class="text-light fw-semibold"><%= course.courseDiscountPrice %></h4>
-                    <p class="mb-0 mt-1 text-decoration-line-through text-light fs-6">
-                      <%= course.courseActualPrice %>
-                    </p>
-                  </div>
-                  <div class="d-flex justify-content-center pt-2 pb-2">
-                    <a class="btn btn-danger rounded-4" href="<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
-                  </div>
-                </div>
-              </div>
-              <% }) %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- texttimonial -->
   <section class="position-relative">
     <img src="/assets/images/home/bg-left.svg" class="position-absolute end-0 left-0 h-50 d-none d-md-block" />
     <img src="/assets/images/home/bg-right.svg" class="position-absolute top-0 start-0 h-50 d-none d-md-block" />
     <div class="container py-5">
-      <h2 class="h1 text-info text-center">শিক্ষার্থীরা যা বলেছেন</h2>
+      <h2 class="text-info text-center fw-normal">শিক্ষার্থীরা যা বলেছেন</h2>
       <div class="card-group py-3 testimonials">
         <div class="card rounded-5 border-0 bg-light me-3 ms-3">
           <div class="card-body">
@@ -880,6 +428,31 @@
   <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="/assets/js/slick.min.js"></script>
   <%- include("/_components/scripts")-%>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get('category');      
+
+      if (category) {
+        const tabButtons = document.querySelectorAll(".nav-link");        
+
+        tabButtons.forEach(function(tabButton) {
+          const tabCategory = tabButton.textContent.trim();
+          const tab = tabCategory.toLocaleLowerCase().split(" ").join('-')
+          if (tab === category) {
+            tabButton.classList.add("active");
+            const tabContentId = tabButton.getAttribute("data-bs-target");
+            if (tabContentId) {
+              const tabContent = document.querySelector(tabContentId);
+              if (tabContent) {
+                tabContent.classList.add("show", "active");
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
