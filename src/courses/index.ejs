@@ -27,11 +27,11 @@
       </h3>
     </div>
   </section>
-  <section class="py-5 d-non">
+  <section class="py-5">
     <div class="container">
       <div class="justify-content-center gap-5 pt-5 flex-column">
         <!-- // nav pill  -->
-        <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">        
+        <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">          
           <% db.categories.forEach(category => { %>
           <li class="nav-item" role="presentation">
             <button class="nav-link " id="<%= category.category_link %>-tab" data-bs-toggle="pill" data-bs-target="#<%= category.category_link %>" type="button" role="tab" aria-controls="<%= category.category_link %>" aria-selected="false">
@@ -45,15 +45,15 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="d-flex justify-content-between mb-3">
             <div class="d-flex flex-row gap-2">
-              <button class="btn btn-outline-danger active" type="button">Online</button>
-              <button class="btn btn-outline-danger" type="button">Offline</button>
+              <button id="onlineButton" class="btn btn-outline-danger active" type="button">Online</button>
+              <button id="offlineButton" class="btn btn-outline-danger" type="button">Offline</button>
             </div>
             <form role="search" action="/search/">
-            <div class="input-group mb-3 d-none d-md-flex">
-              <span class="input-group-text bg-transparent" id="search">
-                <img src="/assets/images/search-icon.svg" alt="search icon">
-              </span>
-                <input type="text" name="q" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" required/>
+              <div class="input-group mb-3 d-none d-md-flex">
+                <span class="input-group-text bg-transparent" id="search">
+                  <img src="/assets/images/search-icon.svg" alt="search icon">
+                </span>
+                <input type="text" name="q" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" required />
               </div>
             </form>
           </div>
@@ -119,18 +119,36 @@
                       <%= course.courseTitle %>
                     </h5>
                     <div class="d-flex justify-content-between">
-                      <div>
-                        <div class="d-flex">
-                          <span> <img src="/assets/images/money-icon.svg" alt="money icon">
-                          </span>
-                          <h6 class="text-info mb-0 fw-semibold"><%= course.courseOnlineDiscountPrice %></h6>
+                      <div class="online-price align-items-center justify-content-between gap-2">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                            </span>
+                            <h6 class="text-info mb-0 fw-semibold"><%= course.courseOnlineDiscountPrice %></h6>
+                          </div>
+                          <p class="ps-4 text-decoration-line-through text-info">
+                            <%= course.courseOnlineActualPrice %>
+                          </p>
                         </div>
-                        <p class="ps-4 text-decoration-line-through text-info">
-                          <%= course.courseOnlineActualPrice %>
-                        </p>
+                        <div class="">
+                          <a class="btn btn-danger rounded" href="/courses/details/?courseLink=<%= course.courseLink %>&pricetag=online" role="button">বিস্তারিত জানুন</a>
+                        </div>
                       </div>
-                      <div class="">
-                        <a class="btn btn-danger rounded" href="/courses/details/?courseLink=<%= course.courseLink %>" role="button">বিস্তারিত জানুন</a>
+
+                      <div class="offline-price align-items-center justify-content-between gap-2" style="display: none;">
+                        <div>
+                          <div class="d-flex">
+                            <span> <img src="/assets/images/money-icon.svg" alt="money icon">
+                            </span>
+                            <h6 class="text-info mb-0 fw-semibold"><%= course.courseDiscountPrice %></h6>
+                          </div>
+                          <p class="ps-4 text-decoration-line-through text-info">
+                            <%= course.courseActualPrice %>
+                          </p>
+                        </div>
+                        <div class="">
+                          <a class="btn btn-danger rounded" href="/courses/details/?courseLink=<%= course.courseLink %>&pricetag=offline" role="button">বিস্তারিত জানুন</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -148,7 +166,7 @@
   <section class="d-none">
     <div class="justify-content-center gap-5 pt-5 flex-column">
       <!-- // nav pill  -->
-      <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">        
+      <ul class="nav nav-pills mb-5 justify-content-md-center justify-content-start" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="all-categories-tab" data-bs-toggle="pill" data-bs-target="#all-categories" type="button" role="tab" aria-controls="all-categories" aria-selected="true">
             <h5 class="mb-0">All Categories</h5>
@@ -164,7 +182,7 @@
         </li>
         <% }) %>
         <!-- Add a button for "All Categories" -->
-       
+
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div class="d-flex justify-content-between mb-3">
@@ -292,7 +310,7 @@
         <% }) %>
       </div>
     </div>
-    
+
   </section>
   <!-- quiz section -->
   <section class="quiz-gradient py-5">
@@ -398,22 +416,6 @@
   </section>
   <!-- logo section -->
   <section class="bg-secondary-subtle py-5">
-    <div class="container w-50 d-none">
-      <h2 class="h1 text-primary text-center fw-semibold">
-        অনুমোদিত রেজিস্ট্রেশন পয়েন্ট
-      </h2>
-      <div class="row py-5 log">
-        <div class="col-4 col-md-4">
-          <img src="/assets/images/idp-logo.png" alt="idp logo" class="text-center" />
-        </div>
-        <div class="col-4 col-md-4">
-          <img src="/assets/images/british-council-logo.png" alt="british council logo" class="text-center" />
-        </div>
-        <div class="col-4 col-md-4">
-          <img src="/assets/images/ielts-logo.png" alt="ielts logo" class="text-center" />
-        </div>
-      </div>
-    </div>
     <div class="container d-md-block d-none">
       <div class="text-center">
         <img src="/assets/images/councils-logo.png" alt="councils logo" class="w-50" />
@@ -434,10 +436,16 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const urlParams = new URLSearchParams(window.location.search);
-      const category = urlParams.get('category');      
+      const category = urlParams.get('category');
+
+      const onlineButton = document.getElementById('onlineButton');
+      const offlineButton = document.getElementById('offlineButton');
+      const onlinePrices = document.querySelectorAll('.online-price');
+      const offlinePrices = document.querySelectorAll('.offline-price');
+      onlinePrices.forEach(price => price.style.display = 'flex');
 
       if (category) {
-        const tabButtons = document.querySelectorAll(".nav-link");        
+        const tabButtons = document.querySelectorAll(".nav-link");
 
         tabButtons.forEach(function(tabButton) {
           const tabCategory = tabButton.textContent.trim();
@@ -454,6 +462,21 @@
           }
         });
       }
+
+      onlineButton.addEventListener('click', function() {
+        onlinePrices.forEach(price => price.style.display = 'flex');
+        offlinePrices.forEach(price => price.style.display = 'none');
+        onlineButton.classList.add('active');
+        offlineButton.classList.remove('active');
+      });
+
+      offlineButton.addEventListener('click', function() {
+        onlinePrices.forEach(price => price.style.display = 'none');
+        offlinePrices.forEach(price => price.style.display = 'flex');
+        onlineButton.classList.remove('active');
+        offlineButton.classList.add('active');
+      });
+
     });
   </script>
 </body>
