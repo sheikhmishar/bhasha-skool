@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | Bhasha Skool</title>
+  <%- include("/_components/head-seo") -%>
+  <!-- slick css -->
+  <link rel="stylesheet" href="/assets/css/slick.min.css" />
+  <link rel="stylesheet" href="/assets/css/slick-theme.min.css" />
+  <%- include("/_components/styles") -%>
+</head>
+
+<body>
+  <!-- nav-bar -->
+  <%- include("/_components/nav") -%>
+  <!-- courses banner section -->
+  <section class="bg-gradient py-5 top-margin">
+    <div class="container py-5">
+      <h1 class="text-center display-5 text-light">
+        সার্চ রেজাল্ট
+      </h1>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <h6 class="fw-light" id="searchtext">আপনি সার্চ করেছেন</h6>
+      <div class="row" id="searchRow"></div>
+      <div class="row" id="searchRowBlog"></div>
+    </div>
+  </section>
+  <!-- quiz section -->
+
+  <!-- footer -->
+  <%- include('/_components/footer') -%>
+
+  <%- include("/_components/scripts")-%>
+  <script>
+    const searchRow = document.getElementById("searchRow");
+    const searchRowBlog = document.getElementById("searchRowBlog");
+    const searchText = document.getElementById("searchtext")
+
+    var blogsJson = <%- JSON.stringify(db.blogs) %>;
+    var coursesJson = <%- JSON.stringify(db.courses) %>;
+    const query = new URLSearchParams(window.location.search).get("q");
+    const course = coursesJson?.filter(course => course.courseTitle.toLowerCase().includes(query.trim().toLowerCase()))
+    const blog = blogsJson?.filter(blog => blog.blog_title.toLowerCase().includes(query.trim().toLowerCase()))
+    searchText.innerHTML = `Search results for: "${query}"`
+
+    if (course.length > 0 || blog.length > 0) {
+      searchRowBlog.innerHTML = blog.map(idx => `
+                <div class="col-md-4 col-12 my-2">
+                    <div class="card border-0 shadow position-relative">
+                        <div class="card-body">
+                            <img src="/${idx.imgSrc}" class="card-img-top mb-3" alt="${idx.blog_Alt}">
+                            <h4 class="card-title">${idx.blog_title}</h4>
+                            <a href="/blog/blog_slug/?blog_slug=${idx.blog_slug}" class="card-link stretched-link">${idx.blog_slug}</a>
+                        </div>
+                    </div>
+                </div>`).join('');
+
+      searchRow.innerHTML = course.map(idx => `
+                  <div class="col-md-4 col-12 my-2">
+                      <div class="card border-0 shadow position-relative">
+                          <div class="card-body">
+                              <img src="/${idx.imgSrc}" class="card-img-top mb-3" alt="${idx}">
+                              <h4 class="card-title">${idx.courseTitle}</h4>
+                              <a href="/courses/details/?courseLink=${ course.courseLink }" class="card-link stretched-link">${idx.courseTitle}</a>
+                          </div>
+                      </div>
+                  </div>`).join('');
+    } else {
+      searchRow.innerHTML = "<h4>No result found</h4>";
+    }
+  </script>
+</body>
+
+</html>
