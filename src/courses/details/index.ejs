@@ -38,47 +38,59 @@
             <div id="course-video-mobile"></div>
             <div class="card rounded-4">
               <div class="card-body">
-                <div class="d-flex gap-2 pt-3 justify-content-between">
-                  <div>
-                    <div class="d-flex flex-row gap-2">
-                      <span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <mask id="mask0_382_1487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                            <rect width="24" height="24" fill="#D9D9D9" />
-                          </mask>
-                          <g mask="url(#mask0_382_1487)">
-                            <path d="M12 21L0 9C1.6 7.36667 3.43333 6.125 5.5 5.275C7.56667 4.425 9.73333 4 12 4C14.2833 4 16.4583 4.425 18.525 5.275C20.5917 6.125 22.4167 7.36667 24 9L12 21ZM5.8 11.95C6.68333 11.3167 7.65 10.8208 8.7 10.4625C9.75 10.1042 10.85 9.925 12 9.925C13.15 9.925 14.25 10.1042 15.3 10.4625C16.35 10.8208 17.3167 11.3167 18.2 11.95L21.1 9.05C19.8 8.06667 18.3792 7.3125 16.8375 6.7875C15.2958 6.2625 13.6833 6 12 6C10.3167 6 8.70417 6.2625 7.1625 6.7875C5.62083 7.3125 4.2 8.06667 2.9 9.05L5.8 11.95Z" fill="#272454" />
-                          </g>
-                        </svg>
-                      </span>
-                      <h4 class="text-info">অনলাইন কোর্স ফি</h4>
-                    </div>
-                    <div class="d-flex flex-row gap-2">
-                      <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
-                        </svg>
-                      </span>
-                      <h4 class="text-info fw-semibold" id="online-coursediscountfee-mobile">৬,৯৯৯</h4>
-                      <p class="mb-0 mt-1 text-decoration-line-through text-info fs-6" id="online-courseactualfee-mobile">
-                        ৯,০০০
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <a class="btn btn-primary rounded" href="#" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">কোর্সে ভর্তি হোন</a>
-                  </div>
-                </div>
-                <hr>
-                <div class="accordion accordion-flush border rounded my-3" id="courseAccordion">
+                <div class="accordion accordion-flush rounded my-3" id="onlineButton">
                   <div class="accordion border d-block">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnlineMobile" aria-expanded="false" aria-controls="flush-collapseOnlineMobile">
                         <h6 class="text-info text-center mb-0">
-                          আরো ১ টি দেখুন
+                          অনলাইন কোর্স
                         </h6>
                       </button>
                     </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div id="flush-collapseOnlineMobile" class="accordion-collapse collapse" data-bs-parent="#onlineButton">
+                      <div class="accordion-body">
+                        <div class="d-flex gap-2 pt-3 justify-content-between">
+                          <div>
+                            <div class="d-flex flex-row gap-2">
+                              <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <mask id="mask0_382_1487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                    <rect width="24" height="24" fill="#D9D9D9" />
+                                  </mask>
+                                  <g mask="url(#mask0_382_1487)">
+                                    <path d="M12 21L0 9C1.6 7.36667 3.43333 6.125 5.5 5.275C7.56667 4.425 9.73333 4 12 4C14.2833 4 16.4583 4.425 18.525 5.275C20.5917 6.125 22.4167 7.36667 24 9L12 21ZM5.8 11.95C6.68333 11.3167 7.65 10.8208 8.7 10.4625C9.75 10.1042 10.85 9.925 12 9.925C13.15 9.925 14.25 10.1042 15.3 10.4625C16.35 10.8208 17.3167 11.3167 18.2 11.95L21.1 9.05C19.8 8.06667 18.3792 7.3125 16.8375 6.7875C15.2958 6.2625 13.6833 6 12 6C10.3167 6 8.70417 6.2625 7.1625 6.7875C5.62083 7.3125 4.2 8.06667 2.9 9.05L5.8 11.95Z" fill="#272454" />
+                                  </g>
+                                </svg>
+                              </span>
+                              <h4 class="text-info">অনলাইন কোর্স ফি</h4>
+                            </div>
+                            <div class="d-flex flex-row gap-2">
+                              <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                                </svg>
+                              </span>
+                              <h4 class="text-info fw-semibold" id="online-coursediscountfee-mobile">৬,৯৯৯</h4>
+                              <p class="mb-0 mt-1 text-decoration-line-through text-info fs-6" id="online-courseactualfee-mobile">
+                                ৯,০০০
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <a class="btn btn-primary rounded" href="#" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">ভর্তি হোন</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion border d-block my-3">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOfflineMobile" aria-expanded="false" aria-controls="flush-collapseOfflineMobile">
+                        <h6 class="text-info text-center mb-0">
+                          অফলাইন কোর্স
+                        </h6>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOfflineMobile" class="accordion-collapse collapse" data-bs-parent="#offlineButton">
                       <div class="accordion-body">
                         <div class="d-flex gap-2 pt-3 justify-content-between">
                           <div>
@@ -180,13 +192,7 @@
               <a class="nav-link text-info" href="#যাযাথাকছে">যা যা থাকছে</a>
             </h6>
             <h6 class="fw-normal text-info h5">
-              <a class="nav-link text-info" href="#সেবাসমূহ">রেভিউ</a>
-            </h6>
-            <h6 class="fw-normal text-info h5">
-              <a class="nav-link text-info" href="#সার্টিফিকেট">সার্টিফিকেট</a>
-            </h6>
-            <h6 class="fw-normal text-info h5">
-              <a class="nav-link text-info" href="#পেমেন্ট">পেমেন্ট</a>
+              <a class="nav-link text-info" href="#বিস্তারিত">বিস্তারিত</a>
             </h6>
           </div>
           <hr />
@@ -281,7 +287,7 @@
               <h5 class="ps-3 text-info mb-0">Freehand Writing</h5>
             </li>
           </ul>
-          <h4 id="সেবাসমূহ" class="text-info fw-semibold pt-5">সেবা সমূহ</h4>
+          <h4 id="বিস্তারিত" class="text-info fw-semibold pt-5">সেবা সমূহ</h4>
           <ul class="list-group list-group-pad">
             <li class="list-group-item d-flex align-items-center border-0">
               <span>
@@ -381,47 +387,59 @@
           <div id="course-video"></div>
           <div class="card rounded-4 mt-4 sticky-top" style="top:100px !important">
             <div class="card-body">
-              <div class="d-flex gap-2 pt-3 justify-content-between">
-                <div>
-                  <div class="d-flex flex-row gap-2">
-                    <span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_382_1487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                          <rect width="24" height="24" fill="#D9D9D9" />
-                        </mask>
-                        <g mask="url(#mask0_382_1487)">
-                          <path d="M12 21L0 9C1.6 7.36667 3.43333 6.125 5.5 5.275C7.56667 4.425 9.73333 4 12 4C14.2833 4 16.4583 4.425 18.525 5.275C20.5917 6.125 22.4167 7.36667 24 9L12 21ZM5.8 11.95C6.68333 11.3167 7.65 10.8208 8.7 10.4625C9.75 10.1042 10.85 9.925 12 9.925C13.15 9.925 14.25 10.1042 15.3 10.4625C16.35 10.8208 17.3167 11.3167 18.2 11.95L21.1 9.05C19.8 8.06667 18.3792 7.3125 16.8375 6.7875C15.2958 6.2625 13.6833 6 12 6C10.3167 6 8.70417 6.2625 7.1625 6.7875C5.62083 7.3125 4.2 8.06667 2.9 9.05L5.8 11.95Z" fill="#272454" />
-                        </g>
-                      </svg>
-                    </span>
-                    <h6 class="text-info">অনলাইন কোর্স ফি</h6>
-                  </div>
-                  <div class="d-flex flex-row gap-2">
-                    <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
-                      </svg>
-                    </span>
-                    <h5 class="text-info fw-semibold" id="online-coursediscountfee">৬,৯৯৯</h5>
-                    <p class="mb-0 mt-1 text-decoration-line-through text-info fs-6" id="online-courseactualfee">
-                      ৯,০০০
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <a class="btn btn-primary rounded" href="#" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">কোর্সে ভর্তি হোন</a>
-                </div>
-              </div>
-              <hr>
-              <div class="accordion accordion-flush border rounded my-3" id="courseAccordion">
+              <div class="accordion accordion-flush rounded my-3" id="courseAccordion">
                 <div class="accordion border d-block">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnline" aria-expanded="false" aria-controls="flush-collapseOnline">
                       <h6 class="text-info text-center mb-0">
-                        আরো ১ টি দেখুন
+                        অনলাইন কোর্স
                       </h6>
                     </button>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                  <div id="flush-collapseOnline" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                      <div class="d-flex gap-2 pt-3 justify-content-between">
+                        <div>
+                          <div class="d-flex flex-row gap-2">
+                            <span>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_382_1487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                  <rect width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_382_1487)">
+                                  <path d="M12 21L0 9C1.6 7.36667 3.43333 6.125 5.5 5.275C7.56667 4.425 9.73333 4 12 4C14.2833 4 16.4583 4.425 18.525 5.275C20.5917 6.125 22.4167 7.36667 24 9L12 21ZM5.8 11.95C6.68333 11.3167 7.65 10.8208 8.7 10.4625C9.75 10.1042 10.85 9.925 12 9.925C13.15 9.925 14.25 10.1042 15.3 10.4625C16.35 10.8208 17.3167 11.3167 18.2 11.95L21.1 9.05C19.8 8.06667 18.3792 7.3125 16.8375 6.7875C15.2958 6.2625 13.6833 6 12 6C10.3167 6 8.70417 6.2625 7.1625 6.7875C5.62083 7.3125 4.2 8.06667 2.9 9.05L5.8 11.95Z" fill="#272454" />
+                                </g>
+                              </svg>
+                            </span>
+                            <h6 class="text-info">অনলাইন কোর্স ফি</h6>
+                          </div>
+                          <div class="d-flex flex-row gap-2">
+                            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.1998 2.25925C6.44668 2.62175 6.66855 3.20612 6.66855 4.06862V6.86862H7.41543L8.66855 8.14675H6.66855V11.7717C6.66855 12.0561 6.7748 12.3124 6.9873 12.5436C7.1998 12.7749 7.54668 12.8905 8.02793 12.8905C8.6498 12.8905 9.30605 12.5436 9.9998 11.8499C10.7092 11.1405 11.0842 10.4124 11.1186 9.6655L10.7998 9.69362C9.6623 9.69362 9.09355 9.0905 9.09355 7.88112C9.09355 7.47175 9.22793 7.10925 9.49355 6.78737C9.75918 6.46862 10.2029 6.30612 10.8248 6.30612C11.4811 6.30612 12.0342 6.5905 12.4779 7.15925C12.9404 7.728 13.1717 8.42175 13.1717 9.23737C13.1717 10.4467 12.6561 11.5999 11.6248 12.703C10.6123 13.803 8.6748 14.3561 7.9998 14.3561C6.91855 14.3561 6.50293 14.1436 6.1498 13.903C5.79668 13.6592 5.33418 13.0842 5.33418 12.3592V8.14675H4.05605L2.83105 6.86862H5.3373V4.33737C5.3373 3.77175 4.77168 3.46237 4.40293 3.43112C4.17793 3.41237 3.93105 3.47487 3.84355 3.5655C3.68418 3.29987 3.53105 2.978 3.39043 2.60612C3.39043 2.60612 3.51543 2.15612 3.9248 1.88737C4.20605 1.703 4.47168 1.64675 4.88418 1.64675C5.66855 1.64362 6.03105 2.01237 6.1998 2.25925Z" fill="#272454"></path>
+                              </svg>
+                            </span>
+                            <h5 class="text-info fw-semibold" id="online-coursediscountfee">৬,৯৯৯</h5>
+                            <p class="mb-0 mt-1 text-decoration-line-through text-info fs-6" id="online-courseactualfee">
+                              ৯,০০০
+                            </p>
+                          </div>
+                        </div>
+                        <div>
+                          <a class="btn btn-primary rounded" href="#" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">ভর্তি হোন</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion border d-block my-3">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOffline" aria-expanded="false" aria-controls="flush-collapseOffline">
+                      <h6 class="text-info text-center mb-0">
+                        অফলাইন কোর্স
+                      </h6>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOffline" class="accordion-collapse collapse" data-bs-parent="#offlineAccordion">
                     <div class="accordion-body">
                       <div class="d-flex gap-2 pt-3 justify-content-between">
                         <div>
@@ -537,7 +555,7 @@
       currentDate.setHours(currentDate.getHours() + 6);
       const startDate = new Date(startDateISO);
       const differenceInDays = Math.ceil((startDate - currentDate) / (1000 * 60 * 60 * 24));
-      if (differenceInDays == 0) {
+      if (differenceInDays < 0) {
         return 0
       } else {
         return differenceInDays;
@@ -549,6 +567,8 @@
 
     const urlParams = new URLSearchParams(window.location.search);
     const courseLink = urlParams.get('courseLink');
+    const coursePrice = urlParams.get("pricetag");
+
     const course = coursesJson.find(course => course.courseLink === courseLink);
     const instructorIds = course.instructorIds.map(idObj => idObj.id);
     const matchingInstructors = instructorJson.filter(instructor => instructorIds.includes(instructor.id));
@@ -644,41 +664,17 @@
       courseTitleContainer.innerHTML = 'Course not found';
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const accordionItems = document.querySelectorAll(".accordion-item");
-      const loadMoreBtn = document.getElementById("loadMoreBtn");
-      const showLessBtn = document.getElementById("showLessBtn");
-      accordionItems.forEach(function(item, index) {
-        if (index >= 4) {
-          item.style.display = "none";
-          showLessBtn.classList.add('d-none')
-        }
-      });
-      loadMoreBtn.addEventListener("click", function() {
-        accordionItems.forEach(function(item, index) {
-          if (index >= 4 && index < 6) {
-            item.classList.add("d-block");
-            item.classList.remove("d-none");
-          }
-        });
-        loadMoreBtn.classList.remove('d-block')
-        loadMoreBtn.classList.add("d-none")
-        showLessBtn.classList.add("d-block")
-        showLessBtn.classList.remove("d-none")
-      });
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const pricetag = urlParams.get('pricetag');
 
-      showLessBtn.addEventListener("click", function() {
-        accordionItems.forEach(function(item, index) {
-          if (index >= 4) {
-            item.classList.add("d-none");
-            item.classList.remove("d-block");
-          }
-        });
-        loadMoreBtn.classList.remove("d-none")
-        loadMoreBtn.classList.add("d-block")
-        showLessBtn.classList.add("d-none")
-        showLessBtn.classList.remove("d-block")
-      });
+      if (pricetag === 'online') {
+        document.getElementById('flush-collapseOnlineMobile').classList.add('show');
+        document.getElementById('flush-collapseOnline').classList.add('show');
+      } else if (pricetag === 'offline') {
+        document.getElementById('flush-collapseOfflineMobile').classList.add('show');
+        document.getElementById('flush-collapseOffline').classList.add('show');
+      }
     });
   </script>
 </body>
