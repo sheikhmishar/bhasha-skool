@@ -48,12 +48,14 @@
               <button class="btn btn-outline-danger active" type="button">Online</button>
               <button class="btn btn-outline-danger" type="button">Offline</button>
             </div>
-            <div class="input-group mb-3 w-25 d-none d-md-flex">
+            <form role="search" action="/search/">
+            <div class="input-group mb-3 d-none d-md-flex">
               <span class="input-group-text bg-transparent" id="search">
                 <img src="/assets/images/search-icon.svg" alt="search icon">
               </span>
-              <input type="text" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" />
-            </div>
+                <input type="text" name="q" class="form-control border-start-0" placeholder="পছন্দের কোর্সটি বেছে নিন" aria-label="Username" aria-describedby="search" required/>
+              </div>
+            </form>
           </div>
           <%              
               function convertToBanglaNumber(number) {
@@ -170,6 +172,7 @@
             <button class="btn btn-outline-danger active" type="button">Online</button>
             <button class="btn btn-outline-danger" type="button">Offline</button>
           </div>
+
           <div class="input-group mb-3 w-25 d-none d-md-flex">
             <span class="input-group-text bg-transparent" id="search">
               <img src="/assets/images/search-icon.svg" alt="search icon">
