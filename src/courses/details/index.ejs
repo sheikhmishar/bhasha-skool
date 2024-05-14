@@ -20,8 +20,8 @@
           <h2 class="fw-semibold display-5 text-info" id="course-title"></h2>
           <h6 class="fw-normal text-info h5" id="course-tagline"></h6>
           <div class="d-flex flex-row gap-2 py-4">
-            <a class="btn btn-danger rounded" href="#" role="button" tabindex="0">Free demo</a>
-            <a class="btn btn-light rounded" href="#" role="button" tabindex="0">Prospectus download</a>
+            <a id="demoBtn" class="btn btn-danger rounded" href="#" role="button" tabindex="0">Free demo</a>
+            <a id="prospectusBtn" class="btn btn-light rounded" href="#" role="button" tabindex="0">Prospectus download</a>
           </div>
           <div class="d-flex flex-wrap gap-2" id="course-tag">
             <div class="bg-primary-subtle p-1 rounded">
@@ -31,7 +31,7 @@
               <p class="mb-0 text-info">Public Speaking</p>
             </div>
             <div class="bg-primary-subtle p-1 rounded">
-              <p class="mb-0 text-info"> Interactive Classes </p>
+              <p class="mb-0 text-info">Interactive Classes </p>
             </div>
           </div>
           <div class=" d-md-none d-block pt-3">
@@ -598,6 +598,8 @@
     const totalClass = document.getElementById("totalclass")
     const dayLeftMobile = document.getElementById("dayleft-mobile")
     const dayLeft = document.getElementById("dayleft")
+    const freeDemoBtn = document.getElementById("demoBtn")
+    const prospectusBtn = document.getElementById("prospectusBtn")
 
     if (course) {
       if (coursetaglineContainer && courseTitleContainer) {
@@ -613,6 +615,21 @@
         offlineDiscountFeeMobile.innerHTML = course.courseDiscountPrice
         offlineActualFee.innerHTML = course.courseActualPrice
         offlineDiscountFee.innerHTML = course.courseDiscountPrice
+
+        if (course.freeDemoLink) {
+          freeDemoBtn.setAttribute("href", course.freeDemoLink);
+          freeDemoBtn.setAttribute("target", "_blank");
+        } else {
+          freeDemoBtn.removeAttribute("target");
+        }
+
+        if (course.prospectusFile) {
+          prospectusBtn.setAttribute("href", `/${course.prospectusFile}`);
+          prospectusBtn.setAttribute("download", `/${course.courseTitle}_Prospectus.pdf`);
+          prospectusBtn.setAttribute("target", "_blank");
+        } else {
+          prospectusBtn.removeAttribute("download");
+        }
 
         onlineActualFeeMobile.innerHTML = course.courseOnlineActualPrice
         onlineDiscountFeeMobile.innerHTML = course.courseOnlineDiscountPrice
